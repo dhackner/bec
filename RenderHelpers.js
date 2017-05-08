@@ -5,9 +5,10 @@ import { findRoute } from './Routes'
 
 const insertImage = (route) => {
     if (route['image']) {
+        // TODO | Handle multi
         return (
             <View style={styles.imageContainer}>
-                <Image style={styles.image} source={route['image']}/>
+                <Image style={styles.image} source={route['image'][0]}/>
             </View>
         );
     } else {
@@ -25,6 +26,8 @@ const insertText = (route) => {
         return null;
     }
 }
+// TODO | Perhaps wipe out the navigator route stack when you hit the
+// end of a letter/reassess states?
 const generateRouteButtons = (route, navigator) => {
     if (route['no'] && route['yes']) {
         return (
@@ -41,14 +44,14 @@ const generateRouteButtons = (route, navigator) => {
                 >Yes</Button>
             </View>
         );
-    } else if (route['continue']){
+    } else if (route['next']){
         return (
             <View style={styles.buttonsContainer}>
                 <Button
                     style={styles.button}
-                    title='continue'
-                    onPress={() => navigator.push(findRoute(route['continue']))}
-                >Continue</Button>
+                    title='next'
+                    onPress={() => navigator.push(findRoute(route['next']))}
+                >Next</Button>
             </View>
         );
     } else {
