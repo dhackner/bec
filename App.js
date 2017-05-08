@@ -5,6 +5,8 @@ import { insertImage, insertText, generateRouteButtons } from './RenderHelpers'
 import { findRoute } from './Routes'
 import Title from './Title'
 
+// TODO | codepush updates
+// TODO | logging and back reporting of route ordering
 export default class App extends React.Component {
 
     render() {
@@ -22,6 +24,8 @@ export default class App extends React.Component {
                             routeMapper={{
                                 LeftButton: (route, navigator, index, navState) =>
                                 {
+                                    // TODO | Instead check if this is
+                                    // the first route
                                     if (route.key === 'homepage') {
                                         return null;
                                     } else {
