@@ -24,9 +24,7 @@ export default class App extends React.Component {
                             routeMapper={{
                                 LeftButton: (route, navigator, index, navState) =>
                                 {
-                                    // TODO | Instead check if this is
-                                    // the first route
-                                    if (route.key === 'homepage') {
+                                    if (navigator.getCurrentRoutes().length <= 1) {
                                         return null;
                                     } else {
                                         return (
