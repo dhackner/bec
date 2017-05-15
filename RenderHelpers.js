@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Image, Button, Text, View } from 'react-native';
+import { StyleSheet, Image, Text, View } from 'react-native';
+import Button from 'react-native-button';
 
 import { findRoute } from './Routes'
 
@@ -33,13 +34,17 @@ const generateRouteButtons = (route, navigator) => {
         return (
             <View style={styles.buttonsContainer}>
                 <Button
+                    containerStyle={styles.buttonsInnerContainer}
                     style={styles.button}
                     title='no'
+                    accessibilityLabel='The answer to the question on the screen is no3'
                     onPress={() => navigator.push(findRoute(route['no']))}
                 >No</Button>
                 <Button
+                    containerStyle={styles.buttonsInnerContainer}
                     style={styles.button}
                     title='yes'
+                    accessibilityLabel='The answer to the question on the screen is yes'
                     onPress={() => navigator.push(findRoute(route['yes']))}
                 >Yes</Button>
             </View>
@@ -48,8 +53,10 @@ const generateRouteButtons = (route, navigator) => {
         return (
             <View style={styles.buttonsContainer}>
                 <Button
+                    containerStyle={styles.buttonsInnerContainer}
                     style={styles.button}
                     title='next'
+                    accessibilityLabel='Go to next screen'
                     onPress={() => navigator.push(findRoute(route['next']))}
                 >Next</Button>
             </View>
@@ -85,7 +92,16 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         flexDirection: 'row',
     },
+    buttonsInnerContainer: {
+        flex: .5,
+        padding:10,
+        height:45,
+        overflow:'hidden',
+        backgroundColor: '#0F7FCA',
+    },
     button: {
+        fontSize: 20,
+        color: 'black'
     },
 });
 

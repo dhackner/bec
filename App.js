@@ -1,16 +1,16 @@
 import React from 'react';
-import { StyleSheet, ScrollView, TouchableHighlight, Navigator, Text, View } from 'react-native';
+import { StyleSheet, ScrollView, Navigator, Text, View } from 'react-native';
+import Button from 'react-native-button';
 
 import { insertImage, insertText, generateRouteButtons } from './RenderHelpers'
 import { findRoute } from './Routes'
 import Title from './Title'
 
 // TODO | codepush updates
-// TODO | logging and back reporting of route ordering
+// TODO | v2 logging and reporting back of route navigation
 export default class App extends React.Component {
 
     render() {
-
         return (
             <View style={styles.flexContainer}>
                 <Title>WHO Emergency Care</Title>
@@ -28,11 +28,12 @@ export default class App extends React.Component {
                                         return null;
                                     } else {
                                         return (
-                                            <TouchableHighlight
+                                            <Button
                                                 title='back'
+                                                accessibilityLabel='Go to previous screen'
                                                 onPress={navigator.pop}
-                                            ><Text>Back</Text>
-                                            </TouchableHighlight>
+                                            >Back
+                                            </Button>
                                         );
                                     }
                                 },
