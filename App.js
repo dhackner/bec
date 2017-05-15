@@ -25,7 +25,8 @@ export default class App extends React.Component {
                             routeMapper={{
                                 LeftButton: (route, navigator, index, navState) =>
                                 {
-                                    if (navigator.getCurrentRoutes().length <= 1) {
+                                    var routes = navigator.getCurrentRoutes();
+                                    if (!routes || routes.length <= 1) {
                                         return null;
                                     } else {
                                         return (
