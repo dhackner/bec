@@ -27,8 +27,9 @@ const insertText = (route) => {
         return null;
     }
 }
-// TODO | Perhaps wipe out the navigator route stack when you hit the
-// end of a letter/reassess states?
+
+// TODO | After 50 screens, reset navigator stack and _routeIndex
+
 const generateRouteButtons = (route, navigator) => {
     if (route['no'] && route['yes']) {
         return (
