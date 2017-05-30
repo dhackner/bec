@@ -78,12 +78,17 @@ const routes = [
         key: 'airwayDevices',
         next: 'reassessAirway',
         bodyText: 'Place a supplemental airway device (As per SKILLS section)',
-        // TODO | Image splits
-        // TODO | Can this be split into another question? These seem
-        // like different things
         image: [
-            require('./img/10_Nasopharyngealairwayinsertion.jpg'),
-            //require('./img/11_Oropharyngealairwayinsertion.jpg'),
+            require('./img/10_Nasopharyngealairwayinsertion_1.jpg'),
+            require('./img/10_Nasopharyngealairwayinsertion_2.jpg'),
+            require('./img/10_Nasopharyngealairwayinsertion_3.jpg'),
+            require('./img/10_Nasopharyngealairwayinsertion_4.jpg'),
+            // TODO | Can Oropharyngeal be split off?
+            //require('./img/11_Oropharyngealairwayinsertion_1.jpg'),
+            //require('./img/11_Oropharyngealairwayinsertion_2.jpg'),
+            //require('./img/11_Oropharyngealairwayinsertion_3.jpg'),
+            //require('./img/11_Oropharyngealairwayinsertion_4.jpg'),
+            //require('./img/11_Oropharyngealairwayinsertion_5.jpg'),
         ],
     }, {
         key: 'pregnantAirway',

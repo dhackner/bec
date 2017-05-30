@@ -6,10 +6,9 @@ import { findRoute } from './Routes'
 
 const insertImage = (route) => {
     if (route['image']) {
-        // TODO | Handle multi
         return (
             <View style={styles.imageContainer}>
-                <Image style={styles.image} source={route['image'][0]}/>
+                {route['image'].map((o, i) => <Image style={styles.image} source={o} key={i}/>)}
             </View>
         );
     } else {
