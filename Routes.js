@@ -1,5 +1,6 @@
 import _ from 'lodash';
 
+// TODO | Christian - route/image audit
 const routes = [
     {
         key: 'homepage',
@@ -190,7 +191,272 @@ const routes = [
         yes: 'normalBreathing',
         no: 'assistBreathing',
         bodyText: 'Is the patient breathing?',
+    }, {
+        key: 'normalBreathing',
+        yes: 'giveOxygen',
+        no: 'pulseCirculation',
+        bodyText: 'Is there increased work of breathing?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'giveOxygen',
+        next: 'slowedBreathing',
+        bodyText: 'Give oxygen for abnormal breathing.',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'slowedBreathing',
+        yes: 'pinpointPupils',
+        no: 'traumaBreathing',
+        bodyText: "Is the patient's breathing slowed?",
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'traumaBreathing',
+        yes: 'tracheaMidline',
+        no: 'anaphylaxisBreathing',
+        bodyText: 'Are there signs of trauma?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'tracheaMidline',
+        yes: 'crepitusCheck',
+        no: 'needleDecompression',
+        bodyText: 'Is the trachea midline?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'crepitusCheck',
+        yes: 'needleDecompression',
+        no: 'decreasedBreathSounds',
+        bodyText: 'Is there crepitus (cracking or popping) over the chest wall?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'decreasedBreathSounds',
+        yes: 'needleDecompression',
+        no: 'abnormalChestWallMovement',
+        bodyText: 'Are there decreased breath sounds or hyperresonance to percussion of the chest?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'abnormalChestWallMovement',
+        yes: 'flailChestTreatment',
+        no: 'suckingChestWound',
+        bodyText: 'Is there abnormal chest wall movement which may indicate a flail chest?',
+    }, {
+        key: 'suckingChestWound',
+        yes: 'treatSuckingChestWound',
+        no: 'burnsPresent',
+        bodyText: 'Is there a sucking chest wound?',
+    }, {
+        key: 'assistBreathing',
+        next: 'prepareTransferBreathing',
+        bodyText: 'Assist breathing with bag-valve-mask ventilation. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'pinpointPupils',
+        yes: 'naloxone',
+        no: 'assistBreathing',
+        bodyText: 'Are there pinpoint pupils?',
+    }, {
+        key: 'anaphylaxisBreathing',
+        yes: 'adrenalineBreathing',
+        no: 'wheezing',
+        bodyText: 'Are there signs of anaphylaxis?',
+    }, {
+        key: 'needleDecompression',
+        next: 'abnormalChestWallMovement',
+        bodyText: 'Perform needle decompression of pneumothorax. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'flailChestTreatment',
+        next: 'suckingChestWound',
+        bodyText: 'If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.',
+        // TODO | Text mentions preparing patient for transfer?
+    }, {
+        key: 'reassessAirway',
+        yes: 'pulseCirculation',
+        no: 'breathingCheck',
+        bodyText: 'Is breathing stable or improved?',
+    }, {
+        key: 'naloxone',
+        next: 'reassessAirway',
+        bodyText: 'Give Naloxone if available. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'adrenalineBreathing',
+        next: 'wheezing',
+        bodyText: 'Give Adrenaline. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'wheezing',
+        yes: 'salbutamol',
+        no: 'pulseCirculation',
+        bodyText: 'Is there wheezing?',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'prepareTransferBreathing',
+        next: 'reassessAirway',
+        bodyText: 'Prepare for rapid handover/transfer.',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'salbutamol',
+        next: 'pulseCirculation',
+        bodyText: 'Give Salbutamol (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'checkFollowingBreathing',
+        yes: 'prepareTransferBreathing',
+        no: 'pulseCirculation',
+        bodyText: 'Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound',
+    }, {
+        key: 'burnsPresent',
+        next: 'checkFollowingBreathing',
+        bodyText: 'Are there circumferential chest or abdominal burns or burns restricting breathing?',
+    }, {
+        key: 'treatSuckingChestWound',
+        next: 'burnsPresent',
+        bodyText: 'Treat sucking chest wound with three-sided dressing. (As per SKILLS section)',
+        // TODO | Really no image here?
     },
+
+    // Circulation
+    {
+        key: 'pulseCirculation',
+        yes: 'poorPerfusionCheck',
+        no: 'CPR',
+        bodyText: 'Does the patient have a pulse?',
+    }, {
+        key: 'CPR',
+        next: 'awakeAndAlert',
+        bodyText: 'Follow relevant CPR protocol. (Link to ACLS)',
+    }, {
+        key: 'poorPerfusionCheck',
+        yes: 'giveIv',
+        no: 'awakeAndAlert',
+        bodyText: 'Are there signs of poor perfusion? (Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia thready pulse, mottled skin, sunken fontanelle or poor skin pinch.)',
+        // TODO | check rendering of body text
+    }, {
+        key: 'giveIV',
+        next: 'externalBleedingCheck',
+        bodyText: 'Lay the patient flat. Obtain IV access and give IV fluids. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+            // TODO | child vs adult picture
+        ],
+    }, {
+        key: 'externalBleedingCheck',
+        yes: 'controlBleeding',
+        no: 'internalBleedingCheck',
+        bodyText: 'Are there signs of external bleeding or external trauma?',
+    }, {
+        key: 'internalBleedingCheck',
+        yes: 'pelvisFractureCheck',
+        no: 'distendedNeckVeins',
+        bodyText: 'Are there signs of internal bleeding? (Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)',
+    }, {
+        key: 'distendedNeckVeins',
+        yes: 'muffledHeartSounds',
+        no: 'infectionCheck',
+        bodyText: 'Are there distended neck veins?',
+    }, {
+        key: 'muffledHeartSounds',
+        yes: 'pericardialTamponade',
+        no: 'pneumothoraxCheck',
+        bodyText: 'Are there muffled heart sounds?',
+    }, {
+        key: 'pericardialTamponade',
+        next: 'arrangeTransferCirculation',
+        bodyText: 'Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.',
+    }, {
+        key: 'controlBleeding',
+        next: 'internalBleedingCheck',
+        bodyText: 'Control bleeding. Remember to apply direct pressure to bleeding wounds. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'pelvisFractureCheck',
+        yes: 'splintPelvis',
+        no: 'arrangeTransferCirculation',
+        bodyText: 'Are there signs of pelvis fracture or open pelvis? (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'infectionCheck',
+        yes: 'antibiotics',
+        no: 'supplyFluids',
+        bodyText: 'Are there signs of infection?\n\nExamples: Fever, pus, rash, diarrhea.',
+    }, {
+        key: 'pneumothoraxCheck',
+        yes: 'emergencyNeedleDecompression',
+        no: 'arrangeTransferCirculation',
+        bodyText: 'Reassess breath sounds.\n\nAre there decreased breath sounds or tracheal deviation?',
+    }, {
+        key: 'arrangeTransferCirculation',
+        next: 'reassessCirculation',
+        bodyText: 'Arrange transfer to surgical center and refer for blood transfusion and ongoing surgical management if needed.',
+    }, {
+        key: 'supplyFluids',
+        next: 'awakeAndAlert',
+        bodyText: 'Continue to give fluids and move on to Disability.',
+    }, {
+        key: 'splintPelvis',
+        next: 'arrangeTransferCirculation',
+        bodyText: 'Split pelvis (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'reassessCirculation',
+        yes: 'awakeAndAlert',
+        no: 'pulseCirculation',
+        bodyText: 'Have signs of circulation stabilized or improved with interventions',
+    }, {
+        key: 'antibiotics',
+        next: 'reassessCirculation',
+        bodyText: 'Give antibiotics and continue IV fluid resucitation',
+    }, {
+        key: 'emergencyNeedleDecompression',
+        next: 'reassessAirwayCirculation',
+        bodyText: 'Perform needle decompression. (As per SKILLS section)',
+        image: [
+            require('./img/.jpg'),
+        ],
+    }, {
+        key: 'reassessAirwayCirculation',
+        yes: 'arrangeTransferCirculation',
+        no: 'reassessCirculation',
+        bodyText: 'Have breath sounds improved?',
+    }
+
+
+    // Disability
+        // TODO awakeAndAlert
 ];
 
 const _routeIndex = 0;
@@ -204,15 +470,3 @@ const findRoute = (routeKey) => {
 };
 
 export { findRoute }
-
-
-
-
-    //}, {
-        //key: '',
-        //yes: '',
-        //no: '',
-        //bodyText: '',
-        //image: [
-            //require('./img/01_Adultheadtiltandchinlift.jpg'),
-        //],
