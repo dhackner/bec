@@ -31,10 +31,10 @@ const routes = [
     }, {
         key: 'conscious',
         yes: 'obstructedAirway',
-        no: 'trauma',
+        no: 'traumaAirway',
         bodyText: 'Is the patient conscious?',
     }, {
-        key: 'trauma',
+        key: 'traumaAirway',
         yes: 'stabilizeCervicalSpine',
         no: 'headTiltChinLift',  // TODO | Route child to headTiltChinLiftChild
         bodyText: 'Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\n\nAre there signs of trauma?',
@@ -154,15 +154,15 @@ const routes = [
         no: 'pregnantAirway',
         bodyText: 'Is the obstruction cleared?',
     }, {
-        key: 'arrangeTransfer',
-        next: 'breathing',
+        key: 'arrangeTransferAirway',
+        next: 'breathingCheck',
         bodyText: 'Arrange for rapid transfer and continue evaluation.',
         image: [
             require('./img/Transfer.jpg'),
         ],
     }, {
         key: 'inhalationInjuryHistory',
-        yes: 'arrangeTransfer',
+        yes: 'arrangeTransferAirway',
         no: 'rashOrAnaphylaxis',
         bodyText: 'Is there a history of fire or inhalation injury?',
     }, {
@@ -172,11 +172,11 @@ const routes = [
         bodyText: 'Is there swelling, drooling or stridor?',
     }, {
         key: 'rashOrAnaphylaxis',
-        yes: 'adrenaline',
-        no: 'arrangeTransfer',
+        yes: 'adrenalineAirways',
+        no: 'arrangeTransferAirway',
         bodyText: 'Is there a rash, wheezing, or other signs of anaphylaxis?',
     }, {
-        key: 'adrenaline',
+        key: 'adrenalineAirways',
         next: 'reassessAirway',
         bodyText: 'Give intramuscular adrenaline. (As per SKILLS section)',
         image: [
@@ -186,7 +186,7 @@ const routes = [
 
     // Breathing
     {
-        key: 'breathing',
+        key: 'breathingCheck',
         yes: 'normalBreathing',
         no: 'assistBreathing',
         bodyText: 'Is the patient breathing?',
