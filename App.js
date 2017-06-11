@@ -7,7 +7,6 @@ import { insertImage, insertText, generateRouteButtons } from './RenderHelpers'
 import { findRoute } from './Routes'
 import Title from './Title'
 
-// TODO | codepush updates
 // TODO | v2 logging and reporting back of route navigation
 export default class App extends React.Component {
 
