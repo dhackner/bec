@@ -57,7 +57,7 @@ const routes = [
     }, {
         key: 'headTiltChinLiftChild',
         next: 'obstructedAirway',
-        bodyText: 'Head tilt and chin lift. (As per SKILLS section)',
+        bodyText: 'Head tilt and chin lift.',
         // TODO | Which image? Jaw thrust??
         image: [
             require('./img/03_Head-tiltandchin-liftinchildrennotrauma.jpg'),
@@ -65,7 +65,7 @@ const routes = [
     }, {
         key: 'headTiltChinLift',
         next: 'obstructedAirway',
-        bodyText: 'Head tilt and chin lift. (As per SKILLS section)',
+        bodyText: 'Head tilt and chin lift.',
         // TODO | Which image? Jaw thrust??
         image: [
             require('./img/01_Adultheadtiltandchinlift.jpg'),
@@ -78,7 +78,7 @@ const routes = [
     }, {
         key: 'airwayDevices',
         next: 'reassessAirway',
-        bodyText: 'Place a supplemental airway device (As per SKILLS section)',
+        bodyText: 'Place a supplemental airway device.',
         image: [
             require('./img/10_Nasopharyngealairwayinsertion_1.jpg'),
             require('./img/10_Nasopharyngealairwayinsertion_2.jpg'),
@@ -99,21 +99,21 @@ const routes = [
     }, {
         key: 'chestThrust',
         next: 'reassessAirway',
-        bodyText: 'Give chest thrusts. (As per SKILLS sections)',
+        bodyText: 'Give chest thrusts.',
         image: [
             require('./img/07_Chestthrustsforchokinginlatepregnancy.jpg'),
         ],
     }, {
         key: 'abdominalThrust',
         next: 'reassessAirway',
-        bodyText: 'Give abdominal thrusts. (As per SKILLS sections)',
+        bodyText: 'Give abdominal thrusts.',
         image: [
             require('./img/05_Abdominalthrustsforchokingadult.jpg'),
         ],
     }, {
         //key: 'chestThrustBackPatChild',
         //next: 'reassessAirway',
-        //bodyText: 'Give chest thrust and back pat. (As per SKILLS section)',
+        //bodyText: 'Give chest thrust and back pat.',
         //image: [
             //require('./img/08_Chestthrustsforchokingininfants.jpg'),
             //require('./img/09_Backblowsforchokingininfants.jpg'),
@@ -136,7 +136,7 @@ const routes = [
     }, {
         key: 'suction',
         next: 'airwayDevices',
-        bodyText: 'Suction secretions or blood.\n\nPlace in recovery position. (As per SKILLS section)',
+        bodyText: 'Suction secretions or blood.\n\nPlace in recovery position.',
         image: [
             require('./img/30_Recoveryposition.jpg'),
         ],
@@ -179,7 +179,7 @@ const routes = [
     }, {
         key: 'adrenalineAirways',
         next: 'reassessAirway',
-        bodyText: 'Give intramuscular adrenaline. (As per SKILLS section)',
+        bodyText: 'Give intramuscular adrenaline.',
         image: [
             require('./img/Adrenaline.jpg'),
         ],
@@ -259,7 +259,7 @@ const routes = [
     }, {
         key: 'assistBreathing',
         next: 'prepareTransferBreathing',
-        bodyText: 'Assist breathing with bag-valve-mask ventilation. (As per SKILLS section)',
+        bodyText: 'Assist breathing with bag-valve-mask ventilation.',
         image: [
             require('./img/.jpg'),
         ],
@@ -276,7 +276,7 @@ const routes = [
     }, {
         key: 'needleDecompression',
         next: 'abnormalChestWallMovement',
-        bodyText: 'Perform needle decompression of pneumothorax. (As per SKILLS section)',
+        bodyText: 'Perform needle decompression of pneumothorax.',
         image: [
             require('./img/.jpg'),
         ],
@@ -293,14 +293,14 @@ const routes = [
     }, {
         key: 'naloxone',
         next: 'reassessAirway',
-        bodyText: 'Give Naloxone if available. (As per SKILLS section)',
+        bodyText: 'Give Naloxone if available.',
         image: [
             require('./img/.jpg'),
         ],
     }, {
         key: 'adrenalineBreathing',
         next: 'wheezing',
-        bodyText: 'Give Adrenaline. (As per SKILLS section)',
+        bodyText: 'Give Adrenaline.',
         image: [
             require('./img/.jpg'),
         ],
@@ -322,7 +322,7 @@ const routes = [
     }, {
         key: 'salbutamol',
         next: 'pulseCirculation',
-        bodyText: 'Give Salbutamol (As per SKILLS section)',
+        bodyText: 'Give Salbutamol.',
         image: [
             require('./img/.jpg'),
         ],
@@ -338,7 +338,7 @@ const routes = [
     }, {
         key: 'treatSuckingChestWound',
         next: 'burnsPresent',
-        bodyText: 'Treat sucking chest wound with three-sided dressing. (As per SKILLS section)',
+        bodyText: 'Treat sucking chest wound with three-sided dressing.',
         // TODO | Really no image here?
     },
 
@@ -361,7 +361,7 @@ const routes = [
     }, {
         key: 'giveIV',
         next: 'externalBleedingCheck',
-        bodyText: 'Lay the patient flat. Obtain IV access and give IV fluids. (As per SKILLS section)',
+        bodyText: 'Lay the patient flat. Obtain IV access and give IV fluids.',
         image: [
             require('./img/.jpg'),
             // TODO | child vs adult picture
@@ -393,7 +393,7 @@ const routes = [
     }, {
         key: 'controlBleeding',
         next: 'internalBleedingCheck',
-        bodyText: 'Control bleeding. Remember to apply direct pressure to bleeding wounds. (As per SKILLS section)',
+        bodyText: 'Control bleeding. Remember to apply direct pressure to bleeding wounds.',
         image: [
             require('./img/.jpg'),
         ],
@@ -401,7 +401,7 @@ const routes = [
         key: 'pelvisFractureCheck',
         yes: 'splintPelvis',
         no: 'arrangeTransferCirculation',
-        bodyText: 'Are there signs of pelvis fracture or open pelvis? (As per SKILLS section)',
+        bodyText: 'Are there signs of pelvis fracture or open pelvis?',
         image: [
             require('./img/.jpg'),
         ],
@@ -426,7 +426,7 @@ const routes = [
     }, {
         key: 'splintPelvis',
         next: 'arrangeTransferCirculation',
-        bodyText: 'Split pelvis (As per SKILLS section)',
+        bodyText: 'Split pelvis.',
         image: [
             require('./img/.jpg'),
             require('./img/.jpg'),
@@ -443,7 +443,7 @@ const routes = [
     }, {
         key: 'emergencyNeedleDecompression',
         next: 'reassessAirwayCirculation',
-        bodyText: 'Perform needle decompression. (As per SKILLS section)',
+        bodyText: 'Perform needle decompression.',
         image: [
             require('./img/.jpg'),
         ],
