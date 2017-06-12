@@ -197,14 +197,14 @@ const routes = [
         no: 'pulseCirculation',
         bodyText: 'Is there increased work of breathing?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'giveOxygen',
         next: 'slowedBreathing',
         bodyText: 'Give oxygen for abnormal breathing.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'slowedBreathing',
@@ -212,7 +212,7 @@ const routes = [
         no: 'traumaBreathing',
         bodyText: "Is the patient's breathing slowed?",
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'traumaBreathing',
@@ -220,7 +220,7 @@ const routes = [
         no: 'anaphylaxisBreathing',
         bodyText: 'Are there signs of trauma?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'tracheaMidline',
@@ -228,7 +228,7 @@ const routes = [
         no: 'needleDecompression',
         bodyText: 'Is the trachea midline?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'crepitusCheck',
@@ -236,7 +236,7 @@ const routes = [
         no: 'decreasedBreathSounds',
         bodyText: 'Is there crepitus (cracking or popping) over the chest wall?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'decreasedBreathSounds',
@@ -244,7 +244,7 @@ const routes = [
         no: 'abnormalChestWallMovement',
         bodyText: 'Are there decreased breath sounds or hyperresonance to percussion of the chest?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'abnormalChestWallMovement',
@@ -261,11 +261,11 @@ const routes = [
         next: 'prepareTransferBreathing',
         bodyText: 'Assist breathing with bag-valve-mask ventilation.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'pinpointPupils',
-        yes: 'naloxone',
+        yes: 'naloxoneBreathing',
         no: 'assistBreathing',
         bodyText: 'Are there pinpoint pupils?',
     }, {
@@ -278,7 +278,7 @@ const routes = [
         next: 'abnormalChestWallMovement',
         bodyText: 'Perform needle decompression of pneumothorax.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'flailChestTreatment',
@@ -291,18 +291,18 @@ const routes = [
         no: 'breathingCheck',
         bodyText: 'Is breathing stable or improved?',
     }, {
-        key: 'naloxone',
+        key: 'naloxoneBreathing',
         next: 'reassessAirway',
         bodyText: 'Give Naloxone if available.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'adrenalineBreathing',
         next: 'wheezing',
         bodyText: 'Give Adrenaline.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'wheezing',
@@ -310,21 +310,21 @@ const routes = [
         no: 'pulseCirculation',
         bodyText: 'Is there wheezing?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'prepareTransferBreathing',
         next: 'reassessAirway',
         bodyText: 'Prepare for rapid handover/transfer.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'salbutamol',
         next: 'pulseCirculation',
         bodyText: 'Give Salbutamol.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'checkFollowingBreathing',
@@ -351,10 +351,10 @@ const routes = [
     }, {
         key: 'CPR',
         next: 'awakeAndAlert',
-        bodyText: 'Follow relevant CPR protocol. (Link to ACLS)',
+        bodyText: 'Follow local CPR protocol.',
     }, {
         key: 'poorPerfusionCheck',
-        yes: 'giveIv',
+        yes: 'giveIV',
         no: 'awakeAndAlert',
         bodyText: 'Are there signs of poor perfusion? (Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia thready pulse, mottled skin, sunken fontanelle or poor skin pinch.)',
         // TODO | check rendering of body text
@@ -363,7 +363,7 @@ const routes = [
         next: 'externalBleedingCheck',
         bodyText: 'Lay the patient flat. Obtain IV access and give IV fluids.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
             // TODO | child vs adult picture
         ],
     }, {
@@ -395,7 +395,7 @@ const routes = [
         next: 'internalBleedingCheck',
         bodyText: 'Control bleeding. Remember to apply direct pressure to bleeding wounds.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'pelvisFractureCheck',
@@ -403,7 +403,7 @@ const routes = [
         no: 'arrangeTransferCirculation',
         bodyText: 'Are there signs of pelvis fracture or open pelvis?',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'infectionCheck',
@@ -428,8 +428,8 @@ const routes = [
         next: 'arrangeTransferCirculation',
         bodyText: 'Split pelvis.',
         image: [
-            require('./img/.jpg'),
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'reassessCirculation',
@@ -445,18 +445,144 @@ const routes = [
         next: 'reassessAirwayCirculation',
         bodyText: 'Perform needle decompression.',
         image: [
-            require('./img/.jpg'),
+            //require('./img/.jpg'),
         ],
     }, {
         key: 'reassessAirwayCirculation',
         yes: 'arrangeTransferCirculation',
         no: 'reassessCirculation',
         bodyText: 'Have breath sounds improved?',
-    }
+    },
 
 
     // Disability
-        // TODO awakeAndAlert
+    {
+        key: 'awakeAndAlert',
+        yes: 'fullyExposed',
+        no: 'mentatingNormally',
+        bodyText: 'Is the patient awake and alert?',
+    }, {
+        key: 'mentatingNormally',
+        next: 'traumaCheck',
+        bodyText: 'Assess the AVPU or GCS level of consciousness of the patient.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'traumaCheck',
+        yes: 'immobilizeSpine',
+        no: 'recoveryPositionDisability',
+        bodyText: 'Are there signs of trauma (such as bleeding, bruising or deformity)?',
+    }, {
+        key: 'recoveryPositionDisability',
+        next: 'glucoseTesting',
+        bodyText: 'Place the patient in the recovery position.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'glucoseTesting',
+        yes: 'glucoseUnder3.5',
+        no: 'hypoclycemiaConcern',
+        bodyText: 'Is glucose testing available?',
+    }, {
+        key: 'glucoseUnder3.5',
+        yes: 'giveGlucoseDisability',
+        no: 'seizureCheck',
+        bodyText: 'Is glucose level < 3.5 mmol/L?',
+    }, {
+        key: 'seizureCheck',
+        yes: 'pregnantCheckDisability',
+        no: 'localizingSymptoms',
+        bodyText: 'Is the patient having a seizure? (Look for abnormal repetitive movements or shaking on one or both sides of the body.)',
+    }, {
+        key: 'localizingSymptoms',
+        yes: 'spinalInjuryConcern',
+        no: 'smallPupilsOrSlowBreathingCheck',
+        bodyText: 'Localizing symptoms or uneven pupils?',
+        image: [
+            //require('./img/.jpg'),
+        ],
+        // TODO | Some text about linking to symptoms teaching set?
+    }, {
+        key: 'smallPupilsOrSlowBreathingCheck',
+        yes: 'naloxoneDisability',
+        no: 'fullyExposed',
+        bodyText: 'Small (pinpoint) pupils or slow breathing?',
+    }, {
+        key: 'immobilizeCervicalSpine',
+        next: 'glucoseTesting',
+        bodyText: 'Immobilize the cervical spine.',
+    }, {
+        key: 'hypoclycemiaConcern',
+        yes: 'giveGlucoseDisability',
+        no: 'seizureCheck',
+        bodyText: 'Is there a high concern for hypoglycemia? (History of diabetes medications or similar presentation in the past?)',
+    }, {
+        key: 'giveGlucoseDisability',
+        next: 'seizureCheck',
+        bodyText: 'Give IV Glucose.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'pregnantCheckDisability',
+        yes: 'magnesiumSulfate',
+        no: 'benzodiazepine',
+        bodyText: 'Is the patient pregnant?',
+    }, {
+        key: 'spinalInjuryConcern',
+        yes: 'immobilizeSpine',
+        no: 'raiseBedHead',
+        bodyText: 'Concern for spinal injury?',
+    }, {
+        key: 'naloxoneDisability',
+        next: 'fullyExposed',
+        bodyText: 'Give Naloxone if available.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'reassessDisability',
+        yes: 'fullyExposed',
+        no: 'traumaCheck',
+        bodyText: 'Reasess the AVPU or GCS level of consciousness. Has there been any improvement?',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'magnesiumSulfate',
+        next: 'reassessDisability',
+        bodyText: 'Give magnesium sulfate.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'benzodiazepine',
+        next: 'reassessDisability',
+        bodyText: 'Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'immobilizeSpine',
+        next: 'arrangeTransferStrokeCenter',
+        bodyText: 'Immobilize cervical, thoracic or lumbar spine.',
+    }, {
+        key: 'arrangeTransferStrokeCenter',
+        next: 'reassessDisability',
+        bodyText: 'Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary. Arrange rapid transfer to a stroke facility.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'raiseBedHead',
+        next: 'arrangeTransferStrokeCenter',
+        bodyText: 'Raise head of bed 30 degrees if no concern for spinal injury.',
+    },
+
+    // Exposure
+    // TODO | fullyExposed
 ];
 
 const _routeIndex = 0;
