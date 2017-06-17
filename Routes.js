@@ -21,7 +21,7 @@ const routes = [
     // Airway
     {
         key: 'speaking',
-        yes: 'breathing',
+        yes: 'breathingCheck',
         no: 'speakingAtAll',
         bodyText: 'Is the patient speaking easily?',
     }, {
@@ -46,7 +46,7 @@ const routes = [
         bodyText: 'Suction blood or secretions.\n\nWill the patient tolerate an airway device such as an oral or nasopharyngeal airway?',
     }, {
         key: 'reassessAirway',
-        yes: 'breathing',
+        yes: 'breathingCheck',
         no: 'speaking',
         bodyText: 'Is the airway stable or improved?',
     }, {
