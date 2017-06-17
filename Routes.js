@@ -582,7 +582,132 @@ const routes = [
     },
 
     // Exposure
-    // TODO | fullyExposed
+    {
+        key: 'fullyExposed',
+        yes: 'hiddenInjuryCheck',
+        no: 'removeClothing',
+        bodyText: 'Is the patient fully exposed?',
+    }, {
+        key: 'removeClothing',
+        next: 'hiddenInjuryCheck',
+        bodyText: 'Remove all jewelry, constrictive or wet clothing. Dry Patient. Protect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'hiddenInjuryCheck',
+        yes: 'deformedExtremity',
+        no: 'normalTemeratureCheck',
+        bodyText: 'Are there any hidden injuries, rashes or lesions?',
+    }, {
+        key: 'deformedExtremity',
+        yes: 'immobilizeExtremity',
+        no: 'bleedingCheckExposure',
+        bodyText: 'Is there an injured or deformed extremity?',
+    }, {
+        key: 'bleedingCheckExposure',
+        yes: 'directPressure',
+        no: 'nonBleedingOpenWound',
+        bodyText: 'Is there bleeding?',
+    }, {
+        key: 'nonBleedingOpenWound',
+        yes: 'bandage',
+        no: 'snakeBite',
+        bodyText: 'Is there an open wound or sore?',
+    }, {
+        key: 'snakeBite',
+        yes: 'immobilizeExtremitySnake',
+        no: 'rashCheck',
+        bodyText: 'Is there a snake bite?',
+    }, {
+        key: 'immobilizeExtremitySnake',
+        next: 'arrangeTransferExposure',
+        bodyText: 'Immobilize extremity. Keep extremity below the level of the heart. Take picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'normalTemeratureCheck',
+        yes: 'considerTransfer',
+        no: 'hypothermicCheck',
+        bodyText: 'Is the patient normal temperature?',
+    }, {
+        key: 'immobilizeExtremity',
+        next: 'bleedingCheckExposure',
+        bodyText: 'Immobilize injured extremity.',
+    }, {
+        key: 'directPressure',
+        next: 'nonBleedingOpenWound',
+        bodyText: 'Apply direct pressure to the site of bleeding.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'bandage',
+        next: 'snakeBite',
+        bodyText: 'Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'rashCheck',
+        yes: 'considerEtiology',
+        no: 'normalTemeratureCheck',
+        bodyText: 'Is there a rash?',
+    }, {
+        key: 'warmPatient',
+        next: 'infectionCheckExposure',
+        bodyText: 'Warm the patient as able.',
+        // TODO | Also say "Remember to cover head in children" for child
+    }, {
+        key: 'hypothermicCheck',
+        yes: 'warmPatient',
+        no: 'hyperthermicCheck',
+        bodyText: 'Is the patient hypothermic?',
+    }, {
+        key: 'considerEtiology',
+        next: 'normalTemeratureCheck',
+        bodyText: 'Consider infectious or allergic etiology. Treat per local protocol.',
+    }, {
+        key: 'infectionCheckExposure',
+        yes: 'treatInfectionExposure',
+        no: 'considerTransfer',
+        bodyText: 'Is there evidence of infection or poisoning?',
+    }, {
+        key: 'treatInfectionExposure',
+        next: 'considerTransfer',
+        bodyText: 'Treat infection or poisoning as per local protocol.',
+    }, {
+        key: 'coolPatient',
+        next: 'infectionCheckExposure',
+        bodyText: 'Cool the patient as possible. Unbundle wrapped babies.',
+        // TODO | Child
+    }, {
+        key: 'hyperthermicCheck',
+        yes: 'coolPatient',
+        no: 'considerTransfer',
+        bodyText: 'Is the patient hyperthermic?',
+    }, {
+        key: 'arrangeTransferExposure',
+        next: 'reassessAirwayExposure',
+        bodyText: 'Plan for transfer.',
+        image: [
+            //require('./img/.jpg'),
+        ],
+    }, {
+        key: 'manageCare',
+        next: 'reassessAirwayExposure',
+        bodyText: 'Manage care as indicated by patient condition. Complete secondary survey.',  // TODO | What is this survey?
+    }, {
+        key: 'considerTransfer',
+        yes: 'arrangeTransferExposure',
+        no: 'manageCare',
+        bodyText: 'Does the patient need to be transferred to another facility based on likely diagnosis or prior answers?',
+    }, {
+        key: 'reassessAirwayExposure',
+        next: 'speaking',
+        bodyText: 'Continue to manage patient condition. Consider further evaluation and reassessment of ABCDE resuscitation.',
+    }
 ];
 
 const _routeIndex = 0;
