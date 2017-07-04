@@ -37,7 +37,7 @@ const generateRouteButtons = (route, navigator) => {
                     containerStyle={styles.buttonsInnerContainer}
                     style={styles.button}
                     title='no'
-                    accessibilityLabel='The answer to the question on the screen is no3'
+                    accessibilityLabel='The answer to the question on the screen is no'
                     onPress={() => navigator.push(findRoute(route['no']))}
                 >No</Button>
                 <Button
