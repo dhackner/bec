@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 // TODO | Christian - route/image audit
 const routes = [
     {
@@ -710,14 +708,4 @@ const routes = [
     }
 ];
 
-const _routeIndex = 0;
-const findRoute = (routeKey) => {
-    var foundRoute =  _.clone(_.find(routes, {key: routeKey}));
-    // The key field is used in the route stack and must be unique.
-    // However, loops are valid in our graph, so we instead just use an
-    // index.
-    foundRoute.key = _routeIndex++;
-    return foundRoute;
-};
-
-export { findRoute }
+export { routes }

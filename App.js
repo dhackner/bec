@@ -1,74 +1,96 @@
 import React from 'react';
-// TODO | Upgrade to react-navigation
-import { StyleSheet, ScrollView, Navigator, Text, View } from 'react-native';
-import Button from 'react-native-button';
+import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-import { insertImage, insertText, generateRouteButtons } from './RenderHelpers'
-import { findRoute } from './Routes'
-import Title from './Title'
+import { routes } from './Routes'
 
 // TODO | v2 logging and reporting back of route navigation
-export default class App extends React.Component {
 
-    render() {
+
+const imageRow = (image, index) => {
+    return <Image key={ index } style={ styles.image } source={ image } />
+};
+const insertImages = (routeInfo) => {
+    if (routeInfo['image']) {
+        return routeInfo.image.map(imageRow);
+    }
+}
+
+const insertButtons = (navigation, routeInfo) => {
+    if (routeInfo['no'] && routeInfo['yes']) {
         return (
-            <View style={styles.flexContainer}>
-                <Title>WHO Emergency Care</Title>
-                <Navigator
-                    initialRoute={findRoute('homepage')}
-                    configureScene={
-                        (route, routeStack) => Navigator.SceneConfigs.HorizontalSwipeJump
-                    }
-                    navigationBar={
-                        <Navigator.NavigationBar
-                            routeMapper={{
-                                LeftButton: (route, navigator, index, navState) =>
-                                {
-                                    var routes = navigator.getCurrentRoutes();
-                                    if (!routes || routes.length <= 1) {
-                                        return null;
-                                    } else {
-                                        return (
-                                            <Button
-                                                title='back'
-                                                accessibilityLabel='Go to previous screen'
-                                                onPress={navigator.pop}
-                                            >Back
-                                            </Button>
-                                        );
-                                    }
-                                },
-                                RightButton: (route, navigator, index, navState) =>
-                                { return null },
-                                Title: (route, navigator, index, navState) =>
-                                { return null },
-                            }}
-                        />
-                    }
-                    renderScene={(route, navigator) => {
-                        return (
-                            <View style={styles.flexContainer}>
-                                <ScrollView style={styles.scrollContainer}>
-                                    {insertText(route)}
-                                    {insertImage(route)}
-                                </ScrollView>
-                                {generateRouteButtons(route, navigator)}
-                            </View>
-                        );
-                    }}
+            <View style={ styles.buttonContainer }>
+                <Button
+                    title='no'
+                    accessibilityLabel='The answer to the question on the screen is no'
+                    onPress={ () => navigation.navigate(routeInfo.no) } title="No"
+                />
+                <Button
+                    title='yes'
+                    accessibilityLabel='The answer to the question on the screen is yes'
+                    onPress={ () => navigation.navigate(routeInfo.yes) } title="Yes"
                 />
             </View>
         );
-    };
+    } else if (routeInfo['next']) {
+        return (
+            <View style={ styles.buttonContainer }>
+                <Button
+                    title='next'
+                    accessibilityLabel='Go to next screen'
+                    onPress={ () => navigation.navigate(routeInfo.next) } title="Next"
+                />
+            </View>
+        );
+    } else {
+        return null;
+    }
 }
 
+const screenStack = routes.reduce((stack, routeInfo) => {
+    stack[routeInfo.key] = {
+        'screen': ({ navigation }) => (
+            <View style={ styles.flexContainer }>
+                <Text>{ routeInfo.bodyText }</Text>
+                <ScrollView>
+                    { insertImages(routeInfo) }
+                </ScrollView>
+                { insertButtons(navigation, routeInfo) }
+            </View>
+        ),
+    };
+    return stack;
+}, {});
+const BECNavigator = StackNavigator(screenStack, {
+    navigationOptions: {
+        title: 'WHO Emergency Care',
+        headerTintColor: '#0F7FCA',
+    },
+    initialRouteName: 'homepage',
+});
+
+export default class App extends React.Component {
+    render() {
+        return (
+            <View style={styles.flexContainer}>
+                <BECNavigator />
+            </View>
+        );
+    }
+}
+
+const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     flexContainer: {
         flex: 1,
+        backgroundColor: 'white'
     },
-    scrollContainer: {
-        flex: 1,
-        flexDirection: 'column',
-        //paddingTop: 40,
+    image: {
+        width: deviceWidth,
+        resizeMode: 'contain'
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
 });

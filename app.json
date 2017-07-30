@@ -1,6 +1,5 @@
 {
   "expo": {
-    "name": "WHO Basic Emergency Care",
-    "sdkVersion": "16.0.0"
+    "sdkVersion": "18.0.0"
   }
 }
