@@ -1,3 +1,4 @@
+// TODO running this should eventually be part of the build process
 var twineToJSON = require("twine_to_json");
 twineToJSON({
     in: "/Users/drh/Developer/bec/BEC_twine.html",
@@ -12,26 +13,51 @@ twineToJSON({
     linkFormat: null
 }).then(function(story) {
     var routes = [];
+    var requiredImages = [];
     story['passages'].forEach ( (element) => {
         var route = {
-            key: element['pid'],
-            bodyText: element['name'],
+            key: element['pid'].toString(),
+            //bodyText: element['name'],
+            bodyText: trimBody(element['text'])
         };
         if (element['links'] != undefined) {
             element['links'].forEach ( (link) => {
-                route[link['label'].trim().toLowerCase()] = link['passageId'];
+                route[link['label'].trim().toLowerCase()] = link['passageId'].toString();
             });
         }
+        // TODO | Add image array, add image to requiredImages list
 
         routes.push(route);
     });
 
-    console.log(routes);
+    routes.push({
+        key: 'homepage',
+        next: '1',
+        bodyText: 'WHO',
+        image: [
+            './img/who_crest.png',
+        ],
+    });
+    requiredImages.push('./img/who_crest.png');
 
-    // TODO write this to json - this should eventually be part of the
-    // build process
+
+
+    //console.log(routes);
+    fs = require('fs');
+    fs.writeFile('GeneratedRoutes.json', JSON.stringify(routes, null, 2), (err) => {console.log(err)});
+
+    // React cannot dynamically load static assets, so they all need to
+    // be required beforehand
+    var imageString = "const requiredImages = {\n" + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"'),\n"} ) + "};\nexport default requiredImages;";
+    fs.writeFile('GeneratedImages.js', imageString, (err) => {console.log(err)});
 
 }).catch(function(err) {
-    // ... 
+    console.log(err);
 });
 
+trimBody = (fullText) => {
+    var reducedText = fullText.split('<img')[0];
+    reducedText = reducedText.split('<%=')[0];
+    reducedText = reducedText.trim();
+    return reducedText;
+};

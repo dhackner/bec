@@ -1,0 +1,675 @@
+[
+  {
+    "key": "1",
+    "bodyText": "Is the patient speaking easily?",
+    "yes": "103",
+    "no": "76"
+  },
+  {
+    "key": "2",
+    "bodyText": "Is the patient conscious?",
+    "yes": "4",
+    "no": "78"
+  },
+  {
+    "key": "3",
+    "bodyText": "Adult = Abdominal Thrusts. In pregnant patients, give chest thrusts. (As per SKILLS sections)",
+    "next": "12"
+  },
+  {
+    "key": "4",
+    "bodyText": "Look inside the mouth.\nIs the airway obstructed?",
+    "yes": "5",
+    "no": "32"
+  },
+  {
+    "key": "5",
+    "bodyText": "Is there blood or secretions?",
+    "yes": "7",
+    "no": "80"
+  },
+  {
+    "key": "6",
+    "bodyText": "Head tilt and chin lift. (As per SKILLS section)",
+    "next": "4"
+  },
+  {
+    "key": "7",
+    "bodyText": "Suction secretions or blood.\nPlace in recovery position. (As per SKILLS section)",
+    "next": "79"
+  },
+  {
+    "key": "8",
+    "bodyText": "Stabilize cervical spine.\n\nIs there blood or secretions?",
+    "yes": "104",
+    "no": "79"
+  },
+  {
+    "key": "9",
+    "bodyText": "Is there swelling, drooling or stridor?",
+    "yes": "10",
+    "no": "89"
+  },
+  {
+    "key": "10",
+    "bodyText": "Is there a rash, wheezing, or other signs of anaphylaxis?",
+    "yes": "11",
+    "no": "105"
+  },
+  {
+    "key": "11",
+    "bodyText": "Give intramuscular adrenaline. (As per SKILLS section)",
+    "continue": "12"
+  },
+  {
+    "key": "12",
+    "bodyText": "Is the airway stable or improved?",
+    "yes": "103",
+    "no": "1"
+  },
+  {
+    "key": "13",
+    "bodyText": "Assist breathing with bag-valve-mask ventilation. (As per SKILLS section)",
+    "next": "33"
+  },
+  {
+    "key": "14",
+    "bodyText": "Is breathing stable or improved?",
+    "yes": "19",
+    "no": "103"
+  },
+  {
+    "key": "15",
+    "bodyText": "Is the trachea midline?",
+    "yes": "17",
+    "no": "16"
+  },
+  {
+    "key": "16",
+    "bodyText": "Perform needle decompression of pneumothorax. \n(As per SKILLS section)",
+    "next": "24"
+  },
+  {
+    "key": "17",
+    "bodyText": "Is there crepitus (cracking or popping) over the chest wall?",
+    "yes": "16",
+    "no": "23"
+  },
+  {
+    "key": "18",
+    "bodyText": "Are there signs of trauma?",
+    "yes": "15",
+    "no": "22"
+  },
+  {
+    "key": "19",
+    "bodyText": "Does the patient have a pulse?",
+    "yes": "34",
+    "no": "35"
+  },
+  {
+    "key": "20",
+    "bodyText": "Are there pinpoint pupils?",
+    "yes": "21",
+    "no": "13"
+  },
+  {
+    "key": "21",
+    "bodyText": "Give Naloxone if available.\n(As per SKILLS section)",
+    "next": "14"
+  },
+  {
+    "key": "22",
+    "bodyText": "Are there signs of anaphylaxis?",
+    "yes": "29",
+    "no": "30"
+  },
+  {
+    "key": "23",
+    "bodyText": "Are there decreased breath sounds or hyperresonance to percussion of the chest?",
+    "yes": "16",
+    "no": "24"
+  },
+  {
+    "key": "24",
+    "bodyText": "Is there abnormal chest wall movement which may indicate a flail chest?",
+    "yes": "25",
+    "no": "26"
+  },
+  {
+    "key": "25",
+    "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\n\nYou will need to prepare patient for transfer. (set prepare_tranfer = True)",
+    "continue": "26"
+  },
+  {
+    "key": "26",
+    "bodyText": "Is there a sucking chest wound?",
+    "yes": "27",
+    "no": "28"
+  },
+  {
+    "key": "27",
+    "bodyText": "Treat sucking chest wound with three-sided dressing. (As per SKILLS section)",
+    "continue": "28"
+  },
+  {
+    "key": "28",
+    "bodyText": "Are there circumferential chest or abdominal burns or burns restricting breathing?",
+    "continue": "102"
+  },
+  {
+    "key": "29",
+    "bodyText": "Give Adrenaline. \n(As per SKILLS section)",
+    "next": "30"
+  },
+  {
+    "key": "30",
+    "bodyText": "Is there wheezing?",
+    "yes": "31",
+    "no": "19"
+  },
+  {
+    "key": "31",
+    "bodyText": "Give Salbutamol. \n(As per SKILLS section)",
+    "next": "19"
+  },
+  {
+    "key": "32",
+    "bodyText": "Are there signs or history of choking?",
+    "yes": "3",
+    "no": "9"
+  },
+  {
+    "key": "33",
+    "bodyText": "Prepare for rapid handover/transfer.",
+    "next": "14"
+  },
+  {
+    "key": "34",
+    "bodyText": "Are there signs of poor perfusion?\n(Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia thready pulse, mottled skin, sunken fontanelle or poor skin pinch.)",
+    "yes": "36",
+    "no": "106"
+  },
+  {
+    "key": "35",
+    "bodyText": "Follow relevant CPR protocol.\n\n||Link to ACLS||",
+    "next": "36"
+  },
+  {
+    "key": "36",
+    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids. (As per SKILLS section)",
+    "next": "37"
+  },
+  {
+    "key": "37",
+    "bodyText": "Are there signs of external bleeding or external trauma?",
+    "yes": "38",
+    "no": "82"
+  },
+  {
+    "key": "38",
+    "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds. (As per SKILLS section)",
+    "next": "82"
+  },
+  {
+    "key": "39",
+    "bodyText": "Are there distended neck veins?",
+    "yes": "40",
+    "no": "41"
+  },
+  {
+    "key": "40",
+    "bodyText": "Are there muffled heart sounds?",
+    "yes": "88",
+    "no": "75"
+  },
+  {
+    "key": "41",
+    "bodyText": "Are there signs of infection?\n\nExamples: Fever, pus, rash, diarrhea.",
+    "yes": "42",
+    "no": "43"
+  },
+  {
+    "key": "42",
+    "bodyText": "Give antibiotics and continue IV fluid resucitation.",
+    "reassess circulation": "87"
+  },
+  {
+    "key": "43",
+    "bodyText": "Continue to give fluids and move on to Disability",
+    "disability": "106"
+  },
+  {
+    "key": "44",
+    "bodyText": "Refer for blood transfusion and ongoing surgical management if needed.",
+    "reassess circulation (circulation)": "87"
+  },
+  {
+    "key": "45",
+    "bodyText": "Assess the AVPU or GCS level of consciousness of the patient.",
+    "next": "90"
+  },
+  {
+    "key": "46",
+    "bodyText": "Is glucose level &lt; 3.5 mmol/L?",
+    "yes": "99",
+    "no": "47"
+  },
+  {
+    "key": "47",
+    "bodyText": "Is the patient having a seizure?\n(Look for abnormal repetitive movements or shaking on one or both sides of the body.)",
+    "yes": "94",
+    "no": "49"
+  },
+  {
+    "key": "48",
+    "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal. (As per SKILLS section)",
+    "reassess": "93"
+  },
+  {
+    "key": "49",
+    "bodyText": "Localizing symptoms or uneven pupils? (As per SKILLS section)\n<link to=\"\" localizing=\"\" symptoms=\"\" teaching=\"\" set=\"\">",
+    "yes": "96",
+    "no": "51"
+  },
+  {
+    "key": "50",
+    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary. (As per SKILLS section)",
+    "reassess": "93"
+  },
+  {
+    "key": "51",
+    "bodyText": "Small (pinpoint) pupils or slow breathing?",
+    "yes": "52",
+    "no": "73"
+  },
+  {
+    "key": "52",
+    "bodyText": "Give Naloxone if available.",
+    "move on to exposure": "73"
+  },
+  {
+    "key": "53",
+    "bodyText": "Are there any hidden injuries, rashes or lesions?",
+    "yes": "60",
+    "no": "56"
+  },
+  {
+    "key": "54",
+    "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry Patient.\nProtect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient. (As per SKILLS section)",
+    "next": "53"
+  },
+  {
+    "key": "55",
+    "bodyText": "Is there a snake bite?",
+    "yes": "57",
+    "no": "58"
+  },
+  {
+    "key": "56",
+    "bodyText": "Is the patient normal temperature?",
+    "yes": "67",
+    "no": "66"
+  },
+  {
+    "key": "57",
+    "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available. (As per SKILLS section)",
+    "prepare fo transfer": "114"
+  },
+  {
+    "key": "58",
+    "bodyText": "Is there a rash?",
+    "yes": "59",
+    "no": "56"
+  },
+  {
+    "key": "59",
+    "bodyText": "Consider infectious or allergic etiology. \nTreat per local protocol.",
+    "next": "56"
+  },
+  {
+    "key": "60",
+    "bodyText": "Is there an injured or deformed extremity?",
+    "yes": "64",
+    "no": "61"
+  },
+  {
+    "key": "61",
+    "bodyText": "Is there bleeding?",
+    "yes": "62",
+    "no": "63"
+  },
+  {
+    "key": "62",
+    "bodyText": "Apply direct pressure to the site of bleeding. (As per SKILLS section)",
+    "next": "63"
+  },
+  {
+    "key": "63",
+    "bodyText": "Is there an open wound or sore?",
+    "yes": "65",
+    "no": "55"
+  },
+  {
+    "key": "64",
+    "bodyText": "Immobilize injured extremity.",
+    "next": "61"
+  },
+  {
+    "key": "65",
+    "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization. \n(As per SKILLS section)",
+    "next": "55"
+  },
+  {
+    "key": "66",
+    "bodyText": "Is the patient hypothermic?",
+    "yes": "68",
+    "no": "69"
+  },
+  {
+    "key": "67",
+    "bodyText": "Does the patient need to be transferred to another facility based on likely diagnosis or prior answers?",
+    "yes": "114",
+    "no": "71"
+  },
+  {
+    "key": "68",
+    "bodyText": "Warm the patient as able.\nRemember to cover head in children.",
+    "next": "109"
+  },
+  {
+    "key": "69",
+    "bodyText": "Is the patient hyperthermic?",
+    "yes": "70",
+    "no": "67"
+  },
+  {
+    "key": "70",
+    "bodyText": "Cool the patient as possible.\nUnbundle wrapped babies.",
+    "next": "109"
+  },
+  {
+    "key": "71",
+    "bodyText": "Manage care as indicated by patient condition.\n\nComplete secondary survey.",
+    "reassess abcde as necessary": "72"
+  },
+  {
+    "key": "72",
+    "bodyText": "Continue to manage patient condition. \nConsider further evaluation and reassessment of ABCDE resuscitation.",
+    "reassess": "1"
+  },
+  {
+    "key": "73",
+    "bodyText": "Is the patient fully exposed?",
+    "yes": "53",
+    "no": "54"
+  },
+  {
+    "key": "74",
+    "bodyText": "Is there increased work of breathing?",
+    "yes": "100",
+    "no": "19"
+  },
+  {
+    "key": "75",
+    "bodyText": "Reassess breath sounds.\n\nAre there decreased breath sounds or tracheal deviation?",
+    "yes": "85",
+    "no": "44"
+  },
+  {
+    "key": "76",
+    "bodyText": "Can the patient speak at all?",
+    "yes": "77",
+    "no": "2"
+  },
+  {
+    "key": "77",
+    "bodyText": "Is the patient hoarse or raspy?",
+    "yes": "9",
+    "no": "4"
+  },
+  {
+    "key": "78",
+    "bodyText": "Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\n\nAre there signs of trauma?",
+    "yes": "8",
+    "no": "6"
+  },
+  {
+    "key": "79",
+    "bodyText": "Place a supplemental airway device (As per SKILLS section)",
+    "reassess": "12"
+  },
+  {
+    "key": "80",
+    "bodyText": "Is there a visible object in the airway?",
+    "yes": "81",
+    "no": "9"
+  },
+  {
+    "key": "81",
+    "bodyText": "Encourage speaking or coughing.",
+    "next": "111"
+  },
+  {
+    "key": "82",
+    "bodyText": "Are there signs of internal bleeding?\n\n(Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)",
+    "yes": "83",
+    "no": "39"
+  },
+  {
+    "key": "83",
+    "bodyText": "Are there signs of pelvis fracture or open pelvis? (As per SKILLS section)",
+    "yes": "84",
+    "no": "44"
+  },
+  {
+    "key": "84",
+    "bodyText": "Splint pelvis (As per SKILLS section)\n\nTying a sheet:",
+    "next": "44"
+  },
+  {
+    "key": "85",
+    "bodyText": "Perform needle decompression. (As per SKILLS section)",
+    "next": "86"
+  },
+  {
+    "key": "86",
+    "bodyText": "Listen for improved breath sounds.",
+    "arrange rapid transfer": "44",
+    "reassess circulation": "87"
+  },
+  {
+    "key": "87",
+    "bodyText": "Have signs of circulation stabilized or improved with interventions?",
+    "yes": "106",
+    "no": "19"
+  },
+  {
+    "key": "88",
+    "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.",
+    "arrange rapid transfer": "44"
+  },
+  {
+    "key": "89",
+    "bodyText": "Is there a history of fire or inhalation injury?",
+    "yes": "105",
+    "no": "10"
+  },
+  {
+    "key": "90",
+    "bodyText": "Are there signs of trauma (such as bleeding, bruising or deformity)?",
+    "yes": "91",
+    "no": "92"
+  },
+  {
+    "key": "91",
+    "bodyText": "Immobilize the cervical spine.",
+    "next": "98"
+  },
+  {
+    "key": "92",
+    "bodyText": "Place the patient in the recovery position. (As per SKILLS section)",
+    "next": "98"
+  },
+  {
+    "key": "93",
+    "bodyText": "Reasess the AVPU or GCS level of consciousness. (As per SKILLS section). Has there been any improvement?",
+    "yes": "73",
+    "no": "90"
+  },
+  {
+    "key": "94",
+    "bodyText": "Is the patient pregnant?",
+    "yes": "95",
+    "no": "48"
+  },
+  {
+    "key": "95",
+    "bodyText": "Give magnesium sulfate. (As per SKILLS section)",
+    "reassess": "93"
+  },
+  {
+    "key": "96",
+    "bodyText": "Concern for spinal injury?",
+    "yes": "108",
+    "no": "97"
+  },
+  {
+    "key": "97",
+    "bodyText": "Raise head of bed 30 degrees if no concern for spinal injury.",
+    "next": "50"
+  },
+  {
+    "key": "98",
+    "bodyText": "Is glucose testing available?",
+    "yes": "46",
+    "no": "107"
+  },
+  {
+    "key": "99",
+    "bodyText": "Give IV Glucose.\n(As per Skills section)",
+    "next": "47"
+  },
+  {
+    "key": "100",
+    "bodyText": "Give oxygen for abnormal breathing.",
+    "next": "101"
+  },
+  {
+    "key": "101",
+    "bodyText": "Is the patient&apos;s breathing slowed?\n\nNormal respiratory rate in children:",
+    "yes": "20",
+    "no": "18"
+  },
+  {
+    "key": "102",
+    "bodyText": "Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound",
+    "yes": "33",
+    "no": "19"
+  },
+  {
+    "key": "103",
+    "bodyText": "Is the patient breathing?",
+    "yes": "74",
+    "no": "13"
+  },
+  {
+    "key": "104",
+    "bodyText": "Suction blood or secretions.\n\nWill the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
+    "yes": "79",
+    "no": "12"
+  },
+  {
+    "key": "105",
+    "bodyText": "Arrange for rapid transfer and continue evaluation.",
+    "next": "103"
+  },
+  {
+    "key": "106",
+    "bodyText": "Is the patient awake and alert?",
+    "yes": "73",
+    "no": "45"
+  },
+  {
+    "key": "107",
+    "bodyText": "Is there a high concern for hypoglycemia? \n(History of diabetes medications or similar presentation in the past?)",
+    "yes": "99",
+    "no": "47"
+  },
+  {
+    "key": "108",
+    "bodyText": "Immobilize cervical, thoracic or lumbar spine.\n(As per Skills section)",
+    "next": "50"
+  },
+  {
+    "key": "109",
+    "bodyText": "Is there evidence of infection or poisoning?",
+    "yes": "110",
+    "no": "67"
+  },
+  {
+    "key": "110",
+    "bodyText": "Treat infection or poisoning as per local protocol.",
+    "next": "120"
+  },
+  {
+    "key": "111",
+    "bodyText": "Is the obstruction cleared?",
+    "yes": "12",
+    "no": "3"
+  },
+  {
+    "key": "112",
+    "bodyText": "Is the patient a child?",
+    "yes": "113",
+    "no": "1"
+  },
+  {
+    "key": "113",
+    "bodyText": "Double-click this passage to edit it."
+  },
+  {
+    "key": "114",
+    "bodyText": "",
+    "begin transfer process": "115"
+  },
+  {
+    "key": "115",
+    "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+    "next": "116"
+  },
+  {
+    "key": "116",
+    "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
+    "next": "117"
+  },
+  {
+    "key": "117",
+    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf &gt;20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf &gt;20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+    "next": "118"
+  },
+  {
+    "key": "118",
+    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
+    "next": "119"
+  },
+  {
+    "key": "119",
+    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient&#x2019;s initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient&#x2019;s case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient&#x2019;s condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
+    "next": "71"
+  },
+  {
+    "key": "120",
+    "bodyText": "Has the patient&apos;s condition stabilized?",
+    "yes": "67",
+    "no": "72"
+  },
+  {
+    "key": "homepage",
+    "next": "1",
+    "bodyText": "WHO",
+    "image": [
+      "./img/who_crest.png"
+    ]
+  }
+]
