@@ -21,9 +21,18 @@ twineToJSON({
             bodyText: trimBody(element['text'])
         };
         if (element['links'] != undefined) {
-            element['links'].forEach ( (link) => {
-                route[link['label'].trim().toLowerCase()] = link['passageId'].toString();
-            });
+            if (element['links'].length <= 2) {
+                element['links'].forEach ( (link) => {
+                    // Standardize all links to yes/no/next
+                    var label = link['label'].trim().toLowerCase();
+                    if (label != 'yes' && label != 'no') {
+                        label = 'next';
+                    }
+                    route[label] = link['passageId'].toString();
+                });
+            } else {
+                throw 'Invalid number of links'
+            }
         }
         // TODO | Add image array, add image to requiredImages list
 

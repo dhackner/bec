@@ -59,7 +59,7 @@
   {
     "key": "11",
     "bodyText": "Give intramuscular adrenaline. (As per SKILLS section)",
-    "continue": "12"
+    "next": "12"
   },
   {
     "key": "12",
@@ -139,7 +139,7 @@
   {
     "key": "25",
     "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\n\nYou will need to prepare patient for transfer. (set prepare_tranfer = True)",
-    "continue": "26"
+    "next": "26"
   },
   {
     "key": "26",
@@ -150,12 +150,12 @@
   {
     "key": "27",
     "bodyText": "Treat sucking chest wound with three-sided dressing. (As per SKILLS section)",
-    "continue": "28"
+    "next": "28"
   },
   {
     "key": "28",
     "bodyText": "Are there circumferential chest or abdominal burns or burns restricting breathing?",
-    "continue": "102"
+    "next": "102"
   },
   {
     "key": "29",
@@ -232,17 +232,17 @@
   {
     "key": "42",
     "bodyText": "Give antibiotics and continue IV fluid resucitation.",
-    "reassess circulation": "87"
+    "next": "87"
   },
   {
     "key": "43",
     "bodyText": "Continue to give fluids and move on to Disability",
-    "disability": "106"
+    "next": "106"
   },
   {
     "key": "44",
     "bodyText": "Refer for blood transfusion and ongoing surgical management if needed.",
-    "reassess circulation (circulation)": "87"
+    "next": "87"
   },
   {
     "key": "45",
@@ -264,7 +264,7 @@
   {
     "key": "48",
     "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal. (As per SKILLS section)",
-    "reassess": "93"
+    "next": "93"
   },
   {
     "key": "49",
@@ -275,7 +275,7 @@
   {
     "key": "50",
     "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary. (As per SKILLS section)",
-    "reassess": "93"
+    "next": "93"
   },
   {
     "key": "51",
@@ -286,7 +286,7 @@
   {
     "key": "52",
     "bodyText": "Give Naloxone if available.",
-    "move on to exposure": "73"
+    "next": "73"
   },
   {
     "key": "53",
@@ -314,7 +314,7 @@
   {
     "key": "57",
     "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available. (As per SKILLS section)",
-    "prepare fo transfer": "114"
+    "next": "114"
   },
   {
     "key": "58",
@@ -391,12 +391,12 @@
   {
     "key": "71",
     "bodyText": "Manage care as indicated by patient condition.\n\nComplete secondary survey.",
-    "reassess abcde as necessary": "72"
+    "next": "72"
   },
   {
     "key": "72",
     "bodyText": "Continue to manage patient condition. \nConsider further evaluation and reassessment of ABCDE resuscitation.",
-    "reassess": "1"
+    "next": "1"
   },
   {
     "key": "73",
@@ -437,7 +437,7 @@
   {
     "key": "79",
     "bodyText": "Place a supplemental airway device (As per SKILLS section)",
-    "reassess": "12"
+    "next": "12"
   },
   {
     "key": "80",
@@ -475,8 +475,7 @@
   {
     "key": "86",
     "bodyText": "Listen for improved breath sounds.",
-    "arrange rapid transfer": "44",
-    "reassess circulation": "87"
+    "next": "87"
   },
   {
     "key": "87",
@@ -487,7 +486,7 @@
   {
     "key": "88",
     "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.",
-    "arrange rapid transfer": "44"
+    "next": "44"
   },
   {
     "key": "89",
@@ -526,7 +525,7 @@
   {
     "key": "95",
     "bodyText": "Give magnesium sulfate. (As per SKILLS section)",
-    "reassess": "93"
+    "next": "93"
   },
   {
     "key": "96",
@@ -631,7 +630,7 @@
   {
     "key": "114",
     "bodyText": "",
-    "begin transfer process": "115"
+    "next": "115"
   },
   {
     "key": "115",
