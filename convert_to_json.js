@@ -18,7 +18,7 @@ twineToJSON({
         var route = {
             key: element['pid'].toString(),
             //bodyText: element['name'],
-            bodyText: trimBody(element['text'])
+            bodyText: textBeforeImageAndLinks(element['text'])
         };
         if (element['links'] != undefined) {
             if (element['links'].length <= 2) {
@@ -53,18 +53,19 @@ twineToJSON({
 
     //console.log(routes);
     fs = require('fs');
-    fs.writeFile('GeneratedRoutes.json', JSON.stringify(routes, null, 2), (err) => {console.log(err)});
+    fs.writeFile('GeneratedRoutes.json', JSON.stringify(routes, null, 2), (err) => {if (err) {console.log(err)}});
 
     // React cannot dynamically load static assets, so they all need to
     // be required beforehand
     var imageString = "const requiredImages = {\n" + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"'),\n"} ) + "};\nexport default requiredImages;";
-    fs.writeFile('GeneratedImages.js', imageString, (err) => {console.log(err)});
+    fs.writeFile('GeneratedImages.js', imageString, (err) => {if (err) {console.log(err)}});
+    console.log('done');
 
 }).catch(function(err) {
     console.log(err);
 });
 
-trimBody = (fullText) => {
+textBeforeImageAndLinks = (fullText) => {
     var reducedText = fullText.split('<img')[0];
     reducedText = reducedText.split('<%=')[0];
     reducedText = reducedText.trim();
