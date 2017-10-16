@@ -541,7 +541,7 @@
   },
   {
     "key": "84",
-    "bodyText": "Splint pelvis\n\nTying a sheet:\n\n\nOr using a sheet and clamps:",
+    "bodyText": "Splint pelvis\n\nTying a sheet or using a sheet and clamps:",
     "image": [
       "./img/01_Adultheadtiltandchinlift.jpg",
       "./img/01_Adultheadtiltandchinlift.jpg"
@@ -714,7 +714,7 @@
   {
     "key": "110",
     "bodyText": "Treat infection or poisoning as per local protocol.",
-    "next": "120"
+    "next": "119"
   },
   {
     "key": "111",
@@ -734,36 +734,31 @@
   },
   {
     "key": "114",
-    "bodyText": "",
+    "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
     "next": "115"
   },
   {
     "key": "115",
-    "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+    "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
     "next": "116"
   },
   {
     "key": "116",
-    "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
+    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf &gt;20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf &gt;20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
     "next": "117"
   },
   {
     "key": "117",
-    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf &gt;20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf &gt;20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
     "next": "118"
   },
   {
     "key": "118",
-    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
-    "next": "119"
-  },
-  {
-    "key": "119",
     "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient&#x2019;s initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient&#x2019;s case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient&#x2019;s condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
     "next": "71"
   },
   {
-    "key": "120",
+    "key": "119",
     "bodyText": "Has the patient&apos;s condition stabilized?",
     "yes": "67",
     "no": "72"
