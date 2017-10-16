@@ -13,7 +13,11 @@
   },
   {
     "key": "3",
-    "bodyText": "Adult = Abdominal Thrusts. In pregnant patients, give chest thrusts. (As per SKILLS sections)",
+    "bodyText": "Adult = Abdominal Thrusts. In pregnant patients, give chest thrusts.\n\n\nChild = Chest thrust and back pat.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "12"
   },
   {
@@ -30,12 +34,19 @@
   },
   {
     "key": "6",
-    "bodyText": "Head tilt and chin lift. (As per SKILLS section)",
+    "bodyText": "Head tilt and chin lift.\n\n \n\nAdult:\n\n\nChild:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "4"
   },
   {
     "key": "7",
-    "bodyText": "Suction secretions or blood.\nPlace in recovery position. (As per SKILLS section)",
+    "bodyText": "Suction secretions or blood.\nPlace in recovery position.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "79"
   },
   {
@@ -58,7 +69,10 @@
   },
   {
     "key": "11",
-    "bodyText": "Give intramuscular adrenaline. (As per SKILLS section)",
+    "bodyText": "Give intramuscular adrenaline.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "12"
   },
   {
@@ -69,7 +83,10 @@
   },
   {
     "key": "13",
-    "bodyText": "Assist breathing with bag-valve-mask ventilation. (As per SKILLS section)",
+    "bodyText": "Assist breathing with bag-valve-mask ventilation.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "33"
   },
   {
@@ -86,7 +103,10 @@
   },
   {
     "key": "16",
-    "bodyText": "Perform needle decompression of pneumothorax. \n(As per SKILLS section)",
+    "bodyText": "Perform needle decompression of pneumothorax.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "24"
   },
   {
@@ -115,7 +135,10 @@
   },
   {
     "key": "21",
-    "bodyText": "Give Naloxone if available.\n(As per SKILLS section)",
+    "bodyText": "Give Naloxone if available.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "14"
   },
   {
@@ -149,7 +172,7 @@
   },
   {
     "key": "27",
-    "bodyText": "Treat sucking chest wound with three-sided dressing. (As per SKILLS section)",
+    "bodyText": "Treat sucking chest wound with three-sided dressing.",
     "next": "28"
   },
   {
@@ -159,7 +182,10 @@
   },
   {
     "key": "29",
-    "bodyText": "Give Adrenaline. \n(As per SKILLS section)",
+    "bodyText": "Give Adrenaline.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "30"
   },
   {
@@ -170,7 +196,10 @@
   },
   {
     "key": "31",
-    "bodyText": "Give Salbutamol. \n(As per SKILLS section)",
+    "bodyText": "Give Salbutamol.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "19"
   },
   {
@@ -182,6 +211,9 @@
   {
     "key": "33",
     "bodyText": "Prepare for rapid handover/transfer.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "14"
   },
   {
@@ -197,7 +229,11 @@
   },
   {
     "key": "36",
-    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids. (As per SKILLS section)",
+    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids.\n\n\n\nAdult:\n\n\nPediatric:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "37"
   },
   {
@@ -208,7 +244,10 @@
   },
   {
     "key": "38",
-    "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds. (As per SKILLS section)",
+    "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "82"
   },
   {
@@ -247,6 +286,9 @@
   {
     "key": "45",
     "bodyText": "Assess the AVPU or GCS level of consciousness of the patient.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "90"
   },
   {
@@ -263,18 +305,27 @@
   },
   {
     "key": "48",
-    "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal. (As per SKILLS section)",
+    "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "93"
   },
   {
     "key": "49",
-    "bodyText": "Localizing symptoms or uneven pupils? (As per SKILLS section)\n<link to=\"\" localizing=\"\" symptoms=\"\" teaching=\"\" set=\"\">",
+    "bodyText": "Localizing symptoms or uneven pupils?\nlink to localizing symptoms teaching set",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "yes": "96",
     "no": "51"
   },
   {
     "key": "50",
-    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary. (As per SKILLS section)",
+    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\n\n\n\nArrange rapid transfer to a stroke facility.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "93"
   },
   {
@@ -286,6 +337,9 @@
   {
     "key": "52",
     "bodyText": "Give Naloxone if available.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "73"
   },
   {
@@ -296,7 +350,10 @@
   },
   {
     "key": "54",
-    "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry Patient.\nProtect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient. (As per SKILLS section)",
+    "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry Patient.\nProtect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "53"
   },
   {
@@ -313,7 +370,10 @@
   },
   {
     "key": "57",
-    "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available. (As per SKILLS section)",
+    "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "114"
   },
   {
@@ -341,7 +401,10 @@
   },
   {
     "key": "62",
-    "bodyText": "Apply direct pressure to the site of bleeding. (As per SKILLS section)",
+    "bodyText": "Apply direct pressure to the site of bleeding.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "63"
   },
   {
@@ -357,7 +420,10 @@
   },
   {
     "key": "65",
-    "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization. \n(As per SKILLS section)",
+    "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "55"
   },
   {
@@ -406,7 +472,11 @@
   },
   {
     "key": "74",
-    "bodyText": "Is there increased work of breathing?",
+    "bodyText": "Is there increased work of breathing?\n\nSigns of labored breathing\nChild:\n\n\nAdult:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "yes": "100",
     "no": "19"
   },
@@ -436,7 +506,11 @@
   },
   {
     "key": "79",
-    "bodyText": "Place a supplemental airway device (As per SKILLS section)",
+    "bodyText": "Place a supplemental airway device\n\n \n\nNasopharyngeal:\n\n\nOropharyngeal:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "12"
   },
   {
@@ -458,18 +532,28 @@
   },
   {
     "key": "83",
-    "bodyText": "Are there signs of pelvis fracture or open pelvis? (As per SKILLS section)",
+    "bodyText": "Are there signs of pelvis fracture or open pelvis?",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "yes": "84",
     "no": "44"
   },
   {
     "key": "84",
-    "bodyText": "Splint pelvis (As per SKILLS section)\n\nTying a sheet:",
+    "bodyText": "Splint pelvis\n\nTying a sheet:\n\n\nOr using a sheet and clamps:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg",
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "44"
   },
   {
     "key": "85",
-    "bodyText": "Perform needle decompression. (As per SKILLS section)",
+    "bodyText": "Perform needle decompression.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "86"
   },
   {
@@ -507,12 +591,18 @@
   },
   {
     "key": "92",
-    "bodyText": "Place the patient in the recovery position. (As per SKILLS section)",
+    "bodyText": "Place the patient in the recovery position.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "98"
   },
   {
     "key": "93",
-    "bodyText": "Reasess the AVPU or GCS level of consciousness. (As per SKILLS section). Has there been any improvement?",
+    "bodyText": "Reasess the AVPU or GCS level of consciousness.. Has there been any improvement?",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "yes": "73",
     "no": "90"
   },
@@ -524,7 +614,10 @@
   },
   {
     "key": "95",
-    "bodyText": "Give magnesium sulfate. (As per SKILLS section)",
+    "bodyText": "Give magnesium sulfate.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "93"
   },
   {
@@ -546,17 +639,26 @@
   },
   {
     "key": "99",
-    "bodyText": "Give IV Glucose.\n(As per Skills section)",
+    "bodyText": "Give IV Glucose.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "47"
   },
   {
     "key": "100",
     "bodyText": "Give oxygen for abnormal breathing.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "101"
   },
   {
     "key": "101",
     "bodyText": "Is the patient&apos;s breathing slowed?\n\nNormal respiratory rate in children:",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "yes": "20",
     "no": "18"
   },
@@ -581,6 +683,9 @@
   {
     "key": "105",
     "bodyText": "Arrange for rapid transfer and continue evaluation.",
+    "image": [
+      "./img/01_Adultheadtiltandchinlift.jpg"
+    ],
     "next": "103"
   },
   {
@@ -597,7 +702,7 @@
   },
   {
     "key": "108",
-    "bodyText": "Immobilize cervical, thoracic or lumbar spine.\n(As per Skills section)",
+    "bodyText": "Immobilize cervical, thoracic or lumbar spine.",
     "next": "50"
   },
   {
@@ -666,7 +771,7 @@
   {
     "key": "homepage",
     "next": "1",
-    "bodyText": "WHO",
+    "bodyText": "",
     "image": [
       "./img/who_crest.png"
     ]

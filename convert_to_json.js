@@ -10,16 +10,22 @@ twineToJSON({
     ignorePassages: [],
     transformPassages: [],
     customTags: [],
-    linkFormat: null
+    linkFormat: (link) => {return '';}, // Strip out links from passage body text
 }).then(function(story) {
     var routes = [];
     var requiredImages = [];
     story['passages'].forEach ( (element) => {
         var route = {
             key: element['pid'].toString(),
-            //bodyText: element['name'],
-            bodyText: textBeforeImageAndLinks(element['text'])
         };
+        var rx = /<img[^>]+src="?([^"\s]+)"?\s*\/>/g;
+        var matches = [];
+        route.bodyText = element['text'].replace(rx, function(m, p1){ matches.push(p1); return ''; }).trim();
+        if (matches.length > 0) {
+            route.image = [];
+            matches.forEach( (element) => { route.image.push(element); requiredImages.push(element);});
+        }
+
         if (element['links'] != undefined) {
             if (element['links'].length <= 2) {
                 element['links'].forEach ( (link) => {
@@ -42,7 +48,7 @@ twineToJSON({
     routes.push({
         key: 'homepage',
         next: '1',
-        bodyText: 'WHO',
+        bodyText: '',
         image: [
             './img/who_crest.png',
         ],
@@ -57,17 +63,10 @@ twineToJSON({
 
     // React cannot dynamically load static assets, so they all need to
     // be required beforehand
-    var imageString = "const requiredImages = {\n" + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"'),\n"} ) + "};\nexport default requiredImages;";
+    var imageString = "const requiredImages = {\n" + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"')\n"} ) + "};\nexport default requiredImages;";
     fs.writeFile('GeneratedImages.js', imageString, (err) => {if (err) {console.log(err)}});
     console.log('done');
 
 }).catch(function(err) {
     console.log(err);
 });
-
-textBeforeImageAndLinks = (fullText) => {
-    var reducedText = fullText.split('<img')[0];
-    reducedText = reducedText.split('<%=')[0];
-    reducedText = reducedText.trim();
-    return reducedText;
-};
