@@ -2,13 +2,17 @@ import React from 'react';
 import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import { routes } from './Routes'
+import routes from './GeneratedRoutes.json';
+import requiredImages from './GeneratedImages.js';
 
 // TODO | v2 logging and reporting back of route navigation
+// TODO | v3 parallel interventions (start preparing for transfer while
+// doing XYZ) or maybe have like a global 'needs transfer' banner on the
+// top
 
 
 const imageRow = (image, index) => {
-    return <Image key={ index } style={ styles.image } source={ image } />
+    return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />
 };
 const insertImages = (routeInfo) => {
     if (routeInfo['image']) {
@@ -51,7 +55,7 @@ const screenStack = routes.reduce((stack, routeInfo) => {
     stack[routeInfo.key] = {
         'screen': ({ navigation }) => (
             <View style={ styles.flexContainer }>
-                <Text>{ routeInfo.bodyText }</Text>
+                <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
                 <ScrollView>
                     { insertImages(routeInfo) }
                 </ScrollView>
@@ -81,6 +85,9 @@ export default class App extends React.Component {
 
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
+    bodyText: {
+        fontSize: 20
+    },
     flexContainer: {
         flex: 1,
         backgroundColor: 'white'
