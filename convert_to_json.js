@@ -18,9 +18,14 @@ twineToJSON({
         var route = {
             key: element['pid'].toString(),
         };
-        var rx = /<img[^>]+src="?([^"\s]+)"?\s*\/>/g;
+        var imgtag_rx = /<img[^>]+src="?([^"\s]+)"?\s*\/>/g;
         var matches = [];
-        route.bodyText = element['text'].replace(rx, function(m, p1){ matches.push(p1); return ''; }).trim();
+        route.bodyText = element['text']
+        .replace(imgtag_rx, function(m, p1){ matches.push(p1); return ''; })
+        .replace(/&apos;/g, "'")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .trim();
         if (matches.length > 0) {
             route.image = [];
             matches.forEach( (element) => { route.image.push(element); requiredImages.push(element);});

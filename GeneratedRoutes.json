@@ -293,7 +293,7 @@
   },
   {
     "key": "46",
-    "bodyText": "Is glucose level &lt; 3.5 mmol/L?",
+    "bodyText": "Is glucose level < 3.5 mmol/L?",
     "yes": "99",
     "no": "47"
   },
@@ -655,7 +655,7 @@
   },
   {
     "key": "101",
-    "bodyText": "Is the patient&apos;s breathing slowed?\n\nNormal respiratory rate in children:",
+    "bodyText": "Is the patient's breathing slowed?\n\nNormal respiratory rate in children:",
     "image": [
       "./img/01_Adultheadtiltandchinlift.jpg"
     ],
@@ -744,7 +744,7 @@
   },
   {
     "key": "116",
-    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf &gt;20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf &gt;20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
     "next": "117"
   },
   {
@@ -754,12 +754,12 @@
   },
   {
     "key": "118",
-    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient&#x2019;s initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient&#x2019;s case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient&#x2019;s condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
+    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
     "next": "71"
   },
   {
     "key": "119",
-    "bodyText": "Has the patient&apos;s condition stabilized?",
+    "bodyText": "Has the patient's condition stabilized?",
     "yes": "67",
     "no": "72"
   },
