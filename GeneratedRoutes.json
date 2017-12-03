@@ -13,16 +13,18 @@
   },
   {
     "key": "3",
-    "bodyText": "Adult = Abdominal Thrusts. In pregnant patients, give chest thrusts.\n\n\nChild = Chest thrust and back pat.",
+    "bodyText": "Adult = Abdominal Thrusts.\r\n\r\nIn pregnant patients, give chest thrusts.\r\n\r\n\r\nChild = Chest thrust and back pat.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/05_Abdominalthrustsforchokingadult.jpg",
+      "./img/07_Chestthrustsforchokinginlatepregnancy.jpg",
+      "./img/08_Chestthrustsforchokingininfants.jpg",
+      "./img/09_Backblowsforchokingininfants.jpg"
     ],
     "next": "12"
   },
   {
     "key": "4",
-    "bodyText": "Look inside the mouth.\nIs the airway obstructed?",
+    "bodyText": "Look inside the mouth.\r\nIs the airway obstructed?",
     "yes": "5",
     "no": "32"
   },
@@ -34,24 +36,24 @@
   },
   {
     "key": "6",
-    "bodyText": "Head tilt and chin lift.\n\n \n\nAdult:\n\n\nChild:",
+    "bodyText": "Head tilt and chin lift.\r\n\r\n \r\n\r\nAdult:\r\n\r\n\r\nChild:",
     "image": [
       "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/03_Head-tiltandchin-liftinchildrennotrauma.jpg"
     ],
     "next": "4"
   },
   {
     "key": "7",
-    "bodyText": "Suction secretions or blood.\nPlace in recovery position.",
+    "bodyText": "Suction secretions or blood.\r\nPlace in recovery position.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/30_Recoveryposition.jpg"
     ],
     "next": "79"
   },
   {
     "key": "8",
-    "bodyText": "Stabilize cervical spine.\n\nIs there blood or secretions?",
+    "bodyText": "Stabilize cervical spine.\r\n\r\nIs there blood or secretions?",
     "yes": "104",
     "no": "79"
   },
@@ -71,7 +73,7 @@
     "key": "11",
     "bodyText": "Give intramuscular adrenaline.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Adrenaline.jpg"
     ],
     "next": "12"
   },
@@ -83,9 +85,11 @@
   },
   {
     "key": "13",
-    "bodyText": "Assist breathing with bag-valve-mask ventilation.",
+    "bodyText": "Assist breathing with bag-valve-mask ventilation.\r\n\r\nAdult:\r\n\r\n\r\nChild:",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/15_BVM-Oneprovider.jpg",
+      "./img/16_BVM-Twoproviders.jpg",
+      "./img/17_BVM-Child.jpg"
     ],
     "next": "33"
   },
@@ -105,7 +109,7 @@
     "key": "16",
     "bodyText": "Perform needle decompression of pneumothorax.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/18_Needledecompression.jpg"
     ],
     "next": "24"
   },
@@ -137,7 +141,7 @@
     "key": "21",
     "bodyText": "Give Naloxone if available.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Naloxone.jpg"
     ],
     "next": "14"
   },
@@ -161,7 +165,7 @@
   },
   {
     "key": "25",
-    "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\n\nYou will need to prepare patient for transfer. (set prepare_tranfer = True)",
+    "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\r\n\r\nYou will need to prepare patient for transfer. (set prepare_tranfer = True)",
     "next": "26"
   },
   {
@@ -184,7 +188,7 @@
     "key": "29",
     "bodyText": "Give Adrenaline.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Adrenaline.jpg"
     ],
     "next": "30"
   },
@@ -198,7 +202,7 @@
     "key": "31",
     "bodyText": "Give Salbutamol.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Salbutamol.jpg"
     ],
     "next": "19"
   },
@@ -210,29 +214,31 @@
   },
   {
     "key": "33",
-    "bodyText": "Prepare for rapid handover/transfer.",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
     "next": "14"
   },
   {
     "key": "34",
-    "bodyText": "Are there signs of poor perfusion?\n(Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia thready pulse, mottled skin, sunken fontanelle or poor skin pinch.)",
+    "bodyText": "Are there signs of poor perfusion?\r\n(Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia thready pulse, mottled skin, sunken fontanelle or poor skin pinch.)\r\n\r\nChild:",
+    "image": [
+      "./img/36_Flatfontanelle.jpg",
+      "./img/40_Abnormalskinpinchinachild.jpg"
+    ],
     "yes": "36",
     "no": "106"
   },
   {
     "key": "35",
-    "bodyText": "Follow relevant CPR protocol.\n\n||Link to ACLS||",
+    "bodyText": "Follow relevant CPR protocol.\r\n\r\n||Link to ACLS||",
     "next": "36"
   },
   {
     "key": "36",
-    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids.\n\n\n\nAdult:\n\n\nPediatric:",
+    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids.\r\n\r\n\r\n\r\nAdult:\r\n\r\n\r\nPediatric:",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/21_IVinantecubitalfossa.jpg",
+      "./img/24_InsertingIVinasmallchildshand.jpg",
+      "./img/25_SecuringanIVinachild.jpg"
     ],
     "next": "37"
   },
@@ -246,7 +252,7 @@
     "key": "38",
     "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/20_Applyingdirectpressuretoawound.jpg"
     ],
     "next": "82"
   },
@@ -264,7 +270,7 @@
   },
   {
     "key": "41",
-    "bodyText": "Are there signs of infection?\n\nExamples: Fever, pus, rash, diarrhea.",
+    "bodyText": "Are there signs of infection?\r\n\r\nExamples: Fever, pus, rash, diarrhea.",
     "yes": "42",
     "no": "43"
   },
@@ -280,15 +286,12 @@
   },
   {
     "key": "44",
-    "bodyText": "Refer for blood transfusion and ongoing surgical management if needed.",
+    "bodyText": "Refer for blood transfusion and ongoing surgical management if needed after completing evaluation.",
     "next": "87"
   },
   {
     "key": "45",
     "bodyText": "Assess the AVPU or GCS level of consciousness of the patient.",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
     "next": "90"
   },
   {
@@ -299,7 +302,7 @@
   },
   {
     "key": "47",
-    "bodyText": "Is the patient having a seizure?\n(Look for abnormal repetitive movements or shaking on one or both sides of the body.)",
+    "bodyText": "Is the patient having a seizure?\r\n(Look for abnormal repetitive movements or shaking on one or both sides of the body.)",
     "yes": "94",
     "no": "49"
   },
@@ -307,13 +310,13 @@
     "key": "48",
     "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Diazepam.jpg"
     ],
     "next": "93"
   },
   {
     "key": "49",
-    "bodyText": "Localizing symptoms or uneven pupils?\nlink to localizing symptoms teaching set",
+    "bodyText": "Localizing symptoms or uneven pupils?\r\nlink to localizing symptoms teaching set",
     "image": [
       "./img/01_Adultheadtiltandchinlift.jpg"
     ],
@@ -322,10 +325,7 @@
   },
   {
     "key": "50",
-    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\n\n\n\nArrange rapid transfer to a stroke facility.",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\r\n\r\nArrange rapid transfer to a stroke facility after completing evaluation.",
     "next": "93"
   },
   {
@@ -338,7 +338,7 @@
     "key": "52",
     "bodyText": "Give Naloxone if available.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Naloxone.jpg"
     ],
     "next": "73"
   },
@@ -350,9 +350,9 @@
   },
   {
     "key": "54",
-    "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry Patient.\nProtect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient.",
+    "bodyText": "Remove all jewelry, constrictive or wet clothing.\r\nDry Patient.\r\nProtect modesty.\r\n\r\nIf the patient requires spinal precautions, use log roll technique to move patient.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/log_roll.jpg"
     ],
     "next": "53"
   },
@@ -370,9 +370,9 @@
   },
   {
     "key": "57",
-    "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake picture of snake if possible and send it with the patient.\n\nGive tetanus vaccine if required and available.",
+    "bodyText": "Immobilize extremity.\r\nKeep extremity below the level of the heart.\r\nTake picture of snake if possible and send it with the patient.\r\n\r\nGive tetanus vaccine if required and available.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Tetanus.jpg"
     ],
     "next": "114"
   },
@@ -384,7 +384,7 @@
   },
   {
     "key": "59",
-    "bodyText": "Consider infectious or allergic etiology. \nTreat per local protocol.",
+    "bodyText": "Consider infectious or allergic etiology. \r\nTreat per local protocol.",
     "next": "56"
   },
   {
@@ -403,7 +403,7 @@
     "key": "62",
     "bodyText": "Apply direct pressure to the site of bleeding.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/20_Applyingdirectpressuretoawound.jpg"
     ],
     "next": "63"
   },
@@ -420,9 +420,9 @@
   },
   {
     "key": "65",
-    "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
+    "bodyText": "Dress wound with bandage.\r\n\r\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Tetanus.jpg"
     ],
     "next": "55"
   },
@@ -440,7 +440,7 @@
   },
   {
     "key": "68",
-    "bodyText": "Warm the patient as able.\nRemember to cover head in children.",
+    "bodyText": "Warm the patient as able.\r\nRemember to cover head in children.",
     "next": "109"
   },
   {
@@ -451,17 +451,17 @@
   },
   {
     "key": "70",
-    "bodyText": "Cool the patient as possible.\nUnbundle wrapped babies.",
+    "bodyText": "Cool the patient as possible.\r\nUnbundle wrapped babies.",
     "next": "109"
   },
   {
     "key": "71",
-    "bodyText": "Manage care as indicated by patient condition.\n\nComplete secondary survey.",
+    "bodyText": "Manage care as indicated by patient condition.\r\n\r\nComplete secondary survey.",
     "next": "72"
   },
   {
     "key": "72",
-    "bodyText": "Continue to manage patient condition. \nConsider further evaluation and reassessment of ABCDE resuscitation.",
+    "bodyText": "Continue to manage patient condition. \r\nConsider further evaluation and reassessment of ABCDE resuscitation.",
     "next": "1"
   },
   {
@@ -472,17 +472,17 @@
   },
   {
     "key": "74",
-    "bodyText": "Is there increased work of breathing?\n\nSigns of labored breathing\nChild:\n\n\nAdult:",
+    "bodyText": "Is there increased work of breathing?\r\n\r\nSigns of labored breathing\r\nAdult:\r\n\r\nChild:",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/38_Tripodposition.jpg",
+      "./img/39_Chestindrawing.jpg"
     ],
     "yes": "100",
     "no": "19"
   },
   {
     "key": "75",
-    "bodyText": "Reassess breath sounds.\n\nAre there decreased breath sounds or tracheal deviation?",
+    "bodyText": "Reassess breath sounds.\r\n\r\nAre there decreased breath sounds or tracheal deviation?",
     "yes": "85",
     "no": "44"
   },
@@ -500,16 +500,16 @@
   },
   {
     "key": "78",
-    "bodyText": "Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\n\nAre there signs of trauma?",
+    "bodyText": "Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\r\n\r\nAre there signs of trauma?",
     "yes": "8",
     "no": "6"
   },
   {
     "key": "79",
-    "bodyText": "Place a supplemental airway device\n\n \n\nNasopharyngeal:\n\n\nOropharyngeal:",
+    "bodyText": "Place a supplemental airway device\r\n\r\n \r\n\r\nNasopharyngeal:\r\n\r\n\r\nOropharyngeal:",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/10_Nasopharyngealairwayinsertion_master.jpg",
+      "./img/11_Oropharyngealairwayinsertion_master.jpg"
     ],
     "next": "12"
   },
@@ -526,7 +526,7 @@
   },
   {
     "key": "82",
-    "bodyText": "Are there signs of internal bleeding?\n\n(Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)",
+    "bodyText": "Are there signs of internal bleeding?\r\n\r\n(Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)",
     "yes": "83",
     "no": "39"
   },
@@ -534,17 +534,16 @@
     "key": "83",
     "bodyText": "Are there signs of pelvis fracture or open pelvis?",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/32_Openpelvicfracture.jpg"
     ],
     "yes": "84",
     "no": "44"
   },
   {
     "key": "84",
-    "bodyText": "Splint pelvis\n\nTying a sheet or using a sheet and clamps:",
+    "bodyText": "Splint pelvis",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/33_Pelvicimmobilization.jpg"
     ],
     "next": "44"
   },
@@ -552,7 +551,7 @@
     "key": "85",
     "bodyText": "Perform needle decompression.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/18_Needledecompression.jpg"
     ],
     "next": "86"
   },
@@ -569,7 +568,7 @@
   },
   {
     "key": "88",
-    "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.",
+    "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\r\n\r\nContinue IV fluids to maintain perfusion.",
     "next": "44"
   },
   {
@@ -587,22 +586,22 @@
   {
     "key": "91",
     "bodyText": "Immobilize the cervical spine.",
+    "image": [
+      "./img/29_Spinalimmobilizationformovingapatient.jpg"
+    ],
     "next": "98"
   },
   {
     "key": "92",
     "bodyText": "Place the patient in the recovery position.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/30_Recoveryposition.jpg"
     ],
     "next": "98"
   },
   {
     "key": "93",
-    "bodyText": "Reasess the AVPU or GCS level of consciousness.. Has there been any improvement?",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Reasess the AVPU or GCS level of consciousness. Has there been any improvement?",
     "yes": "73",
     "no": "90"
   },
@@ -614,10 +613,7 @@
   },
   {
     "key": "95",
-    "bodyText": "Give magnesium sulfate.",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Give magnesium sulfate.\r\n\r\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
     "next": "93"
   },
   {
@@ -641,7 +637,7 @@
     "key": "99",
     "bodyText": "Give IV Glucose.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/Glucose.jpg"
     ],
     "next": "47"
   },
@@ -649,22 +645,21 @@
     "key": "100",
     "bodyText": "Give oxygen for abnormal breathing.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
+      "./img/12_Nasalcannula.jpg",
+      "./img/13_Simplefacemask.jpg",
+      "./img/14_Non-rebreather.jpg"
     ],
     "next": "101"
   },
   {
     "key": "101",
-    "bodyText": "Is the patient's breathing slowed?\n\nNormal respiratory rate in children:",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Is the patient's breathing slowed?",
     "yes": "20",
     "no": "18"
   },
   {
     "key": "102",
-    "bodyText": "Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound",
+    "bodyText": "Were there any of the following?\r\n- Pneumothorax\r\n- Flail chest\r\n- Sucking chest wound",
     "yes": "33",
     "no": "19"
   },
@@ -676,16 +671,13 @@
   },
   {
     "key": "104",
-    "bodyText": "Suction blood or secretions.\n\nWill the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
+    "bodyText": "Suction blood or secretions.\r\n\r\nWill the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
     "yes": "79",
     "no": "12"
   },
   {
     "key": "105",
-    "bodyText": "Arrange for rapid transfer and continue evaluation.",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Arrange for rapid transfer after completion of evaluation.",
     "next": "103"
   },
   {
@@ -696,13 +688,16 @@
   },
   {
     "key": "107",
-    "bodyText": "Is there a high concern for hypoglycemia? \n(History of diabetes medications or similar presentation in the past?)",
+    "bodyText": "Is there a high concern for hypoglycemia? \r\n(History of diabetes medications or similar presentation in the past?)",
     "yes": "99",
     "no": "47"
   },
   {
     "key": "108",
     "bodyText": "Immobilize cervical, thoracic or lumbar spine.",
+    "image": [
+      "./img/29_Spinalimmobilizationformovingapatient.jpg"
+    ],
     "next": "50"
   },
   {
@@ -734,27 +729,27 @@
   },
   {
     "key": "114",
-    "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+    "bodyText": "Check that patient needs match the available services at the destination facility.\r\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\r\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\r\nSecure patient valuables for transport (whenever possible, leave with family).\r\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
     "next": "115"
   },
   {
     "key": "115",
-    "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
+    "bodyText": "PPE for the staff.\r\nAirway equipment and suction (check if working before departure).\r\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\r\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\r\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\r\nPrepare for new or recurrent symptoms.\r\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\r\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\r\nCheck that there is enough fuel for transport.\r\nEnsure that telephone or radio is present in vehicle and working",
     "next": "116"
   },
   {
     "key": "116",
-    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+    "bodyText": "Position patient for best airway opening and breathing.\r\nUse recovery position if no trauma.\r\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\r\nCheck that cervical spine has been immobilized if indicated.\r\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\r\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\r\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
     "next": "117"
   },
   {
     "key": "117",
-    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
+    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\r\nControl bleeding prior to transport and re-assess for new bleeding\r\nPerform regular re-assessment of any splinted extremity\r\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\r\nKeep the patient from getting too hot or too cold during transport.\r\n\r\n(Paediatric Considerations)\r\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\r\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\r\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\r\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
     "next": "118"
   },
   {
     "key": "118",
-    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
+    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\r\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\r\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\r\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
     "next": "71"
   },
   {
