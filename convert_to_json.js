@@ -59,8 +59,7 @@ twineToJSON({
         ],
     });
     requiredImages.push('./img/who_crest.png');
-
-
+    requiredImages.sort();
 
     //console.log(routes);
     fs = require('fs');
@@ -68,7 +67,7 @@ twineToJSON({
 
     // React cannot dynamically load static assets, so they all need to
     // be required beforehand
-    var imageString = "const requiredImages = {\n" + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"')\n"} ) + "};\nexport default requiredImages;";
+    var imageString = "const requiredImages = {\n " + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"')\n"} ) + "};\nexport default requiredImages;";
     fs.writeFile('GeneratedImages.js', imageString, (err) => {if (err) {console.log(err)}});
     console.log('done');
 
