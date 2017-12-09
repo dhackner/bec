@@ -13,20 +13,19 @@
   },
   {
     "key": "3",
-    "bodyText": "Adult = Abdominal Thrusts.\r\n\r\nIn pregnant patients, give chest thrusts.\r\n\r\n\r\nChild = Chest thrust and back pat.",
+    "bodyText": "In an adult, perform abdominal thrusts.\r\n\r\n\r\nIn pregnant patients, perform chest thrusts.\r\n\r\n\r\nIn children, perform chest thrust and back pat.",
     "image": [
-      "./img/05_Abdominalthrustsforchokingadult.jpg",
-      "./img/07_Chestthrustsforchokinginlatepregnancy.jpg",
-      "./img/08_Chestthrustsforchokingininfants.jpg",
-      "./img/09_Backblowsforchokingininfants.jpg"
+      "./img/05_Abdominalthrustsforchoking_Adult.jpg",
+      "./img/07_Chestthrustsforchoking_Pregnant.jpg",
+      "./img/08_Chestthrustsforchoking_Infant.jpg",
+      "./img/09_Backblowsforchoking_Infant.jpg"
     ],
     "next": "12"
   },
   {
     "key": "4",
-    "bodyText": "Look inside the mouth.\r\nIs the airway obstructed?",
-    "yes": "5",
-    "no": "32"
+    "bodyText": "Look inside the mouth.",
+    "next": "122"
   },
   {
     "key": "5",
@@ -36,26 +35,23 @@
   },
   {
     "key": "6",
-    "bodyText": "Head tilt and chin lift.\r\n\r\n \r\n\r\nAdult:\r\n\r\n\r\nChild:",
+    "bodyText": "Head tilt and chin lift.",
     "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg",
-      "./img/03_Head-tiltandchin-liftinchildrennotrauma.jpg"
+      "./img/01_Headtiltandchinlift_Adult.jpg",
+      "./img/03_Head-tiltandchin-liftnotrauma_Child.jpg",
+      "./img/02_Neutralposition_Infant.jpg"
     ],
     "next": "4"
   },
   {
     "key": "7",
-    "bodyText": "Suction secretions or blood.\r\nPlace in recovery position.",
-    "image": [
-      "./img/30_Recoveryposition.jpg"
-    ],
-    "next": "79"
+    "bodyText": "Suction secretions or blood.",
+    "next": "123"
   },
   {
     "key": "8",
-    "bodyText": "Stabilize cervical spine.\r\n\r\nIs there blood or secretions?",
-    "yes": "104",
-    "no": "79"
+    "bodyText": "Stabilize cervical spine.",
+    "next": "120"
   },
   {
     "key": "9",
@@ -85,11 +81,11 @@
   },
   {
     "key": "13",
-    "bodyText": "Assist breathing with bag-valve-mask ventilation.\r\n\r\nAdult:\r\n\r\n\r\nChild:",
+    "bodyText": "Assist breathing with bag-valve-mask ventilation.",
     "image": [
-      "./img/15_BVM-Oneprovider.jpg",
+      "./img/15_BVM_Oneprovider_Adult.jpg",
       "./img/16_BVM-Twoproviders.jpg",
-      "./img/17_BVM-Child.jpg"
+      "./img/17_BVM_One_Child.jpg"
     ],
     "next": "33"
   },
@@ -165,7 +161,7 @@
   },
   {
     "key": "25",
-    "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\r\n\r\nYou will need to prepare patient for transfer. (set prepare_tranfer = True)",
+    "bodyText": "If flail chest, consider treatment with chest wall splinting as able. Ensure adequate treatment of underlying pneumothorax.\r\n\r\nYou will need to prepare patient for transfer after completing evaluation.",
     "next": "26"
   },
   {
@@ -229,16 +225,16 @@
   },
   {
     "key": "35",
-    "bodyText": "Follow relevant CPR protocol.\r\n\r\n||Link to ACLS||",
+    "bodyText": "Follow relevant CPR protocol.",
     "next": "36"
   },
   {
     "key": "36",
-    "bodyText": "Lay the patient flat. Obtain IV access and give IV fluids.\r\n\r\n\r\n\r\nAdult:\r\n\r\n\r\nPediatric:",
+    "bodyText": "Lay the patient flat. \r\nObtain IV access and give IV fluids.",
     "image": [
-      "./img/21_IVinantecubitalfossa.jpg",
-      "./img/24_InsertingIVinasmallchildshand.jpg",
-      "./img/25_SecuringanIVinachild.jpg"
+      "./img/21_IVinantecubitalfossa_Adult.jpg",
+      "./img/24_InsertingIVhand_Child.jpg",
+      "./img/25_SecuringanIV_Child.jpg"
     ],
     "next": "37"
   },
@@ -302,13 +298,13 @@
   },
   {
     "key": "47",
-    "bodyText": "Is the patient having a seizure?\r\n(Look for abnormal repetitive movements or shaking on one or both sides of the body.)",
+    "bodyText": "Is the patient having a seizure?\r\nExamples: Abnormal repetitive movements or shaking on one or both sides of the body.",
     "yes": "94",
     "no": "49"
   },
   {
     "key": "48",
-    "bodyText": "Give a benzodiazepine such as Diazepam however available - IV injection, intramuscular, or rectal.",
+    "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\r\nExamples: IV injection, intramuscular injection, intranasal or rectal.",
     "image": [
       "./img/Diazepam.jpg"
     ],
@@ -316,10 +312,7 @@
   },
   {
     "key": "49",
-    "bodyText": "Localizing symptoms or uneven pupils?\r\nlink to localizing symptoms teaching set",
-    "image": [
-      "./img/01_Adultheadtiltandchinlift.jpg"
-    ],
+    "bodyText": "Does the patient have localizing symptoms or uneven pupils?\r\nExamples: facial droop, inability to move one side of the body.",
     "yes": "96",
     "no": "51"
   },
@@ -350,7 +343,7 @@
   },
   {
     "key": "54",
-    "bodyText": "Remove all jewelry, constrictive or wet clothing.\r\nDry Patient.\r\nProtect modesty.\r\n\r\nIf the patient requires spinal precautions, use log roll technique to move patient.",
+    "bodyText": "Remove all jewelry, constrictive or wet clothing.\r\nDry the patient and protect modesty.\r\n\r\nIf the patient requires spinal precautions, use log roll technique to move patient.",
     "image": [
       "./img/log_roll.jpg"
     ],
@@ -370,11 +363,11 @@
   },
   {
     "key": "57",
-    "bodyText": "Immobilize extremity.\r\nKeep extremity below the level of the heart.\r\nTake picture of snake if possible and send it with the patient.\r\n\r\nGive tetanus vaccine if required and available.",
+    "bodyText": "Immobilize extremity.\r\nKeep extremity below the level of the heart.\r\nTake a picture of snake if possible and keep it with the patient.\r\n\r\nGive tetanus vaccine if required and available.",
     "image": [
       "./img/Tetanus.jpg"
     ],
-    "next": "114"
+    "next": "67"
   },
   {
     "key": "58",
@@ -472,10 +465,10 @@
   },
   {
     "key": "74",
-    "bodyText": "Is there increased work of breathing?\r\n\r\nSigns of labored breathing\r\nAdult:\r\n\r\nChild:",
+    "bodyText": "Are there signs of increased work of breathing?",
     "image": [
-      "./img/38_Tripodposition.jpg",
-      "./img/39_Chestindrawing.jpg"
+      "./img/38_Tripodposition_Adult.jpg",
+      "./img/39_Chestindrawing_Child.jpg"
     ],
     "yes": "100",
     "no": "19"
@@ -506,7 +499,7 @@
   },
   {
     "key": "79",
-    "bodyText": "Place a supplemental airway device\r\n\r\n \r\n\r\nNasopharyngeal:\r\n\r\n\r\nOropharyngeal:",
+    "bodyText": "Place a supplemental airway device",
     "image": [
       "./img/10_Nasopharyngealairwayinsertion_master.jpg",
       "./img/11_Oropharyngealairwayinsertion_master.jpg"
@@ -541,7 +534,7 @@
   },
   {
     "key": "84",
-    "bodyText": "Splint pelvis",
+    "bodyText": "Splint pelvis.",
     "image": [
       "./img/33_Pelvicimmobilization.jpg"
     ],
@@ -601,7 +594,7 @@
   },
   {
     "key": "93",
-    "bodyText": "Reasess the AVPU or GCS level of consciousness. Has there been any improvement?",
+    "bodyText": "Reasess the AVPU or GCS level of consciousness. \r\nHas the patient stabilized or improved?",
     "yes": "73",
     "no": "90"
   },
@@ -613,7 +606,7 @@
   },
   {
     "key": "95",
-    "bodyText": "Give magnesium sulfate.\r\n\r\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
+    "bodyText": "Give magnesium sulfate.\r\n\r\n \r\n\r\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
     "next": "93"
   },
   {
@@ -624,7 +617,7 @@
   },
   {
     "key": "97",
-    "bodyText": "Raise head of bed 30 degrees if no concern for spinal injury.",
+    "bodyText": "Raise head of bed 30 degrees if there is no concern for a spinal injury.",
     "next": "50"
   },
   {
@@ -671,9 +664,8 @@
   },
   {
     "key": "104",
-    "bodyText": "Suction blood or secretions.\r\n\r\nWill the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
-    "yes": "79",
-    "no": "12"
+    "bodyText": "Suction blood or secretions.",
+    "next": "121"
   },
   {
     "key": "105",
@@ -757,6 +749,32 @@
     "bodyText": "Has the patient's condition stabilized?",
     "yes": "67",
     "no": "72"
+  },
+  {
+    "key": "120",
+    "bodyText": "Is there blood or secretions?",
+    "yes": "104",
+    "no": "79"
+  },
+  {
+    "key": "121",
+    "bodyText": "Will the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
+    "yes": "79",
+    "no": "12"
+  },
+  {
+    "key": "122",
+    "bodyText": "Is the airway obstructed?",
+    "yes": "5",
+    "no": "32"
+  },
+  {
+    "key": "123",
+    "bodyText": "Place in recovery position.",
+    "image": [
+      "./img/30_Recoveryposition.jpg"
+    ],
+    "next": "79"
   },
   {
     "key": "homepage",
