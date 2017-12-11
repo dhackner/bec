@@ -65,10 +65,14 @@ const screenStack = routes.reduce((stack, routeInfo) => {
     };
     return stack;
 }, {});
+
 const BECNavigator = StackNavigator(screenStack, {
-    navigationOptions: {
-        title: 'WHO Emergency Care',
-        headerTintColor: '#0F7FCA',
+    navigationOptions: ({ navigation }) => {
+        return {
+            title: 'WHO Emergency Care',
+            headerTintColor: '#0F7FCA',
+            headerRight: <Button title="Home" accessibilityLabel='Go to homepage' onPress={ () => navigation.navigate('homepage') } />
+        };
     },
     initialRouteName: 'homepage',
 });
