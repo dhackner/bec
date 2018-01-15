@@ -67,7 +67,7 @@
   },
   {
     "key": "11",
-    "bodyText": "Give intramuscular adrenaline.",
+    "bodyText": "Suspect anaphylaxis.\r\nGive intramuscular adrenaline.\r\n\r\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\r\nAdults:\r\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\r\n40 kg: 0.4mg (0.4ml of 1:1000)\r\n30kg: 0.3mg (0.3ml of 1:1000)\r\nRepeat every 5 minutes as needed\r\nChildren:\r\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\r\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
     "image": [
       "./img/Adrenaline.jpg"
     ],
@@ -135,7 +135,7 @@
   },
   {
     "key": "21",
-    "bodyText": "Give Naloxone if available.",
+    "bodyText": "Suspect opiate overdose.\r\nGive Naloxone if available.\r\n\r\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\r\nIV: 100mcg single dose OR\r\nIM: 400mcg single dose\r\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
     "image": [
       "./img/Naloxone.jpg"
     ],
@@ -182,7 +182,7 @@
   },
   {
     "key": "29",
-    "bodyText": "Give Adrenaline.",
+    "bodyText": "Suspect anaphylaxis.\r\nGive Adrenaline. \r\n\r\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\r\nAdults:\r\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\r\n40 kg: 0.4mg (0.4ml of 1:1000)\r\n30kg: 0.3mg (0.3ml of 1:1000)\r\nRepeat every 5 minutes as needed\r\nChildren:\r\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\r\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
     "image": [
       "./img/Adrenaline.jpg"
     ],
@@ -196,7 +196,7 @@
   },
   {
     "key": "31",
-    "bodyText": "Give Salbutamol.",
+    "bodyText": "Suspect asthma.\r\nGive Salbutamol. \r\n\r\n**Inhaler: 100mcg per puff\r\nAdult: Prime with 5 puffs and give 2 puffs via spacer every 2 minutes until improved.\r\nChild: Prime with 5 puffs and give 2 puffs into spacer. Keep spacer in mouth for 3-5 breaths. Repeat until 6\r\npuffs given for < 5 years, or 12 puffs for > 5 years.\r\nNebulizer: (ADULT) 5mg in 5 mL sterile saline.  (CHILD) 2.5mg in 3 mL sterile saline.\r\nFor severe wheezing, above doses can be given several times in an hour.**",
     "image": [
       "./img/Salbutamol.jpg"
     ],
@@ -304,7 +304,7 @@
   },
   {
     "key": "48",
-    "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\r\nExamples: IV injection, intramuscular injection, intranasal or rectal.",
+    "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\r\nExamples: IV injection, intramuscular injection, intranasal or rectal.\r\n\r\n**Diazepam\r\nOral Tablet: 2mg, 5mg\r\nIV Injection: 5mg /1ml ampoule\r\nRectal Solution: 10mg/2ml\r\nAdults:\r\nFirst dose:  10 mg slow IV push or 20 mg rectally\r\nSecond dose after 10 minutes:   5 mg slow IV push or 10 mg rectally\r\nMaximum IV Dose: 30 mg\r\nChildren:\r\nFirst dose: 0.2 mg/kg slow IV push or 0.5 mg/kg rectally. Can repeat half of first dose after 10 minutes if\r\nseizures/convulsions continue. Max IV Dose: 20 mg**",
     "image": [
       "./img/Diazepam.jpg"
     ],
@@ -329,7 +329,7 @@
   },
   {
     "key": "52",
-    "bodyText": "Give Naloxone if available.",
+    "bodyText": "Suspect opiate overdose.\r\nGive Naloxone if available.\r\n\r\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\r\nIV: 100mcg single dose OR\r\nIM: 400mcg single dose\r\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
     "image": [
       "./img/Naloxone.jpg"
     ],
@@ -606,7 +606,7 @@
   },
   {
     "key": "95",
-    "bodyText": "Give magnesium sulfate.\r\n\r\n \r\n\r\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
+    "bodyText": "Suspect preecclampsia.\r\nGive magnesium sulfate.\r\n\r\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\r\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\r\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\r\nIf unable to give IV, give IM injections only (loading dose).\r\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\r\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**\r\n\r\n \r\n\r\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
     "next": "93"
   },
   {
@@ -628,7 +628,7 @@
   },
   {
     "key": "99",
-    "bodyText": "Give IV Glucose.",
+    "bodyText": "Give IV Glucose.\r\n\r\n**IV Infusion 50% or 10% Dextrose. Adults and children greater than 40kg:\r\n25-50 mL of 50% Dextrose (D50) or 125-250 mL of 10% Dextrose (D10)\r\nChildren up to 40kg:\r\n1ml/kg of 50% Dextrose (D50) \r\n2ml/kg of 25% Dextrose (D25)\r\n5ml/kg of 10% Dextrose (D10)\r\nIf no IV access: 2-5 ml of 50% Dextrose OR sugar solution in buccal space**",
     "image": [
       "./img/Glucose.jpg"
     ],
