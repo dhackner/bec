@@ -55,10 +55,10 @@ twineToJSON({
         next: '1',
         bodyText: '',
         image: [
-            './img/who_crest.png',
+            './img/caduceus.png',
         ],
     });
-    requiredImages.push('./img/who_crest.png');
+    requiredImages.push('./img/caduceus.png');
     requiredImages.sort();
 
     //console.log(routes);
