@@ -1,5 +1,15 @@
 {
   "expo": {
+    "name": "Basic Emergency Care",
+    "slug": "bec",
+    "version": "0.0.1",
+    "githubUrl": "https://github.com/dhackner/bec.git",
+    "assetBundlePatterns": [
+      "img/*"
+    ],
+    "ios": {
+      "loadJSInBackgroundExperimental": true
+    },
     "sdkVersion": "18.0.0"
   }
 }
