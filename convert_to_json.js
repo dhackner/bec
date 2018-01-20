@@ -50,27 +50,34 @@ twineToJSON({
         routes.push(route);
     });
 
-    routes.push({
-        key: 'homepage',
-        next: '1',
-        bodyText: '',
-        image: [
-            './img/caduceus.png',
-        ],
-    });
-    requiredImages.push('./img/caduceus.png');
-    requiredImages.sort();
 
-    //console.log(routes);
     fs = require('fs');
-    fs.writeFile('GeneratedRoutes.json', JSON.stringify(routes, null, 2), (err) => {if (err) {console.log(err)}});
 
-    // React cannot dynamically load static assets, so they all need to
-    // be required beforehand
-    var imageString = "const requiredImages = {\n " + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"')\n"} ) + "};\nexport default requiredImages;";
-    fs.writeFile('GeneratedImages.js', imageString, (err) => {if (err) {console.log(err)}});
-    console.log('done');
+    fs.readFile('disclaimer.txt', 'utf8', (err, disclaimer) => {
+        if (err) console.log(err)
+        routes.push({
+            key: 'homepage',
+            next: '1',
+            //bodyText: disclaimer,
+            bodyText: 'BETA Product; DO NOT USE',
+            image: [
+                './img/caduceus.png',
+            ],
+        });
+        requiredImages.push('./img/caduceus.png');
+        requiredImages.sort();
 
+        //console.log(routes);
+        fs.writeFile('GeneratedRoutes.json', JSON.stringify(routes, null, 2), (err) => {if (err) {console.log(err)}});
+
+        // React cannot dynamically load static assets, so they all need to
+        // be required beforehand
+        var imageString = "const requiredImages = {\n " + requiredImages.map( (imageName, index) => {return "  '"+imageName+"': require('"+imageName+"')\n"} ) + "};\nexport default requiredImages;";
+        fs.writeFile('GeneratedImages.js', imageString, (err) => {
+            if (err) console.log(err)
+            console.log('done');
+        });
+    });
 }).catch(function(err) {
     console.log(err);
 });

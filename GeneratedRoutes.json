@@ -779,7 +779,7 @@
   {
     "key": "homepage",
     "next": "1",
-    "bodyText": "",
+    "bodyText": "BETA Product; DO NOT USE",
     "image": [
       "./img/caduceus.png"
     ]
