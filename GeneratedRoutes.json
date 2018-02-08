@@ -1,852 +1,869 @@
-[
-  {
-    "key": "1",
-    "bodyText": "Is the patient speaking easily?",
-    "yes": "103",
-    "no": "76"
-  },
-  {
-    "key": "2",
-    "bodyText": "Is the patient conscious?",
-    "yes": "4",
-    "no": "78"
-  },
-  {
-    "key": "3",
-    "bodyText": "In an adult, perform abdominal thrusts.\n\n\nIn pregnant patients, perform chest thrusts.\n\n\nIn children, perform chest thrust and back pat.",
-    "image": [
-      "./img/05_Abdominalthrustsforchoking_Adult.jpg",
-      "./img/07_Chestthrustsforchoking_Pregnant.jpg",
-      "./img/08_Chestthrustsforchoking_Infant.jpg",
-      "./img/09_Backblowsforchoking_Infant.jpg"
+{
+  "Intro": {
+    "screens": [
+      {
+        "key": "124",
+        "bodyText": "The goal of the ABCDE Approach is to rapidly identify and manage life-threatening conditions in order of priority; ensure the airway stays open; and ensure that breathing and circulation are adequate to deliver oxygen to the body. You will be asked a series of questions and be advised to intervene if life threats are found.  Once you have intervened you should rapidly reassess the patient. If at any time the patient's condition changes, repeat the ABCDE assessment from the beginning. Remember that this app is a guide and should not take the place of clinical judgement.",
+        "next": "126"
+      },
+      {
+        "key": "125",
+        "bodyText": "This app was designed based on the WHO Basic Emergency Care Course and will help guide you through the ABCDE assessment. \n\nA = Airway\nB = Breathing\nC = Circulation\nD = Disability\nE = Exposure",
+        "next": "124"
+      },
+      {
+        "key": "126",
+        "bodyText": "BETA | DO NOT USE THIS APP",
+        "next": "1"
+      }
     ],
-    "next": "12"
+    "initialRouteName": "125"
   },
-  {
-    "key": "4",
-    "bodyText": "Look inside the mouth.",
-    "next": "122"
-  },
-  {
-    "key": "5",
-    "bodyText": "Is there blood or secretions?",
-    "yes": "7",
-    "no": "80"
-  },
-  {
-    "key": "6",
-    "bodyText": "Head tilt and chin lift.",
-    "image": [
-      "./img/01_Headtiltandchinlift_Adult.jpg",
-      "./img/03_Head-tiltandchin-liftnotrauma_Child.jpg",
-      "./img/02_Neutralposition_Infant.jpg"
+  "Airway": {
+    "screens": [
+      {
+        "key": "1",
+        "bodyText": "Is the patient speaking easily?",
+        "yes": "103",
+        "no": "76"
+      },
+      {
+        "key": "2",
+        "bodyText": "Is the patient conscious?",
+        "yes": "4",
+        "no": "78"
+      },
+      {
+        "key": "3",
+        "bodyText": "In an adult, perform abdominal thrusts.\n\n\nIn pregnant patients, perform chest thrusts.\n\n\nIn children, perform chest thrust and back pat.",
+        "image": [
+          "./img/05_Abdominalthrustsforchoking_Adult.jpg",
+          "./img/07_Chestthrustsforchoking_Pregnant.jpg",
+          "./img/08_Chestthrustsforchoking_Infant.jpg",
+          "./img/09_Backblowsforchoking_Infant.jpg"
+        ],
+        "next": "12"
+      },
+      {
+        "key": "4",
+        "bodyText": "Look inside the mouth.",
+        "next": "122"
+      },
+      {
+        "key": "5",
+        "bodyText": "Is there blood or secretions?",
+        "yes": "7",
+        "no": "80"
+      },
+      {
+        "key": "6",
+        "bodyText": "Head tilt and chin lift.",
+        "image": [
+          "./img/01_Headtiltandchinlift_Adult.jpg",
+          "./img/03_Head-tiltandchin-liftnotrauma_Child.jpg",
+          "./img/02_Neutralposition_Infant.jpg"
+        ],
+        "next": "4"
+      },
+      {
+        "key": "7",
+        "bodyText": "Suction secretions or blood.",
+        "next": "123"
+      },
+      {
+        "key": "8",
+        "bodyText": "Stabilize cervical spine.",
+        "next": "120"
+      },
+      {
+        "key": "9",
+        "bodyText": "Is there swelling, drooling or stridor?",
+        "yes": "10",
+        "no": "89"
+      },
+      {
+        "key": "10",
+        "bodyText": "Is there a rash, wheezing, or other signs of anaphylaxis?",
+        "yes": "11",
+        "no": "105"
+      },
+      {
+        "key": "11",
+        "bodyText": "Suspect anaphylaxis.\nGive intramuscular adrenaline.\n\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\nAdults:\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\n40 kg: 0.4mg (0.4ml of 1:1000)\n30kg: 0.3mg (0.3ml of 1:1000)\nRepeat every 5 minutes as needed\nChildren:\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
+        "image": [
+          "./img/Adrenaline.jpg"
+        ],
+        "next": "12"
+      },
+      {
+        "key": "12",
+        "bodyText": "Is the airway stable or improved?",
+        "yes": "103",
+        "no": "1"
+      },
+      {
+        "key": "32",
+        "bodyText": "Are there signs or history of choking?",
+        "yes": "3",
+        "no": "9"
+      },
+      {
+        "key": "76",
+        "bodyText": "Can the patient speak at all?",
+        "yes": "77",
+        "no": "2"
+      },
+      {
+        "key": "77",
+        "bodyText": "Is the patient hoarse or raspy?",
+        "yes": "9",
+        "no": "4"
+      },
+      {
+        "key": "78",
+        "bodyText": "Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\n\nAre there signs of trauma?",
+        "yes": "8",
+        "no": "6"
+      },
+      {
+        "key": "79",
+        "bodyText": "Place a supplemental airway device",
+        "image": [
+          "./img/10_Nasopharyngealairwayinsertion_master.jpg",
+          "./img/11_Oropharyngealairwayinsertion_master.jpg"
+        ],
+        "next": "12"
+      },
+      {
+        "key": "80",
+        "bodyText": "Is there a visible object in the airway?",
+        "yes": "81",
+        "no": "9"
+      },
+      {
+        "key": "81",
+        "bodyText": "Encourage speaking or coughing.",
+        "next": "111"
+      },
+      {
+        "key": "89",
+        "bodyText": "Is there a history of fire or inhalation injury?",
+        "yes": "105",
+        "no": "10"
+      },
+      {
+        "key": "104",
+        "bodyText": "Suction blood or secretions.",
+        "next": "121"
+      },
+      {
+        "key": "105",
+        "bodyText": "Arrange for rapid transfer after completion of evaluation.",
+        "next": "103"
+      },
+      {
+        "key": "111",
+        "bodyText": "Is the obstruction cleared?",
+        "yes": "12",
+        "no": "3"
+      },
+      {
+        "key": "120",
+        "bodyText": "Is there blood or secretions?",
+        "yes": "104",
+        "no": "79"
+      },
+      {
+        "key": "121",
+        "bodyText": "Will the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
+        "yes": "79",
+        "no": "12"
+      },
+      {
+        "key": "122",
+        "bodyText": "Is the airway obstructed?",
+        "yes": "5",
+        "no": "32"
+      },
+      {
+        "key": "123",
+        "bodyText": "Place in recovery position.",
+        "image": [
+          "./img/30_Recoveryposition.jpg"
+        ],
+        "next": "79"
+      }
     ],
-    "next": "4"
+    "initialRouteName": "1"
   },
-  {
-    "key": "7",
-    "bodyText": "Suction secretions or blood.",
-    "next": "123"
-  },
-  {
-    "key": "8",
-    "bodyText": "Stabilize cervical spine.",
-    "next": "120"
-  },
-  {
-    "key": "9",
-    "bodyText": "Is there swelling, drooling or stridor?",
-    "yes": "10",
-    "no": "89"
-  },
-  {
-    "key": "10",
-    "bodyText": "Is there a rash, wheezing, or other signs of anaphylaxis?",
-    "yes": "11",
-    "no": "105"
-  },
-  {
-    "key": "11",
-    "bodyText": "Suspect anaphylaxis.\nGive intramuscular adrenaline.\n\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\nAdults:\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\n40 kg: 0.4mg (0.4ml of 1:1000)\n30kg: 0.3mg (0.3ml of 1:1000)\nRepeat every 5 minutes as needed\nChildren:\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
-    "image": [
-      "./img/Adrenaline.jpg"
+  "Breathing": {
+    "screens": [
+      {
+        "key": "13",
+        "bodyText": "Assist breathing with bag-valve-mask ventilation.",
+        "image": [
+          "./img/15_BVM_Oneprovider_Adult.jpg",
+          "./img/16_BVM-Twoproviders.jpg",
+          "./img/17_BVM_One_Child.jpg"
+        ],
+        "next": "33"
+      },
+      {
+        "key": "14",
+        "bodyText": "Is breathing stable or improved?",
+        "yes": "19",
+        "no": "103"
+      },
+      {
+        "key": "15",
+        "bodyText": "Is the trachea midline?",
+        "yes": "17",
+        "no": "16"
+      },
+      {
+        "key": "16",
+        "bodyText": "Consider pneumothorax.\nPerform needle decompression as indicated.",
+        "image": [
+          "./img/18_Needledecompression.jpg"
+        ],
+        "next": "24"
+      },
+      {
+        "key": "17",
+        "bodyText": "Is there crepitus (cracking or popping) over the chest wall?",
+        "yes": "16",
+        "no": "23"
+      },
+      {
+        "key": "18",
+        "bodyText": "Are there signs of trauma?",
+        "yes": "15",
+        "no": "22"
+      },
+      {
+        "key": "20",
+        "bodyText": "Are there pinpoint pupils?",
+        "yes": "21",
+        "no": "13"
+      },
+      {
+        "key": "21",
+        "bodyText": "Suspect opiate overdose.\nGive Naloxone if available.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
+        "image": [
+          "./img/Naloxone.jpg"
+        ],
+        "next": "14"
+      },
+      {
+        "key": "22",
+        "bodyText": "Are there signs of anaphylaxis?",
+        "yes": "29",
+        "no": "30"
+      },
+      {
+        "key": "23",
+        "bodyText": "Are there decreased breath sounds or hyperresonance to percussion of the chest?",
+        "yes": "16",
+        "no": "24"
+      },
+      {
+        "key": "24",
+        "bodyText": "Is there abnormal chest wall movement?",
+        "yes": "25",
+        "no": "26"
+      },
+      {
+        "key": "25",
+        "bodyText": "Consider Flail Chest.\n\nSplint the chest wall as possible. Ensure adequate treatment of underlying pneumothorax.",
+        "next": "26"
+      },
+      {
+        "key": "26",
+        "bodyText": "Is there a sucking chest wound?",
+        "yes": "27",
+        "no": "28"
+      },
+      {
+        "key": "27",
+        "bodyText": "Treat sucking chest wound with three-sided dressing.",
+        "next": "28"
+      },
+      {
+        "key": "28",
+        "bodyText": "Are there circumferential chest or abdominal burns or burns restricting breathing?",
+        "yes": "128",
+        "no": "128"
+      },
+      {
+        "key": "29",
+        "bodyText": "Suspect anaphylaxis.\nGive Adrenaline. \n\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\nAdults:\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\n40 kg: 0.4mg (0.4ml of 1:1000)\n30kg: 0.3mg (0.3ml of 1:1000)\nRepeat every 5 minutes as needed\nChildren:\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
+        "image": [
+          "./img/Adrenaline.jpg"
+        ],
+        "next": "30"
+      },
+      {
+        "key": "30",
+        "bodyText": "Is there wheezing?",
+        "yes": "31",
+        "no": "127"
+      },
+      {
+        "key": "31",
+        "bodyText": "Suspect asthma.\nGive Salbutamol. \n\n**Inhaler: 100mcg per puff\nAdult: Prime with 5 puffs and give 2 puffs via spacer every 2 minutes until improved.\nChild: Prime with 5 puffs and give 2 puffs into spacer. Keep spacer in mouth for 3-5 breaths. Repeat until 6\npuffs given for < 5 years, or 12 puffs for > 5 years.\nNebulizer: (ADULT) 5mg in 5 mL sterile saline.  (CHILD) 2.5mg in 3 mL sterile saline.\nFor severe wheezing, above doses can be given several times in an hour.**",
+        "image": [
+          "./img/Salbutamol.jpg"
+        ],
+        "next": "19"
+      },
+      {
+        "key": "33",
+        "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
+        "next": "14"
+      },
+      {
+        "key": "74",
+        "bodyText": "Are there signs of increased work of breathing?",
+        "image": [
+          "./img/38_Tripodposition_Adult.jpg",
+          "./img/39_Chestindrawing_Child.jpg"
+        ],
+        "yes": "100",
+        "no": "19"
+      },
+      {
+        "key": "100",
+        "bodyText": "Give oxygen for abnormal breathing.",
+        "image": [
+          "./img/12_Nasalcannula.jpg",
+          "./img/13_Simplefacemask.jpg",
+          "./img/14_Non-rebreather.jpg"
+        ],
+        "next": "101"
+      },
+      {
+        "key": "101",
+        "bodyText": "Is the patient's breathing slowed?",
+        "yes": "20",
+        "no": "18"
+      },
+      {
+        "key": "102",
+        "bodyText": "Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound",
+        "yes": "33",
+        "no": "19"
+      },
+      {
+        "key": "103",
+        "bodyText": "Is the patient breathing?",
+        "yes": "74",
+        "no": "13"
+      },
+      {
+        "key": "127",
+        "bodyText": "Are there rhonchi on lung examination?",
+        "yes": "128",
+        "no": "19"
+      },
+      {
+        "key": "128",
+        "bodyText": "Continue oxygen and arrange rapid transfer.",
+        "next": "33"
+      }
     ],
-    "next": "12"
+    "initialRouteName": "103"
   },
-  {
-    "key": "12",
-    "bodyText": "Is the airway stable or improved?",
-    "yes": "103",
-    "no": "1"
-  },
-  {
-    "key": "13",
-    "bodyText": "Assist breathing with bag-valve-mask ventilation.",
-    "image": [
-      "./img/15_BVM_Oneprovider_Adult.jpg",
-      "./img/16_BVM-Twoproviders.jpg",
-      "./img/17_BVM_One_Child.jpg"
+  "Circulation": {
+    "screens": [
+      {
+        "key": "19",
+        "bodyText": "Does the patient have a pulse?",
+        "yes": "34",
+        "no": "35"
+      },
+      {
+        "key": "34",
+        "bodyText": "Are there signs of poor perfusion?\n\n(Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia, thready pulse, mottled skin)\n\nA child might have poor skin pinch or a sunken fontanelle (see image below):\n\nChild:",
+        "image": [
+          "./img/36_Flatfontanelle.jpg",
+          "./img/40_Abnormalskinpinchinachild.jpg"
+        ],
+        "yes": "129",
+        "no": "106"
+      },
+      {
+        "key": "35",
+        "bodyText": "Follow relevant CPR protocol.",
+        "next": "36"
+      },
+      {
+        "key": "36",
+        "bodyText": "Lay the patient flat.\nObtain IV access and give IV fluids.",
+        "image": [
+          "./img/21_IVinantecubitalfossa_Adult.jpg",
+          "./img/24_InsertingIVhand_Child.jpg",
+          "./img/25_SecuringanIV_Child.jpg"
+        ],
+        "next": "37"
+      },
+      {
+        "key": "37",
+        "bodyText": "Are there signs of external bleeding or external trauma?",
+        "yes": "38",
+        "no": "82"
+      },
+      {
+        "key": "38",
+        "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds.",
+        "image": [
+          "./img/20_Applyingdirectpressuretoawound.jpg"
+        ],
+        "next": "82"
+      },
+      {
+        "key": "39",
+        "bodyText": "Are there distended neck veins?",
+        "yes": "40",
+        "no": "41"
+      },
+      {
+        "key": "40",
+        "bodyText": "Are there muffled heart sounds?",
+        "yes": "88",
+        "no": "131"
+      },
+      {
+        "key": "41",
+        "bodyText": "Are there signs of infection?\n\nExamples: Fever, pus, rash, diarrhea.",
+        "yes": "42",
+        "no": "43"
+      },
+      {
+        "key": "42",
+        "bodyText": "Give antibiotics and continue IV fluid resucitation.",
+        "next": "87"
+      },
+      {
+        "key": "43",
+        "bodyText": "Continue to give fluids and move on to Disability",
+        "next": "106"
+      },
+      {
+        "key": "44",
+        "bodyText": "Refer for blood transfusion and ongoing surgical management if needed after completing evaluation.",
+        "next": "87"
+      },
+      {
+        "key": "75",
+        "bodyText": "Reassess breath sounds.\n\nAre breath sounds decreased bilaterally?",
+        "yes": "130",
+        "no": "85"
+      },
+      {
+        "key": "82",
+        "bodyText": "Are there signs of internal bleeding?\n\n(Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)",
+        "yes": "83",
+        "no": "39"
+      },
+      {
+        "key": "83",
+        "bodyText": "Are there signs of pelvis fracture or open pelvis?",
+        "image": [
+          "./img/32_Openpelvicfracture.jpg"
+        ],
+        "yes": "84",
+        "no": "44"
+      },
+      {
+        "key": "84",
+        "bodyText": "Splint pelvis.",
+        "image": [
+          "./img/33_Pelvicimmobilization.jpg"
+        ],
+        "next": "44"
+      },
+      {
+        "key": "85",
+        "bodyText": "Consider pneumothorax.\nPerform needle decompression as indicated.",
+        "image": [
+          "./img/18_Needledecompression.jpg"
+        ],
+        "next": "86"
+      },
+      {
+        "key": "86",
+        "bodyText": "Listen for improved breath sounds.",
+        "next": "87"
+      },
+      {
+        "key": "87",
+        "bodyText": "Have signs of circulation stabilized or improved with interventions?",
+        "yes": "106",
+        "no": "19"
+      },
+      {
+        "key": "88",
+        "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.",
+        "next": "44"
+      },
+      {
+        "key": "129",
+        "bodyText": "Are there signs of volume overload?\n(Pitting edema, elevated JVP or history of heart failure)",
+        "yes": "132",
+        "no": "36"
+      },
+      {
+        "key": "130",
+        "bodyText": "Are there rhonchi present on lung exam?",
+        "yes": "133",
+        "no": "134"
+      },
+      {
+        "key": "131",
+        "bodyText": "Is there tracheal deviation?",
+        "yes": "85",
+        "no": "75"
+      },
+      {
+        "key": "132",
+        "bodyText": "Consider volume overload.\nGive oxygen.",
+        "next": "135"
+      },
+      {
+        "key": "133",
+        "bodyText": "Consider pulmonary edema.\nGive oxygen.",
+        "next": "135"
+      },
+      {
+        "key": "134",
+        "bodyText": "Consider pleural effusion.\nGive oxygen.",
+        "next": "135"
+      },
+      {
+        "key": "135",
+        "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
+        "next": "106"
+      }
     ],
-    "next": "33"
+    "initialRouteName": "19"
   },
-  {
-    "key": "14",
-    "bodyText": "Is breathing stable or improved?",
-    "yes": "19",
-    "no": "103"
-  },
-  {
-    "key": "15",
-    "bodyText": "Is the trachea midline?",
-    "yes": "17",
-    "no": "16"
-  },
-  {
-    "key": "16",
-    "bodyText": "Consider pneumothorax.\nPerform needle decompression as indicated.",
-    "image": [
-      "./img/18_Needledecompression.jpg"
+  "Disability": {
+    "screens": [
+      {
+        "key": "45",
+        "bodyText": "Assess the AVPU or GCS level of consciousness of the patient. \n\nA - The patient is AWAKE\nV - Responds to VERBAL stimulation\nP - Responds to PAINFUL stimulation\nU - The patient is UNRESPONSIVE",
+        "next": "90"
+      },
+      {
+        "key": "46",
+        "bodyText": "Is glucose level < 3.5 mmol/L?",
+        "yes": "99",
+        "no": "47"
+      },
+      {
+        "key": "47",
+        "bodyText": "Is the patient having a seizure?\nExamples: Abnormal repetitive movements or shaking on one or both sides of the body.",
+        "yes": "94",
+        "no": "49"
+      },
+      {
+        "key": "48",
+        "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\nExamples: IV injection, intramuscular injection, intranasal or rectal.\n\n**Diazepam\nOral Tablet: 2mg, 5mg\nIV Injection: 5mg /1ml ampoule\nRectal Solution: 10mg/2ml\nAdults:\nFirst dose:  10 mg slow IV push or 20 mg rectally\nSecond dose after 10 minutes:   5 mg slow IV push or 10 mg rectally\nMaximum IV Dose: 30 mg\nChildren:\nFirst dose: 0.2 mg/kg slow IV push or 0.5 mg/kg rectally. Can repeat half of first dose after 10 minutes if\nseizures/convulsions continue. Max IV Dose: 20 mg**",
+        "image": [
+          "./img/Diazepam.jpg"
+        ],
+        "next": "93"
+      },
+      {
+        "key": "49",
+        "bodyText": "Does the patient have localizing symptoms or uneven pupils?\nExamples: facial droop, inability to move one side of the body.",
+        "yes": "96",
+        "no": "51"
+      },
+      {
+        "key": "50",
+        "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\n\nArrange rapid transfer to a stroke facility after completing evaluation.",
+        "next": "93"
+      },
+      {
+        "key": "51",
+        "bodyText": "Small (pinpoint) pupils or slow breathing?",
+        "yes": "52",
+        "no": "73"
+      },
+      {
+        "key": "52",
+        "bodyText": "Suspect opiate overdose.\nGive Naloxone if available.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
+        "image": [
+          "./img/Naloxone.jpg"
+        ],
+        "next": "73"
+      },
+      {
+        "key": "90",
+        "bodyText": "Are there signs of trauma (such as bleeding, bruising or deformity)?",
+        "yes": "91",
+        "no": "92"
+      },
+      {
+        "key": "91",
+        "bodyText": "Immobilize the cervical spine.",
+        "image": [
+          "./img/29_Spinalimmobilizationformovingapatient.jpg"
+        ],
+        "next": "98"
+      },
+      {
+        "key": "92",
+        "bodyText": "Place the patient in the recovery position.",
+        "image": [
+          "./img/30_Recoveryposition.jpg"
+        ],
+        "next": "98"
+      },
+      {
+        "key": "93",
+        "bodyText": "Reasess the AVPU or GCS level of consciousness. \nHas the patient stabilized or improved?",
+        "yes": "73",
+        "no": "90"
+      },
+      {
+        "key": "94",
+        "bodyText": "Is the patient pregnant?",
+        "yes": "95",
+        "no": "48"
+      },
+      {
+        "key": "95",
+        "bodyText": "Suspect preecclampsia.\nGive magnesium sulfate.\n\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\nIf unable to give IV, give IM injections only (loading dose).\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**\n\n \n\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
+        "next": "93"
+      },
+      {
+        "key": "96",
+        "bodyText": "Concern for spinal injury?",
+        "yes": "108",
+        "no": "97"
+      },
+      {
+        "key": "97",
+        "bodyText": "Raise head of bed 30 degrees if there is no concern for a spinal injury.",
+        "next": "50"
+      },
+      {
+        "key": "98",
+        "bodyText": "Is glucose testing available?",
+        "yes": "46",
+        "no": "107"
+      },
+      {
+        "key": "99",
+        "bodyText": "Give IV Glucose.\n\n**IV Infusion 50% or 10% Dextrose. Adults and children greater than 40kg:\n25-50 mL of 50% Dextrose (D50) or 125-250 mL of 10% Dextrose (D10)\nChildren up to 40kg:\n1ml/kg of 50% Dextrose (D50) \n2ml/kg of 25% Dextrose (D25)\n5ml/kg of 10% Dextrose (D10)\nIf no IV access: 2-5 ml of 50% Dextrose OR sugar solution in buccal space**",
+        "image": [
+          "./img/Glucose.jpg"
+        ],
+        "next": "47"
+      },
+      {
+        "key": "106",
+        "bodyText": "Is the patient awake and alert?",
+        "yes": "73",
+        "no": "45"
+      },
+      {
+        "key": "107",
+        "bodyText": "Is there a high concern for hypoglycemia? \n(History of diabetes medications or similar presentation in the past?)",
+        "yes": "99",
+        "no": "47"
+      },
+      {
+        "key": "108",
+        "bodyText": "Immobilize cervical, thoracic or lumbar spine.",
+        "image": [
+          "./img/29_Spinalimmobilizationformovingapatient.jpg"
+        ],
+        "next": "50"
+      }
     ],
-    "next": "24"
+    "initialRouteName": "106"
   },
-  {
-    "key": "17",
-    "bodyText": "Is there crepitus (cracking or popping) over the chest wall?",
-    "yes": "16",
-    "no": "23"
-  },
-  {
-    "key": "18",
-    "bodyText": "Are there signs of trauma?",
-    "yes": "15",
-    "no": "22"
-  },
-  {
-    "key": "19",
-    "bodyText": "Does the patient have a pulse?",
-    "yes": "34",
-    "no": "35"
-  },
-  {
-    "key": "20",
-    "bodyText": "Are there pinpoint pupils?",
-    "yes": "21",
-    "no": "13"
-  },
-  {
-    "key": "21",
-    "bodyText": "Suspect opiate overdose.\nGive Naloxone if available.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
-    "image": [
-      "./img/Naloxone.jpg"
+  "Exposure": {
+    "screens": [
+      {
+        "key": "53",
+        "bodyText": "Are there any hidden injuries, rashes or lesions?",
+        "yes": "60",
+        "no": "56"
+      },
+      {
+        "key": "54",
+        "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry the patient and protect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient.",
+        "image": [
+          "./img/log_roll.jpg"
+        ],
+        "next": "53"
+      },
+      {
+        "key": "55",
+        "bodyText": "Is there a snake bite?",
+        "yes": "57",
+        "no": "58"
+      },
+      {
+        "key": "56",
+        "bodyText": "Is the patient normal temperature?",
+        "yes": "67",
+        "no": "66"
+      },
+      {
+        "key": "57",
+        "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.",
+        "image": [
+          "./img/Tetanus.jpg"
+        ],
+        "next": "67"
+      },
+      {
+        "key": "58",
+        "bodyText": "Is there a rash?",
+        "yes": "59",
+        "no": "56"
+      },
+      {
+        "key": "59",
+        "bodyText": "Consider infectious or allergic etiology. \nTreat per local protocol.",
+        "next": "56"
+      },
+      {
+        "key": "60",
+        "bodyText": "Is there an injured or deformed extremity?",
+        "yes": "64",
+        "no": "61"
+      },
+      {
+        "key": "61",
+        "bodyText": "Is there bleeding?",
+        "yes": "62",
+        "no": "63"
+      },
+      {
+        "key": "62",
+        "bodyText": "Apply direct pressure to the site of bleeding.",
+        "image": [
+          "./img/20_Applyingdirectpressuretoawound.jpg"
+        ],
+        "next": "63"
+      },
+      {
+        "key": "63",
+        "bodyText": "Is there an open wound or sore?",
+        "yes": "65",
+        "no": "55"
+      },
+      {
+        "key": "64",
+        "bodyText": "Immobilize injured extremity.",
+        "next": "61"
+      },
+      {
+        "key": "65",
+        "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
+        "image": [
+          "./img/Tetanus.jpg"
+        ],
+        "next": "55"
+      },
+      {
+        "key": "66",
+        "bodyText": "Is the patient hypothermic?",
+        "yes": "68",
+        "no": "69"
+      },
+      {
+        "key": "68",
+        "bodyText": "Warm the patient as able.\nRemember to cover head in children.",
+        "next": "109"
+      },
+      {
+        "key": "69",
+        "bodyText": "Is the patient hyperthermic?",
+        "yes": "70",
+        "no": "67"
+      },
+      {
+        "key": "70",
+        "bodyText": "Cool the patient as possible.\nUnbundle wrapped babies.",
+        "next": "109"
+      },
+      {
+        "key": "72",
+        "bodyText": "Continue to manage patient condition. \nConsider further evaluation and reassessment of ABCDE resuscitation.",
+        "next": "1"
+      },
+      {
+        "key": "73",
+        "bodyText": "Is the patient fully exposed?",
+        "yes": "53",
+        "no": "54"
+      },
+      {
+        "key": "109",
+        "bodyText": "Is there evidence of infection or poisoning?",
+        "yes": "110",
+        "no": "67"
+      },
+      {
+        "key": "110",
+        "bodyText": "Treat infection or poisoning as per local protocol.",
+        "next": "119"
+      },
+      {
+        "key": "119",
+        "bodyText": "Has the patient's condition stabilized?",
+        "yes": "67",
+        "no": "72"
+      }
     ],
-    "next": "14"
+    "initialRouteName": "73"
   },
-  {
-    "key": "22",
-    "bodyText": "Are there signs of anaphylaxis?",
-    "yes": "29",
-    "no": "30"
-  },
-  {
-    "key": "23",
-    "bodyText": "Are there decreased breath sounds or hyperresonance to percussion of the chest?",
-    "yes": "16",
-    "no": "24"
-  },
-  {
-    "key": "24",
-    "bodyText": "Is there abnormal chest wall movement?",
-    "yes": "25",
-    "no": "26"
-  },
-  {
-    "key": "25",
-    "bodyText": "Consider Flail Chest.\n\nSplint the chest wall as possible. Ensure adequate treatment of underlying pneumothorax.",
-    "next": "26"
-  },
-  {
-    "key": "26",
-    "bodyText": "Is there a sucking chest wound?",
-    "yes": "27",
-    "no": "28"
-  },
-  {
-    "key": "27",
-    "bodyText": "Treat sucking chest wound with three-sided dressing.",
-    "next": "28"
-  },
-  {
-    "key": "28",
-    "bodyText": "Are there circumferential chest or abdominal burns or burns restricting breathing?",
-    "yes": "128",
-    "no": "128"
-  },
-  {
-    "key": "29",
-    "bodyText": "Suspect anaphylaxis.\nGive Adrenaline. \n\n**Intramuscular (IM) Injection:1mg in 1ml ampoule (1:1000)\nAdults:\n50 kg or above: 0.5mg (0.5 ml of 1:1000)\n40 kg: 0.4mg (0.4ml of 1:1000)\n30kg: 0.3mg (0.3ml of 1:1000)\nRepeat every 5 minutes as needed\nChildren:\nAnaphylaxis: 0.15mg IM (0.15ml of 1:1000). Repeat every 5-15 minutes as needed\nSevere Asthma: 0.01mg/kg IM up to 0.3mg. Repeat every 15 minutes as needed**",
-    "image": [
-      "./img/Adrenaline.jpg"
+  "Transfer": {
+    "screens": [
+      {
+        "key": "67",
+        "bodyText": "Does the patient need to be transferred to another facility based on likely diagnosis or prior answers?",
+        "yes": "114",
+        "no": "71"
+      },
+      {
+        "key": "71",
+        "bodyText": "Manage care as indicated by patient condition.\n\nComplete secondary survey.",
+        "next": "72"
+      },
+      {
+        "key": "114",
+        "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+        "next": "115"
+      },
+      {
+        "key": "115",
+        "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
+        "next": "116"
+      },
+      {
+        "key": "116",
+        "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+        "next": "117"
+      },
+      {
+        "key": "117",
+        "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
+        "next": "118"
+      },
+      {
+        "key": "118",
+        "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
+        "next": "71"
+      }
     ],
-    "next": "30"
-  },
-  {
-    "key": "30",
-    "bodyText": "Is there wheezing?",
-    "yes": "31",
-    "no": "127"
-  },
-  {
-    "key": "31",
-    "bodyText": "Suspect asthma.\nGive Salbutamol. \n\n**Inhaler: 100mcg per puff\nAdult: Prime with 5 puffs and give 2 puffs via spacer every 2 minutes until improved.\nChild: Prime with 5 puffs and give 2 puffs into spacer. Keep spacer in mouth for 3-5 breaths. Repeat until 6\npuffs given for < 5 years, or 12 puffs for > 5 years.\nNebulizer: (ADULT) 5mg in 5 mL sterile saline.  (CHILD) 2.5mg in 3 mL sterile saline.\nFor severe wheezing, above doses can be given several times in an hour.**",
-    "image": [
-      "./img/Salbutamol.jpg"
-    ],
-    "next": "19"
-  },
-  {
-    "key": "32",
-    "bodyText": "Are there signs or history of choking?",
-    "yes": "3",
-    "no": "9"
-  },
-  {
-    "key": "33",
-    "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
-    "next": "14"
-  },
-  {
-    "key": "34",
-    "bodyText": "Are there signs of poor perfusion?\n\n(Cool, moist extremities, diaphoresis or excessive sweating, low blood pressure, tachypnoea, tachycardia, thready pulse, mottled skin)\n\nA child might have poor skin pinch or a sunken fontanelle (see image below):\n\nChild:",
-    "image": [
-      "./img/36_Flatfontanelle.jpg",
-      "./img/40_Abnormalskinpinchinachild.jpg"
-    ],
-    "yes": "129",
-    "no": "106"
-  },
-  {
-    "key": "35",
-    "bodyText": "Follow relevant CPR protocol.",
-    "next": "36"
-  },
-  {
-    "key": "36",
-    "bodyText": "Lay the patient flat.\nObtain IV access and give IV fluids.",
-    "image": [
-      "./img/21_IVinantecubitalfossa_Adult.jpg",
-      "./img/24_InsertingIVhand_Child.jpg",
-      "./img/25_SecuringanIV_Child.jpg"
-    ],
-    "next": "37"
-  },
-  {
-    "key": "37",
-    "bodyText": "Are there signs of external bleeding or external trauma?",
-    "yes": "38",
-    "no": "82"
-  },
-  {
-    "key": "38",
-    "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds.",
-    "image": [
-      "./img/20_Applyingdirectpressuretoawound.jpg"
-    ],
-    "next": "82"
-  },
-  {
-    "key": "39",
-    "bodyText": "Are there distended neck veins?",
-    "yes": "40",
-    "no": "41"
-  },
-  {
-    "key": "40",
-    "bodyText": "Are there muffled heart sounds?",
-    "yes": "88",
-    "no": "131"
-  },
-  {
-    "key": "41",
-    "bodyText": "Are there signs of infection?\n\nExamples: Fever, pus, rash, diarrhea.",
-    "yes": "42",
-    "no": "43"
-  },
-  {
-    "key": "42",
-    "bodyText": "Give antibiotics and continue IV fluid resucitation.",
-    "next": "87"
-  },
-  {
-    "key": "43",
-    "bodyText": "Continue to give fluids and move on to Disability",
-    "next": "106"
-  },
-  {
-    "key": "44",
-    "bodyText": "Refer for blood transfusion and ongoing surgical management if needed after completing evaluation.",
-    "next": "87"
-  },
-  {
-    "key": "45",
-    "bodyText": "Assess the AVPU or GCS level of consciousness of the patient. \n\nA - The patient is AWAKE\nV - Responds to VERBAL stimulation\nP - Responds to PAINFUL stimulation\nU - The patient is UNRESPONSIVE",
-    "next": "90"
-  },
-  {
-    "key": "46",
-    "bodyText": "Is glucose level < 3.5 mmol/L?",
-    "yes": "99",
-    "no": "47"
-  },
-  {
-    "key": "47",
-    "bodyText": "Is the patient having a seizure?\nExamples: Abnormal repetitive movements or shaking on one or both sides of the body.",
-    "yes": "94",
-    "no": "49"
-  },
-  {
-    "key": "48",
-    "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\nExamples: IV injection, intramuscular injection, intranasal or rectal.\n\n**Diazepam\nOral Tablet: 2mg, 5mg\nIV Injection: 5mg /1ml ampoule\nRectal Solution: 10mg/2ml\nAdults:\nFirst dose:  10 mg slow IV push or 20 mg rectally\nSecond dose after 10 minutes:   5 mg slow IV push or 10 mg rectally\nMaximum IV Dose: 30 mg\nChildren:\nFirst dose: 0.2 mg/kg slow IV push or 0.5 mg/kg rectally. Can repeat half of first dose after 10 minutes if\nseizures/convulsions continue. Max IV Dose: 20 mg**",
-    "image": [
-      "./img/Diazepam.jpg"
-    ],
-    "next": "93"
-  },
-  {
-    "key": "49",
-    "bodyText": "Does the patient have localizing symptoms or uneven pupils?\nExamples: facial droop, inability to move one side of the body.",
-    "yes": "96",
-    "no": "51"
-  },
-  {
-    "key": "50",
-    "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\n\nArrange rapid transfer to a stroke facility after completing evaluation.",
-    "next": "93"
-  },
-  {
-    "key": "51",
-    "bodyText": "Small (pinpoint) pupils or slow breathing?",
-    "yes": "52",
-    "no": "73"
-  },
-  {
-    "key": "52",
-    "bodyText": "Suspect opiate overdose.\nGive Naloxone if available.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
-    "image": [
-      "./img/Naloxone.jpg"
-    ],
-    "next": "73"
-  },
-  {
-    "key": "53",
-    "bodyText": "Are there any hidden injuries, rashes or lesions?",
-    "yes": "60",
-    "no": "56"
-  },
-  {
-    "key": "54",
-    "bodyText": "Remove all jewelry, constrictive or wet clothing.\nDry the patient and protect modesty.\n\nIf the patient requires spinal precautions, use log roll technique to move patient.",
-    "image": [
-      "./img/log_roll.jpg"
-    ],
-    "next": "53"
-  },
-  {
-    "key": "55",
-    "bodyText": "Is there a snake bite?",
-    "yes": "57",
-    "no": "58"
-  },
-  {
-    "key": "56",
-    "bodyText": "Is the patient normal temperature?",
-    "yes": "67",
-    "no": "66"
-  },
-  {
-    "key": "57",
-    "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.",
-    "image": [
-      "./img/Tetanus.jpg"
-    ],
-    "next": "67"
-  },
-  {
-    "key": "58",
-    "bodyText": "Is there a rash?",
-    "yes": "59",
-    "no": "56"
-  },
-  {
-    "key": "59",
-    "bodyText": "Consider infectious or allergic etiology. \nTreat per local protocol.",
-    "next": "56"
-  },
-  {
-    "key": "60",
-    "bodyText": "Is there an injured or deformed extremity?",
-    "yes": "64",
-    "no": "61"
-  },
-  {
-    "key": "61",
-    "bodyText": "Is there bleeding?",
-    "yes": "62",
-    "no": "63"
-  },
-  {
-    "key": "62",
-    "bodyText": "Apply direct pressure to the site of bleeding.",
-    "image": [
-      "./img/20_Applyingdirectpressuretoawound.jpg"
-    ],
-    "next": "63"
-  },
-  {
-    "key": "63",
-    "bodyText": "Is there an open wound or sore?",
-    "yes": "65",
-    "no": "55"
-  },
-  {
-    "key": "64",
-    "bodyText": "Immobilize injured extremity.",
-    "next": "61"
-  },
-  {
-    "key": "65",
-    "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
-    "image": [
-      "./img/Tetanus.jpg"
-    ],
-    "next": "55"
-  },
-  {
-    "key": "66",
-    "bodyText": "Is the patient hypothermic?",
-    "yes": "68",
-    "no": "69"
-  },
-  {
-    "key": "67",
-    "bodyText": "Does the patient need to be transferred to another facility based on likely diagnosis or prior answers?",
-    "yes": "114",
-    "no": "71"
-  },
-  {
-    "key": "68",
-    "bodyText": "Warm the patient as able.\nRemember to cover head in children.",
-    "next": "109"
-  },
-  {
-    "key": "69",
-    "bodyText": "Is the patient hyperthermic?",
-    "yes": "70",
-    "no": "67"
-  },
-  {
-    "key": "70",
-    "bodyText": "Cool the patient as possible.\nUnbundle wrapped babies.",
-    "next": "109"
-  },
-  {
-    "key": "71",
-    "bodyText": "Manage care as indicated by patient condition.\n\nComplete secondary survey.",
-    "next": "72"
-  },
-  {
-    "key": "72",
-    "bodyText": "Continue to manage patient condition. \nConsider further evaluation and reassessment of ABCDE resuscitation.",
-    "next": "1"
-  },
-  {
-    "key": "73",
-    "bodyText": "Is the patient fully exposed?",
-    "yes": "53",
-    "no": "54"
-  },
-  {
-    "key": "74",
-    "bodyText": "Are there signs of increased work of breathing?",
-    "image": [
-      "./img/38_Tripodposition_Adult.jpg",
-      "./img/39_Chestindrawing_Child.jpg"
-    ],
-    "yes": "100",
-    "no": "19"
-  },
-  {
-    "key": "75",
-    "bodyText": "Reassess breath sounds.\n\nAre breath sounds decreased bilaterally?",
-    "yes": "130",
-    "no": "85"
-  },
-  {
-    "key": "76",
-    "bodyText": "Can the patient speak at all?",
-    "yes": "77",
-    "no": "2"
-  },
-  {
-    "key": "77",
-    "bodyText": "Is the patient hoarse or raspy?",
-    "yes": "9",
-    "no": "4"
-  },
-  {
-    "key": "78",
-    "bodyText": "Look to see if the chest wall is moving and listen to see if there is air movement from the mouth or nose.\n\nAre there signs of trauma?",
-    "yes": "8",
-    "no": "6"
-  },
-  {
-    "key": "79",
-    "bodyText": "Place a supplemental airway device",
-    "image": [
-      "./img/10_Nasopharyngealairwayinsertion_master.jpg",
-      "./img/11_Oropharyngealairwayinsertion_master.jpg"
-    ],
-    "next": "12"
-  },
-  {
-    "key": "80",
-    "bodyText": "Is there a visible object in the airway?",
-    "yes": "81",
-    "no": "9"
-  },
-  {
-    "key": "81",
-    "bodyText": "Encourage speaking or coughing.",
-    "next": "111"
-  },
-  {
-    "key": "82",
-    "bodyText": "Are there signs of internal bleeding?\n\n(Bruising around the umbilicus or over the flanks, vomiting blood, blood per rectum or vagina, or blood in the urine.)",
-    "yes": "83",
-    "no": "39"
-  },
-  {
-    "key": "83",
-    "bodyText": "Are there signs of pelvis fracture or open pelvis?",
-    "image": [
-      "./img/32_Openpelvicfracture.jpg"
-    ],
-    "yes": "84",
-    "no": "44"
-  },
-  {
-    "key": "84",
-    "bodyText": "Splint pelvis.",
-    "image": [
-      "./img/33_Pelvicimmobilization.jpg"
-    ],
-    "next": "44"
-  },
-  {
-    "key": "85",
-    "bodyText": "Consider pneumothorax.\nPerform needle decompression as indicated.",
-    "image": [
-      "./img/18_Needledecompression.jpg"
-    ],
-    "next": "86"
-  },
-  {
-    "key": "86",
-    "bodyText": "Listen for improved breath sounds.",
-    "next": "87"
-  },
-  {
-    "key": "87",
-    "bodyText": "Have signs of circulation stabilized or improved with interventions?",
-    "yes": "106",
-    "no": "19"
-  },
-  {
-    "key": "88",
-    "bodyText": "Consider pericardial tamponade and arrange rapid transfer to surgical center.\n\nContinue IV fluids to maintain perfusion.",
-    "next": "44"
-  },
-  {
-    "key": "89",
-    "bodyText": "Is there a history of fire or inhalation injury?",
-    "yes": "105",
-    "no": "10"
-  },
-  {
-    "key": "90",
-    "bodyText": "Are there signs of trauma (such as bleeding, bruising or deformity)?",
-    "yes": "91",
-    "no": "92"
-  },
-  {
-    "key": "91",
-    "bodyText": "Immobilize the cervical spine.",
-    "image": [
-      "./img/29_Spinalimmobilizationformovingapatient.jpg"
-    ],
-    "next": "98"
-  },
-  {
-    "key": "92",
-    "bodyText": "Place the patient in the recovery position.",
-    "image": [
-      "./img/30_Recoveryposition.jpg"
-    ],
-    "next": "98"
-  },
-  {
-    "key": "93",
-    "bodyText": "Reasess the AVPU or GCS level of consciousness. \nHas the patient stabilized or improved?",
-    "yes": "73",
-    "no": "90"
-  },
-  {
-    "key": "94",
-    "bodyText": "Is the patient pregnant?",
-    "yes": "95",
-    "no": "48"
-  },
-  {
-    "key": "95",
-    "bodyText": "Suspect preecclampsia.\nGive magnesium sulfate.\n\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\nIf unable to give IV, give IM injections only (loading dose).\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**\n\n \n\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
-    "next": "93"
-  },
-  {
-    "key": "96",
-    "bodyText": "Concern for spinal injury?",
-    "yes": "108",
-    "no": "97"
-  },
-  {
-    "key": "97",
-    "bodyText": "Raise head of bed 30 degrees if there is no concern for a spinal injury.",
-    "next": "50"
-  },
-  {
-    "key": "98",
-    "bodyText": "Is glucose testing available?",
-    "yes": "46",
-    "no": "107"
-  },
-  {
-    "key": "99",
-    "bodyText": "Give IV Glucose.\n\n**IV Infusion 50% or 10% Dextrose. Adults and children greater than 40kg:\n25-50 mL of 50% Dextrose (D50) or 125-250 mL of 10% Dextrose (D10)\nChildren up to 40kg:\n1ml/kg of 50% Dextrose (D50) \n2ml/kg of 25% Dextrose (D25)\n5ml/kg of 10% Dextrose (D10)\nIf no IV access: 2-5 ml of 50% Dextrose OR sugar solution in buccal space**",
-    "image": [
-      "./img/Glucose.jpg"
-    ],
-    "next": "47"
-  },
-  {
-    "key": "100",
-    "bodyText": "Give oxygen for abnormal breathing.",
-    "image": [
-      "./img/12_Nasalcannula.jpg",
-      "./img/13_Simplefacemask.jpg",
-      "./img/14_Non-rebreather.jpg"
-    ],
-    "next": "101"
-  },
-  {
-    "key": "101",
-    "bodyText": "Is the patient's breathing slowed?",
-    "yes": "20",
-    "no": "18"
-  },
-  {
-    "key": "102",
-    "bodyText": "Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound",
-    "yes": "33",
-    "no": "19"
-  },
-  {
-    "key": "103",
-    "bodyText": "Is the patient breathing?",
-    "yes": "74",
-    "no": "13"
-  },
-  {
-    "key": "104",
-    "bodyText": "Suction blood or secretions.",
-    "next": "121"
-  },
-  {
-    "key": "105",
-    "bodyText": "Arrange for rapid transfer after completion of evaluation.",
-    "next": "103"
-  },
-  {
-    "key": "106",
-    "bodyText": "Is the patient awake and alert?",
-    "yes": "73",
-    "no": "45"
-  },
-  {
-    "key": "107",
-    "bodyText": "Is there a high concern for hypoglycemia? \n(History of diabetes medications or similar presentation in the past?)",
-    "yes": "99",
-    "no": "47"
-  },
-  {
-    "key": "108",
-    "bodyText": "Immobilize cervical, thoracic or lumbar spine.",
-    "image": [
-      "./img/29_Spinalimmobilizationformovingapatient.jpg"
-    ],
-    "next": "50"
-  },
-  {
-    "key": "109",
-    "bodyText": "Is there evidence of infection or poisoning?",
-    "yes": "110",
-    "no": "67"
-  },
-  {
-    "key": "110",
-    "bodyText": "Treat infection or poisoning as per local protocol.",
-    "next": "119"
-  },
-  {
-    "key": "111",
-    "bodyText": "Is the obstruction cleared?",
-    "yes": "12",
-    "no": "3"
-  },
-  {
-    "key": "112",
-    "bodyText": "Is the patient a child?",
-    "yes": "113",
-    "no": "1"
-  },
-  {
-    "key": "113",
-    "bodyText": "Double-click this passage to edit it."
-  },
-  {
-    "key": "114",
-    "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
-    "next": "115"
-  },
-  {
-    "key": "115",
-    "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
-    "next": "116"
-  },
-  {
-    "key": "116",
-    "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
-    "next": "117"
-  },
-  {
-    "key": "117",
-    "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
-    "next": "118"
-  },
-  {
-    "key": "118",
-    "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
-    "next": "71"
-  },
-  {
-    "key": "119",
-    "bodyText": "Has the patient's condition stabilized?",
-    "yes": "67",
-    "no": "72"
-  },
-  {
-    "key": "120",
-    "bodyText": "Is there blood or secretions?",
-    "yes": "104",
-    "no": "79"
-  },
-  {
-    "key": "121",
-    "bodyText": "Will the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
-    "yes": "79",
-    "no": "12"
-  },
-  {
-    "key": "122",
-    "bodyText": "Is the airway obstructed?",
-    "yes": "5",
-    "no": "32"
-  },
-  {
-    "key": "123",
-    "bodyText": "Place in recovery position.",
-    "image": [
-      "./img/30_Recoveryposition.jpg"
-    ],
-    "next": "79"
-  },
-  {
-    "key": "124",
-    "bodyText": "The goal of the ABCDE Approach is to rapidly identify and manage life-threatening conditions in order of priority; ensure the airway stays open; and ensure that breathing and circulation are adequate to deliver oxygen to the body.  You will be asked a series of questions and be advised to intervene if life threats are found.  Once you have intervened you should rapidly reassess the patient. If at any time the patient's condition changes, repeat the ABCDE assessment (you can do this easily by hitting the &quot;Home&quot; button to start over).  Remember that this app is a guide and should not take the place of clinical judgement.",
-    "next": "126"
-  },
-  {
-    "key": "125",
-    "bodyText": "This app was designed based on the WHO Basic Emergency Care Course and will help guide you through the ABCDE assessment. \n\nA = Airway\nB = Breathing\nC = Circulation\nD = Disability\nE = Exposure",
-    "next": "124"
-  },
-  {
-    "key": "126",
-    "bodyText": "This application includes clinical tools and content intended for use by healthcare professionals. These tools do not give professional advice; physicians and other healthcare professionals who use these tools or databases should exercise their own clinical judgment as to the information they provide. Consumers (non-medical professionals) who use the tools or databases do so at their own risk. Individuals with any type of medical condition are specifically cautioned to seek professional medical advice before beginning any sort of health treatment. For medical concerns, including decisions about medications and other treatments, non-medical users users should always consult their physician or other qualified healthcare professional.\nThis application&#x2019;s content developers have carefully tried to create its content to conform to the standards of professional practice that prevailed at the time of development. However, standards and practices in medicine change as new data become available and the individual medical professional should consult a variety of sources.\nThe contents of this site and app, such as text, graphics, and images are for informational purposes only. This app does not recommend or endorse any specific tests, physicians, products, procedures, opinions, or other information that may be mentioned on the site.\nWhile information on this site has been obtained from sources believed to be reliable, neither we nor our content providers warrant the accuracy of the information contained on this site.\nWe do not give medical advice, nor do we provide medical or diagnostic services. Medical information changes rapidly. Neither we nor our content providers guarantee that the content covers all possible uses, directions, precautions, drug interactions, or adverse effects that may be associated with any therapeutic treatments.\nYour reliance upon information and content obtained by you at or through this app is solely at your own risk. Neither we nor our content providers assume any liability or responsibility for damage or injury (including death) to you, other persons, or property arising from any use of any product, information, idea, or instruction contained in the content or services provided to you.",
-    "next": "1"
-  },
-  {
-    "key": "127",
-    "bodyText": "Are there rhonchi on lung examination?",
-    "yes": "128",
-    "no": "19"
-  },
-  {
-    "key": "128",
-    "bodyText": "Continue oxygen and arrange rapid transfer.",
-    "next": "33"
-  },
-  {
-    "key": "129",
-    "bodyText": "Are there signs of volume overload?\n(Pitting edema, elevated JVP or history of heart failure)",
-    "yes": "132",
-    "no": "36"
-  },
-  {
-    "key": "130",
-    "bodyText": "Are there rhonchi present on lung exam?",
-    "yes": "133",
-    "no": "134"
-  },
-  {
-    "key": "131",
-    "bodyText": "Is there tracheal deviation?",
-    "yes": "85",
-    "no": "75"
-  },
-  {
-    "key": "132",
-    "bodyText": "Consider volume overload.\nGive oxygen.",
-    "next": "135"
-  },
-  {
-    "key": "133",
-    "bodyText": "Consider pulmonary edema.\nGive oxygen.",
-    "next": "135"
-  },
-  {
-    "key": "134",
-    "bodyText": "Consider pleural effusion.\nGive oxygen.",
-    "next": "135"
-  },
-  {
-    "key": "135",
-    "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
-    "next": "106"
-  },
-  {
-    "key": "homepage",
-    "next": "1",
-    "bodyText": "BETA Product; DO NOT USE",
-    "image": [
-      "./img/caduceus.png"
-    ]
+    "initialRouteName": "67"
   }
-]
+}

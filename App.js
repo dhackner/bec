@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { DrawerNavigator, StackNavigator } from 'react-navigation';
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
@@ -10,6 +10,9 @@ import requiredImages from './GeneratedImages.js';
 // doing XYZ) or maybe have like a global 'needs transfer' banner on the
 // top
 
+// TODO | Disclaimer
+// TODO | Back button when navigating into a new section doesnt take you
+// back to old section
 
 const imageRow = (image, index) => {
     return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />
@@ -20,10 +23,15 @@ const insertImages = (routeInfo) => {
     }
 }
 
+// TODO | Better place for section selector
 const insertButtons = (navigation, routeInfo) => {
     if (routeInfo['no'] && routeInfo['yes']) {
         return (
             <View style={ styles.buttonContainer }>
+                <Button
+                    title='<Sections'
+                    onPress={ () => navigation.navigate('DrawerOpen') }
+                />
                 <Button
                     title='no'
                     accessibilityLabel='The answer to the question on the screen is no'
@@ -40,6 +48,10 @@ const insertButtons = (navigation, routeInfo) => {
         return (
             <View style={ styles.buttonContainer }>
                 <Button
+                    title='<Sections'
+                    onPress={ () => navigation.navigate('DrawerOpen') }
+                />
+                <Button
                     title='next'
                     accessibilityLabel='Go to next screen'
                     onPress={ () => navigation.navigate(routeInfo.next) } title="Next"
@@ -51,32 +63,36 @@ const insertButtons = (navigation, routeInfo) => {
     }
 }
 
-const screenStack = routes.reduce((stack, routeInfo) => {
-    stack[routeInfo.key] = {
-        'screen': ({ navigation }) => (
-            <View style={ styles.flexContainer }>
-                <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
-                <ScrollView>
+
+const buildStackNavigator = (routes) => {
+    return StackNavigator(
+        routes['screens'].reduce((stack, routeInfo) => {
+            stack[routeInfo.key] = {
+                'screen': ({ navigation }) => (
+                    <View style={ styles.flexContainer }>
+                    <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
+                    <ScrollView>
                     { insertImages(routeInfo) }
-                </ScrollView>
-                { insertButtons(navigation, routeInfo) }
-            </View>
-        ),
-    };
-    return stack;
-}, {});
+                    </ScrollView>
+                    { insertButtons(navigation, routeInfo) }
+                    </View>
+                ),
+            };
+            return stack;
+        }, {}), {
+            initialRouteName: routes['initialRouteName']
+        }
+    );
+}
 
-const BECNavigator = StackNavigator(screenStack, {
-    navigationOptions: ({ navigation }) => {
-        return {
-            title: 'WHO Emergency Care',
-            headerTintColor: '#0F7FCA',
-            headerRight: <Button title="Home" accessibilityLabel='Go to homepage' onPress={ () => navigation.navigate('homepage') } />
-        };
-    },
-    initialRouteName: 'homepage',
-});
+var stacks = {};
+for (var section in routes) {
+    stacks[section] = {
+        screen: buildStackNavigator(routes[section]),
+    }
+}
 
+const BECNavigator = DrawerNavigator(stacks, {initialRouteName: 'Intro'});
 export default class App extends React.Component {
     render() {
         return (
@@ -87,6 +103,8 @@ export default class App extends React.Component {
     }
 }
 
+// TODO | Style
+const blue = '#0F7FCA';
 const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     bodyText: {

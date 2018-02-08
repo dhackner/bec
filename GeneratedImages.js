@@ -40,7 +40,6 @@ const requiredImages = {
 ,  './img/Salbutamol.jpg': require('./img/Salbutamol.jpg')
 ,  './img/Tetanus.jpg': require('./img/Tetanus.jpg')
 ,  './img/Tetanus.jpg': require('./img/Tetanus.jpg')
-,  './img/caduceus.png': require('./img/caduceus.png')
 ,  './img/log_roll.jpg': require('./img/log_roll.jpg')
 };
 export default requiredImages;

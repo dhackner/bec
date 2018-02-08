@@ -12,7 +12,15 @@ twineToJSON({
     customTags: [],
     linkFormat: (link) => {return '';}, // Strip out links from passage body text
 }).then(function(story) {
-    var routes = [];
+    var routes = {
+        'Intro': {'screens': []},
+        'Airway': {'screens': []},
+        'Breathing': {'screens': []},
+        'Circulation': {'screens': []},
+        'Disability': {'screens': []},
+        'Exposure': {'screens': []},
+        'Transfer': {'screens': []},
+    };
     var requiredImages = [];
     story['passages'].forEach ( (element) => {
         var route = {
@@ -47,7 +55,20 @@ twineToJSON({
         }
         // TODO | Add image array, add image to requiredImages list
 
-        routes.push(route);
+        var section = element['name'].match(/\(.+\)/);
+        if (section == null) {
+            console.log('No section for element: ' + element['name']);
+        } else {
+            section = section[0].substr(1, section[0].length-2) // Trim parens because my regex is weak
+            if (!routes[section]) {
+                console.log('Section not expected: ' + section);
+            } else {
+                if (element.tags.indexOf('Section') != -1) {
+                    routes[section]['initialRouteName'] = route['key'];
+                }
+                routes[section]['screens'].push(route);
+            }
+        }
     });
 
 
@@ -55,16 +76,6 @@ twineToJSON({
 
     fs.readFile('disclaimer.txt', 'utf8', (err, disclaimer) => {
         if (err) console.log(err)
-        routes.push({
-            key: 'homepage',
-            next: '1',
-            //bodyText: disclaimer,
-            bodyText: 'BETA Product; DO NOT USE',
-            image: [
-                './img/caduceus.png',
-            ],
-        });
-        requiredImages.push('./img/caduceus.png');
         requiredImages.sort();
 
         //console.log(routes);
