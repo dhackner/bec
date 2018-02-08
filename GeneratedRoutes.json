@@ -779,13 +779,13 @@
   },
   {
     "key": "124",
-    "bodyText": "The goal  of the ABCDE Approach is to rapidly identify and manage life-threatening conditions in order of priority; ensure the airway stays open; and ensure that breathing and circulation are adequate to deliver oxygen to the body.  You will be asked a series of questions and be advised to intervene if life threats are found.  Once you have intervened you should rapidly reassess the patient. If at any time the patient's condition changes, repeat the ABCDE assessment (you can do this easily by hitting the &quot;Home&quot; button to start over).  Remember that this app is a guide and should not take the place of clinical judgement.",
+    "bodyText": "The goal of the ABCDE Approach is to rapidly identify and manage life-threatening conditions in order of priority; ensure the airway stays open; and ensure that breathing and circulation are adequate to deliver oxygen to the body.  You will be asked a series of questions and be advised to intervene if life threats are found.  Once you have intervened you should rapidly reassess the patient. If at any time the patient's condition changes, repeat the ABCDE assessment (you can do this easily by hitting the &quot;Home&quot; button to start over).  Remember that this app is a guide and should not take the place of clinical judgement.",
     "next": "126"
   },
   {
     "key": "125",
     "bodyText": "This app was designed based on the WHO Basic Emergency Care Course and will help guide you through the ABCDE assessment. \n\nA = Airway\nB = Breathing\nC = Circulation\nD = Disability\nE = Exposure",
-    "next": "1"
+    "next": "124"
   },
   {
     "key": "126",
