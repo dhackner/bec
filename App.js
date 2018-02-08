@@ -27,12 +27,12 @@ const insertButtons = (navigation, routeInfo) => {
                 <Button
                     title='no'
                     accessibilityLabel='The answer to the question on the screen is no'
-                    onPress={ () => navigation.navigate(routeInfo.no) } title="No"
+                    onPress={ () => navigation.navigate(routeInfo.no) }
                 />
                 <Button
                     title='yes'
                     accessibilityLabel='The answer to the question on the screen is yes'
-                    onPress={ () => navigation.navigate(routeInfo.yes) } title="Yes"
+                    onPress={ () => navigation.navigate(routeInfo.yes) }
                 />
             </View>
         );
