@@ -38,8 +38,6 @@ const requiredImages = {
 ,  './img/Naloxone.jpg': require('./img/Naloxone.jpg')
 ,  './img/Naloxone.jpg': require('./img/Naloxone.jpg')
 ,  './img/Salbutamol.jpg': require('./img/Salbutamol.jpg')
-,  './img/Tetanus.jpg': require('./img/Tetanus.jpg')
-,  './img/Tetanus.jpg': require('./img/Tetanus.jpg')
 ,  './img/log_roll.jpg': require('./img/log_roll.jpg')
 };
 export default requiredImages;

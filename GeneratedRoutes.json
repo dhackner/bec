@@ -716,10 +716,7 @@
       },
       {
         "key": "57",
-        "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.",
-        "image": [
-          "./img/Tetanus.jpg"
-        ],
+        "bodyText": "Immobilize extremity.\r\nKeep extremity below the level of the heart.\r\nTake a picture of snake if possible and keep it with the patient.\r\n\r\nGive tetanus vaccine if required and available.\r\n\r\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
         "next": "67"
       },
       {
@@ -766,10 +763,7 @@
       },
       {
         "key": "65",
-        "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization.",
-        "image": [
-          "./img/Tetanus.jpg"
-        ],
+        "bodyText": "Dress wound with bandage.\r\n\r\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization. \r\n\r\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
         "next": "55"
       },
       {
