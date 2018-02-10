@@ -635,7 +635,10 @@
       },
       {
         "key": "95",
-        "bodyText": "Suspect preecclampsia.\nGive magnesium sulfate.\n\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\nIf unable to give IV, give IM injections only (loading dose).\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**\n\n \n\n<img src=\"./img/Magnesium Sulfate.jpg\"/>",
+        "bodyText": "Suspect preecclampsia.\r\nGive magnesium sulfate.\r\n\r\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\r\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\r\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\r\nIf unable to give IV, give IM injections only (loading dose).\r\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\r\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**",
+        "image": [
+          "./img/MagnesiumSulfate.jpg"
+        ],
         "next": "93"
       },
       {
