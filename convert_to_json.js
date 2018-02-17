@@ -33,6 +33,7 @@ twineToJSON({
         .replace(/&apos;/g, "'")
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
+        .replace(/\r/g, "")
         .trim();
         if (matches.length > 0) {
             route.image = [];

@@ -635,10 +635,10 @@
       },
       {
         "key": "95",
-        "bodyText": "Suspect preecclampsia.\r\nGive magnesium sulfate.\r\n\r\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\r\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\r\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\r\nIf unable to give IV, give IM injections only (loading dose).\r\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\r\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**",
         "image": [
           "./img/MagnesiumSulfate.jpg"
         ],
+        "bodyText": "Suspect preecclampsia.\nGive magnesium sulfate.\n\n**IV/IM Injection: 1g in 2ml ampoule (50% or 500 mg/mL), 5g in 10ml ampoule  (50% or 500 mg/mL)\nGive 4g IV (dilute to a 20% solution and give 20mL) slowly over 20 minutes\nAND give 10g IM: 5g (10ml of 50% solution) with 1 ml of 2% lidocaine in each buttock.\nIf unable to give IV, give IM injections only (loading dose).\nIf seizures/convulsions recur: after 15 minutes give additional 2g (10 ml of 20%) IV over 20 minutes.\nIf transport delayed continue: Give 5g of 50% solution IM with 1 ml of 2% lidocaine every 4h in alternate buttocks.**",
         "next": "93"
       },
       {
@@ -719,7 +719,7 @@
       },
       {
         "key": "57",
-        "bodyText": "Immobilize extremity.\r\nKeep extremity below the level of the heart.\r\nTake a picture of snake if possible and keep it with the patient.\r\n\r\nGive tetanus vaccine if required and available.\r\n\r\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
+        "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.\n\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
         "next": "67"
       },
       {
@@ -766,7 +766,7 @@
       },
       {
         "key": "65",
-        "bodyText": "Dress wound with bandage.\r\n\r\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization. \r\n\r\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
+        "bodyText": "Dress wound with bandage.\n\nGive tetanus vaccine for open wounds if vaccine available and patient is not up to date with immunization. \n\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
         "next": "55"
       },
       {
