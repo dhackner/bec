@@ -35,7 +35,6 @@ const requiredImages = {
 ,  './img/Adrenaline.jpg': require('./img/Adrenaline.jpg')
 ,  './img/Diazepam.jpg': require('./img/Diazepam.jpg')
 ,  './img/Glucose.jpg': require('./img/Glucose.jpg')
-,  './img/MagnesiumSulfate.jpg': require('./img/MagnesiumSulfate.jpg')
 ,  './img/Naloxone.jpg': require('./img/Naloxone.jpg')
 ,  './img/Naloxone.jpg': require('./img/Naloxone.jpg')
 ,  './img/Salbutamol.jpg': require('./img/Salbutamol.jpg')
