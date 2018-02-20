@@ -19,6 +19,7 @@ const requiredImages = {
 ,  './img/20_Applyingdirectpressuretoawound.jpg': require('./img/20_Applyingdirectpressuretoawound.jpg')
 ,  './img/20_Applyingdirectpressuretoawound.jpg': require('./img/20_Applyingdirectpressuretoawound.jpg')
 ,  './img/21_IVinantecubitalfossa_Adult.jpg': require('./img/21_IVinantecubitalfossa_Adult.jpg')
+,  './img/22_Uterinemassageforpostpartumhemorrhage.jpg': require('./img/22_Uterinemassageforpostpartumhemorrhage.jpg')
 ,  './img/24_InsertingIVhand_Child.jpg': require('./img/24_InsertingIVhand_Child.jpg')
 ,  './img/25_SecuringanIV_Child.jpg': require('./img/25_SecuringanIV_Child.jpg')
 ,  './img/29_Spinalimmobilizationformovingapatient.jpg': require('./img/29_Spinalimmobilizationformovingapatient.jpg')

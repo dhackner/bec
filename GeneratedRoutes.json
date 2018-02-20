@@ -394,7 +394,7 @@
       {
         "key": "35",
         "bodyText": "Begin relevant CPR protocol.",
-        "next": "136"
+        "next": "148"
       },
       {
         "key": "36",
@@ -414,11 +414,11 @@
       },
       {
         "key": "38",
-        "bodyText": "Control bleeding. Remember to apply direct pressure to bleeding wounds.",
+        "bodyText": "Attempt to control bleeding by applying direct pressure to bleeding wounds.",
         "image": [
           "./img/20_Applyingdirectpressuretoawound.jpg"
         ],
-        "next": "82"
+        "next": "136"
       },
       {
         "key": "39",
@@ -450,7 +450,7 @@
       },
       {
         "key": "44",
-        "bodyText": "Refer for blood transfusion and ongoing surgical management if needed after completing evaluation.",
+        "bodyText": "Continue IV fluids.\n\nRefer for blood transfusion and ongoing surgical management if needed after completing evaluation.",
         "next": "87"
       },
       {
@@ -472,7 +472,7 @@
           "./img/32_Openpelvicfracture.jpg"
         ],
         "yes": "84",
-        "no": "44"
+        "no": "141"
       },
       {
         "key": "84",
@@ -546,6 +546,75 @@
       },
       {
         "key": "136",
+        "bodyText": "Is bleeding controlled?",
+        "yes": "82",
+        "no": "137"
+      },
+      {
+        "key": "137",
+        "bodyText": "Attempt Deep wound packing.",
+        "next": "139"
+      },
+      {
+        "key": "138",
+        "bodyText": "Attempt tourniquette use.\n\nRemember: A tourniquet should be used only for life-threatening bleeding. When placed, it may lead to amputation.",
+        "next": "140"
+      },
+      {
+        "key": "139",
+        "bodyText": "Has bleeding improved?",
+        "yes": "82",
+        "no": "138"
+      },
+      {
+        "key": "140",
+        "bodyText": "Is the bleeding improved or controlled?",
+        "yes": "82",
+        "no": "44"
+      },
+      {
+        "key": "141",
+        "bodyText": "Is the patient female?",
+        "yes": "144",
+        "no": "44"
+      },
+      {
+        "key": "142",
+        "bodyText": "Did the patient recently deliver a child?",
+        "yes": "143",
+        "no": "146"
+      },
+      {
+        "key": "143",
+        "bodyText": "Consider uterine massage.\nExplain to the woman what you will do and why.\nMassage the uterus until it is very firm.\nDo not stop massaging until the uterus is contracted (hard).\nMake sure the uterus does not become relaxed (soft) after you stop uterine massage. If it becomes relaxed, resume massage.",
+        "image": [
+          "./img/22_Uterinemassageforpostpartumhemorrhage.jpg"
+        ],
+        "next": "147"
+      },
+      {
+        "key": "144",
+        "bodyText": "Is the patient currently pregnant?",
+        "yes": "145",
+        "no": "142"
+      },
+      {
+        "key": "145",
+        "bodyText": "Consider ectopic pregnancy.",
+        "next": "147"
+      },
+      {
+        "key": "146",
+        "bodyText": "Consider mass in the cervix or uterus.",
+        "next": "147"
+      },
+      {
+        "key": "147",
+        "bodyText": "Continue IV fluids.\n\nPlan for rapid transfer to facility with blood transfusion and obstetric care capabilities after completing evaluation.",
+        "next": "87"
+      },
+      {
+        "key": "148",
         "bodyText": "Continue relevant CPR protocol while completing ABCDE evaluation.",
         "next": "36"
       }
