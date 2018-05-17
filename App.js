@@ -27,7 +27,7 @@ const insertButtons = (navigation, routeInfo) => {
         return (
             <View style={ styles.buttonContainer }>
                 <Button
-                    title='<Sections'
+                    title='☰'
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
                 <Button
@@ -46,7 +46,7 @@ const insertButtons = (navigation, routeInfo) => {
         return (
             <View style={ styles.buttonContainer }>
                 <Button
-                    title='<Sections'
+                    title='☰'
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
                 <Button
