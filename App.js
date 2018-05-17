@@ -11,9 +11,8 @@ import styles from './style.js';
 // doing XYZ) or maybe have like a global 'needs transfer' banner on the
 // top
 
-// TODO | Disclaimer
-// TODO | Back button when navigating into a new section doesnt take you
-// back to old section
+// TODO | Add disclaimer
+// TODO | Tie back button across stacks; hide at beginning
 
 const insertImages = (routeInfo) => {
     if (routeInfo['image']) {
@@ -21,7 +20,6 @@ const insertImages = (routeInfo) => {
     }
 }
 
-// TODO | Better place for section selector
 const insertButtons = (navigation, routeInfo) => {
     if (routeInfo['no'] && routeInfo['yes']) {
         return (
@@ -29,6 +27,11 @@ const insertButtons = (navigation, routeInfo) => {
                 <Button
                     title='☰'
                     onPress={ () => navigation.navigate('DrawerOpen') }
+                />
+                <Button
+                    title='<'
+                    accessibilityLabel='Go to last screen'
+                    onPress={ () => navigation.goBack() }
                 />
                 <Button
                     title='No'
@@ -48,6 +51,11 @@ const insertButtons = (navigation, routeInfo) => {
                 <Button
                     title='☰'
                     onPress={ () => navigation.navigate('DrawerOpen') }
+                />
+                <Button
+                    title='<'
+                    accessibilityLabel='Go to last screen'
+                    onPress={ () => navigation.goBack() }
                 />
                 <Button
                     title='Next'
@@ -80,6 +88,7 @@ for (var section in routes) {
             initialRouteName: routes[section]['initialRouteName'],
             navigationOptions: {
                 headerTitle: section,
+                headerLeft: null,
             }
         }
     );
