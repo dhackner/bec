@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, ScrollView, Text, View } from 'react-native';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
+import styles from './style.js';
 
 // TODO | v2 logging and reporting back of route navigation
 // TODO | v3 parallel interventions (start preparing for transfer while
@@ -103,23 +104,3 @@ export default class App extends React.Component {
     }
 }
 
-// TODO | Style
-const blue = '#0F7FCA';
-const deviceWidth = Dimensions.get('window').width;
-const styles = StyleSheet.create({
-    bodyText: {
-        fontSize: 20
-    },
-    flexContainer: {
-        flex: 1,
-        backgroundColor: 'white'
-    },
-    image: {
-        width: deviceWidth,
-        resizeMode: 'contain'
-    },
-    buttonContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around'
-    },
-});
