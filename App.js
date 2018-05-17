@@ -15,12 +15,9 @@ import styles from './style.js';
 // TODO | Back button when navigating into a new section doesnt take you
 // back to old section
 
-const imageRow = (image, index) => {
-    return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />
-};
 const insertImages = (routeInfo) => {
     if (routeInfo['image']) {
-        return routeInfo.image.map(imageRow);
+        return routeInfo.image.map( (image, index) => {return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />});
     }
 }
 
@@ -34,12 +31,12 @@ const insertButtons = (navigation, routeInfo) => {
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
                 <Button
-                    title='no'
+                    title='No'
                     accessibilityLabel='The answer to the question on the screen is no'
                     onPress={ () => navigation.navigate(routeInfo.no) }
                 />
                 <Button
-                    title='yes'
+                    title='Yes'
                     accessibilityLabel='The answer to the question on the screen is yes'
                     onPress={ () => navigation.navigate(routeInfo.yes) }
                 />
@@ -53,9 +50,9 @@ const insertButtons = (navigation, routeInfo) => {
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
                 <Button
-                    title='next'
+                    title='Next'
                     accessibilityLabel='Go to next screen'
-                    onPress={ () => navigation.navigate(routeInfo.next) } title="Next"
+                    onPress={ () => navigation.navigate(routeInfo.next) }
                 />
             </View>
         );
@@ -93,7 +90,13 @@ for (var section in routes) {
     }
 }
 
-const BECNavigator = DrawerNavigator(stacks, {initialRouteName: 'Intro'});
+const BECNavigator = DrawerNavigator(
+    stacks,
+    {
+        initialRouteName: 'Intro'
+    }
+);
+
 export default class App extends React.Component {
     render() {
         return (
