@@ -62,11 +62,11 @@ const insertButtons = (navigation, routeInfo) => {
 }
 
 
-const buildStackNavigator = (routes) => {
-    return StackNavigator(
-        routes['screens'].reduce((stack, routeInfo) => {
-            stack[routeInfo.key] = {
-                'screen': ({ navigation }) => (
+var stacks = {};
+for (var section in routes) {
+    stacks[section] = StackNavigator(
+        routes[section]['screens'].reduce((stack, routeInfo) => {
+            stack[routeInfo.key] = ({ navigation }) => (
                     <View style={ styles.flexContainer }>
                     <ScrollView>
                     <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
@@ -74,20 +74,12 @@ const buildStackNavigator = (routes) => {
                     </ScrollView>
                     { insertButtons(navigation, routeInfo) }
                     </View>
-                ),
-            };
+            );
             return stack;
         }, {}), {
-            initialRouteName: routes['initialRouteName']
+            initialRouteName: routes[section]['initialRouteName']
         }
     );
-}
-
-var stacks = {};
-for (var section in routes) {
-    stacks[section] = {
-        screen: buildStackNavigator(routes[section]),
-    }
 }
 
 const BECNavigator = DrawerNavigator(
