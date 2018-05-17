@@ -77,7 +77,10 @@ for (var section in routes) {
             );
             return stack;
         }, {}), {
-            initialRouteName: routes[section]['initialRouteName']
+            initialRouteName: routes[section]['initialRouteName'],
+            navigationOptions: {
+                headerTitle: section,
+            }
         }
     );
 }
@@ -85,7 +88,9 @@ for (var section in routes) {
 const BECNavigator = DrawerNavigator(
     stacks,
     {
-        initialRouteName: 'Intro'
+        initialRouteName: 'Intro',
+        navigationOptions: {
+        }
     }
 );
 
