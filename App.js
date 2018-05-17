@@ -68,8 +68,8 @@ const buildStackNavigator = (routes) => {
             stack[routeInfo.key] = {
                 'screen': ({ navigation }) => (
                     <View style={ styles.flexContainer }>
-                    <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
                     <ScrollView>
+                    <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
                     { insertImages(routeInfo) }
                     </ScrollView>
                     { insertButtons(navigation, routeInfo) }
