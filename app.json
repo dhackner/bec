@@ -4,6 +4,7 @@
     "slug": "bec",
     "version": "0.0.1",
     "githubUrl": "https://github.com/dhackner/bec.git",
+    "orientation": "portrait",
     "assetBundlePatterns": [
       "img/*"
     ],
