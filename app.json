@@ -8,12 +8,15 @@
       "img/*"
     ],
     "ios": {
-      "loadJSInBackgroundExperimental": true,
       "bundleIdentifier": "com.danhackner.bec"
     },
     "android": {
       "package": "com.danhackner.bec"
     },
-    "sdkVersion": "25.0.0"
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    },
+    "sdkVersion": "27.0.0"
   }
 }
