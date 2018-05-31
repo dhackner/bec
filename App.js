@@ -115,6 +115,7 @@ const BECNavigator = DrawerNavigator(
     stacks,
     {
         initialRouteName: 'Intro',
+        drawerWidth: 200,
         navigationOptions: {
         }
     }
