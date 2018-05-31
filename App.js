@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Image, ScrollView, Text, View } from 'react-native';
+import { Image, ScrollView, Text, View } from 'react-native';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
+import { Button, Icon } from 'react-native-elements'
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
@@ -24,22 +25,32 @@ const insertButtons = (navigation, routeInfo) => {
     if (routeInfo['no'] && routeInfo['yes']) {
         return (
             <View style={ styles.buttonContainer }>
-                <Button
-                    title='☰'
+                <Icon
+                    reverse
+                    name='menu'
+                    accessibilityLabel='Open tab selection drawer'
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
-                <Button
-                    title='<'
+                <Icon
+                    reverse
+                    color="gray"
+                    name="arrow-back"
                     accessibilityLabel='Go to last screen'
                     onPress={ () => navigation.goBack() }
                 />
-                <Button
-                    title='No'
+                <Icon
+                    reverse
+                    color="gray"
+                    type="MaterialCommunityIcons"
+                    name="close"
                     accessibilityLabel='The answer to the question on the screen is no'
                     onPress={ () => navigation.navigate(routeInfo.no) }
                 />
-                <Button
-                    title='Yes'
+                <Icon
+                    reverse
+                    color="gray"
+                    type="MaterialCommunityIcons"
+                    name="check"
                     accessibilityLabel='The answer to the question on the screen is yes'
                     onPress={ () => navigation.navigate(routeInfo.yes) }
                 />
@@ -48,17 +59,23 @@ const insertButtons = (navigation, routeInfo) => {
     } else if (routeInfo['next']) {
         return (
             <View style={ styles.buttonContainer }>
-                <Button
-                    title='☰'
+                <Icon
+                    reverse
+                    name='menu'
+                    accessibilityLabel='Open tab selection drawer'
                     onPress={ () => navigation.navigate('DrawerOpen') }
                 />
-                <Button
-                    title='<'
+                <Icon
+                    reverse
+                    color="gray"
+                    name="arrow-back"
                     accessibilityLabel='Go to last screen'
                     onPress={ () => navigation.goBack() }
                 />
-                <Button
-                    title='Next'
+                <Icon
+                    reverse
+                    color="gray"
+                    name="arrow-forward"
                     accessibilityLabel='Go to next screen'
                     onPress={ () => navigation.navigate(routeInfo.next) }
                 />
@@ -75,13 +92,13 @@ for (var section in routes) {
     stacks[section] = StackNavigator(
         routes[section]['screens'].reduce((stack, routeInfo) => {
             stack[routeInfo.key] = ({ navigation }) => (
-                    <View style={ styles.flexContainer }>
+                <View style={ styles.flexContainer }>
                     <ScrollView>
-                    <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
-                    { insertImages(routeInfo) }
+                        <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
+                        { insertImages(routeInfo) }
                     </ScrollView>
                     { insertButtons(navigation, routeInfo) }
-                    </View>
+                </View>
             );
             return stack;
         }, {}), {
