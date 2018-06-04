@@ -82,7 +82,23 @@ const insertButtons = (navigation, routeInfo) => {
             </View>
         );
     } else {
-        return null;
+        return (
+            <View style={ styles.buttonContainer }>
+                <Icon
+                    reverse
+                    name='menu'
+                    accessibilityLabel='Open tab selection drawer'
+                    onPress={ () => navigation.navigate('DrawerOpen') }
+                />
+                <Icon
+                    reverse
+                    color="gray"
+                    name="arrow-back"
+                    accessibilityLabel='Go to last screen'
+                    onPress={ () => navigation.goBack() }
+                />
+            </View>
+        );
     }
 }
 
