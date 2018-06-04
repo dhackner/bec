@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
-import { Button, Icon } from 'react-native-elements'
+import { Button, Icon, SearchBar} from 'react-native-elements'
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
@@ -102,6 +102,18 @@ const insertButtons = (navigation, routeInfo) => {
     }
 }
 
+class SearchScreen extends React.Component {
+    static navigationOptions = {
+        title: 'Welcome',
+    };
+    render() {
+        return <View>
+            <Text>Under Development</Text>
+            <SearchBar placeholder='Type Here...' />
+            <Text>Under Development</Text>
+        </View>;
+    }
+}
 
 var stacks = {};
 for (var section in routes) {
@@ -119,12 +131,30 @@ for (var section in routes) {
             return stack;
         }, {}), {
             initialRouteName: routes[section]['initialRouteName'],
-            navigationOptions: {
-                headerTitle: section,
-                headerLeft: null,
+            navigationOptions: ({ navigation }) => {
+                return {
+                    headerStyle: {
+                        backgroundColor: '#473830',
+                    },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                    headerTitle: section,
+                    headerRight: <Button
+                        icon={{name: 'search'}}
+                        backgroundColor='#473830'
+                        onPress={() => navigation.navigate('search')}
+                    />
+                }
             }
         }
     );
+    stacks['meta'] = StackNavigator({
+        search: {
+            screen: SearchScreen
+        },
+    });
 }
 
 const BECNavigator = DrawerNavigator(
