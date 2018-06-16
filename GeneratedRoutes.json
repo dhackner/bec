@@ -2,14 +2,14 @@
   "Intro": {
     "screens": [
       {
-        "key": "124",
+        "key": "123",
         "bodyText": "The goal of the ABCDE Approach is to rapidly identify and manage life-threatening conditions in order of priority; ensure the airway stays open; and ensure that breathing and circulation are adequate to deliver oxygen to the body. You will be asked a series of questions and be advised to intervene if life threats are found.  Once you have intervened you should rapidly reassess the patient. If at any time the patient's condition changes, repeat the ABCDE assessment from the beginning. Remember that this app is a guide and should not take the place of clinical judgement.",
-        "next": "126"
+        "next": "125"
       },
       {
-        "key": "125",
+        "key": "124",
         "bodyText": "This app was designed based on the WHO Basic Emergency Care Course and will help guide you through the ABCDE assessment. \n\nA = Airway\nB = Breathing\nC = Circulation\nD = Disability\nE = Exposure",
-        "next": "124"
+        "next": "123"
       },
       {
         "key": "126",
@@ -17,14 +17,14 @@
         "next": "1"
       }
     ],
-    "initialRouteName": "125"
+    "initialRouteName": "124"
   },
   "Airway": {
     "screens": [
       {
         "key": "1",
         "bodyText": "Is the patient speaking easily?",
-        "yes": "103",
+        "yes": "102",
         "no": "76"
       },
       {
@@ -42,12 +42,12 @@
           "./img/08_Chestthrustsforchoking_Infant.jpg",
           "./img/09_Backblowsforchoking_Infant.jpg"
         ],
-        "next": "12"
+        "next": "157"
       },
       {
         "key": "4",
         "bodyText": "Look inside the mouth.",
-        "next": "122"
+        "next": "121"
       },
       {
         "key": "5",
@@ -68,12 +68,12 @@
       {
         "key": "7",
         "bodyText": "Suction secretions or blood.",
-        "next": "123"
+        "next": "122"
       },
       {
         "key": "8",
         "bodyText": "Stabilize cervical spine.",
-        "next": "120"
+        "next": "119"
       },
       {
         "key": "9",
@@ -85,7 +85,7 @@
         "key": "10",
         "bodyText": "Is there a rash, wheezing, or other signs of anaphylaxis?",
         "yes": "11",
-        "no": "105"
+        "no": "89"
       },
       {
         "key": "11",
@@ -97,8 +97,8 @@
       },
       {
         "key": "12",
-        "bodyText": "Is the airway stable or improved?",
-        "yes": "103",
+        "bodyText": "Is the airway stablized or improved?",
+        "yes": "102",
         "no": "1"
       },
       {
@@ -115,7 +115,7 @@
       },
       {
         "key": "77",
-        "bodyText": "Is the patient hoarse or raspy?",
+        "bodyText": "Are there abnormal sounds from the airway?\nExamples: Raspy voice, stridor, snoring or gurgling.",
         "yes": "9",
         "no": "4"
       },
@@ -127,7 +127,7 @@
       },
       {
         "key": "79",
-        "bodyText": "Place a supplemental airway device",
+        "bodyText": "Place a supplemental airway device as indicated.",
         "image": [
           "./img/10_Nasopharyngealairwayinsertion_master.jpg",
           "./img/11_Oropharyngealairwayinsertion_master.jpg"
@@ -143,55 +143,99 @@
       {
         "key": "81",
         "bodyText": "Encourage speaking or coughing.",
-        "next": "111"
+        "next": "110"
       },
       {
         "key": "89",
-        "bodyText": "Is there a history of fire or inhalation injury?",
-        "yes": "105",
-        "no": "10"
+        "bodyText": "Is there signs or history of fire or inhalation injury?\n\nExamples: Burned nasal hairs, soot around the nose or mouth.",
+        "yes": "156",
+        "no": "12"
+      },
+      {
+        "key": "103",
+        "bodyText": "Suction blood or secretions.",
+        "next": "120"
       },
       {
         "key": "104",
-        "bodyText": "Suction blood or secretions.",
-        "next": "121"
+        "bodyText": "Plan for rapid handover/transfer to a provider capable of advanced airway management after completion of ABCDE evaluation.",
+        "next": "102"
       },
       {
-        "key": "105",
-        "bodyText": "Arrange for rapid transfer after completion of evaluation.",
-        "next": "103"
-      },
-      {
-        "key": "111",
+        "key": "110",
         "bodyText": "Is the obstruction cleared?",
         "yes": "12",
-        "no": "3"
+        "no": "159"
       },
       {
-        "key": "120",
-        "bodyText": "Is there blood or secretions?",
-        "yes": "104",
+        "key": "119",
+        "bodyText": "Is there blood or secretions in the airway?",
+        "yes": "103",
         "no": "79"
       },
       {
-        "key": "121",
-        "bodyText": "Will the patient tolerate an airway device such as an oral or nasopharyngeal airway?",
+        "key": "120",
+        "bodyText": "Can the patient tolerate an airway device such as an oral or nasopharyngeal airway?\n\nDo NOT place an oral airway if it will cause a gag reflex. Do not place a nasal airwar if there is evidence of facial fractures.",
         "yes": "79",
         "no": "12"
       },
       {
-        "key": "122",
+        "key": "121",
         "bodyText": "Is the airway obstructed?",
         "yes": "5",
         "no": "32"
       },
       {
-        "key": "123",
+        "key": "122",
         "bodyText": "Place in recovery position.",
         "image": [
           "./img/30_Recoveryposition.jpg"
         ],
-        "next": "79"
+        "next": "120"
+      },
+      {
+        "key": "156",
+        "bodyText": "Give oxygen to all patients with burn injuries of the airway as they might not show signs of hypoxia.",
+        "next": "104"
+      },
+      {
+        "key": "157",
+        "bodyText": "Is the obstruction cleared?",
+        "yes": "12",
+        "no": "158"
+      },
+      {
+        "key": "158",
+        "bodyText": "Plan for rapid handover/transfer to advanced provider capable of advanced airway management if the obstruction cannot be cleared after completion of ABCDE evaluation.",
+        "next": "102"
+      },
+      {
+        "key": "159",
+        "bodyText": "In an adult, perform abdominal thrusts.\n\n\nIn pregnant patients, perform chest thrusts.\n\n\nIn children, perform chest thrust and back pat.",
+        "image": [
+          "./img/05_Abdominalthrustsforchoking_Adult.jpg",
+          "./img/07_Chestthrustsforchoking_Pregnant.jpg",
+          "./img/08_Chestthrustsforchoking_Infant.jpg",
+          "./img/09_Backblowsforchoking_Infant.jpg"
+        ],
+        "next": "160"
+      },
+      {
+        "key": "160",
+        "bodyText": "Is the obstruction cleared?",
+        "yes": "12",
+        "no": "161"
+      },
+      {
+        "key": "161",
+        "bodyText": "Can the object be safely removed?",
+        "yes": "162",
+        "no": "158"
+      },
+      {
+        "key": "162",
+        "bodyText": "Remove the foreign body if possible and suction\nfluid. Be careful not to push a foreign body further into the airway. Do not try to remove a foreign body unless clearly visible.",
+        "next": "12"
       }
     ],
     "initialRouteName": "1"
@@ -212,7 +256,7 @@
         "key": "14",
         "bodyText": "Is breathing stable or improved?",
         "yes": "19",
-        "no": "103"
+        "no": "102"
       },
       {
         "key": "15",
@@ -222,7 +266,7 @@
       },
       {
         "key": "16",
-        "bodyText": "Consider pneumothorax.\nPerform needle decompression as indicated.",
+        "bodyText": "Consider pneumothorax.\nPerform needle decompression on affected side as indicated.",
         "image": [
           "./img/18_Needledecompression.jpg"
         ],
@@ -232,7 +276,7 @@
         "key": "17",
         "bodyText": "Is there crepitus (cracking or popping) over the chest wall?",
         "yes": "16",
-        "no": "23"
+        "no": "163"
       },
       {
         "key": "18",
@@ -248,7 +292,7 @@
       },
       {
         "key": "21",
-        "bodyText": "Suspect opiate overdose.\nGive Naloxone if available.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
+        "bodyText": "Suspect opiate overdose.\n\nGive Naloxone if available.\n\nMonitor closely as naloxone will wear off and additional doses may be needed.\n\n**IV/IM Injection: 400mcg/ml (hydrochloride) in 1 ml ampoule\nIV: 100mcg single dose OR\nIM: 400mcg single dose\nMay repeat every 5 minutes as needed. May require 0.4 mg/hr infusion for several hours for long-acting opioids.**",
         "image": [
           "./img/Naloxone.jpg"
         ],
@@ -262,19 +306,19 @@
       },
       {
         "key": "23",
-        "bodyText": "Are there decreased breath sounds or hyperresonance to percussion of the chest?",
-        "yes": "16",
+        "bodyText": "Are there decreased breath sounds?",
+        "yes": "163",
         "no": "24"
       },
       {
         "key": "24",
-        "bodyText": "Is there abnormal chest wall movement?",
+        "bodyText": "Is part of chest wall moving in the opposite direction of the rest of the chest while breathing?",
         "yes": "25",
         "no": "26"
       },
       {
         "key": "25",
-        "bodyText": "Consider Flail Chest.\n\nSplint the chest wall as possible. Ensure adequate treatment of underlying pneumothorax.",
+        "bodyText": "Consider Flail Chest.\n\nEnsure adequate pain control and give oxygen.",
         "next": "26"
       },
       {
@@ -291,8 +335,8 @@
       {
         "key": "28",
         "bodyText": "Are there circumferential chest or abdominal burns or burns restricting breathing?",
-        "yes": "128",
-        "no": "128"
+        "yes": "127",
+        "no": "164"
       },
       {
         "key": "29",
@@ -306,7 +350,7 @@
         "key": "30",
         "bodyText": "Is there wheezing?",
         "yes": "31",
-        "no": "127"
+        "no": "126"
       },
       {
         "key": "31",
@@ -314,7 +358,7 @@
         "image": [
           "./img/Salbutamol.jpg"
         ],
-        "next": "19"
+        "next": "14"
       },
       {
         "key": "33",
@@ -349,29 +393,62 @@
       },
       {
         "key": "102",
-        "bodyText": "Were there any of the following?\n- Pneumothorax\n- Flail chest\n- Sucking chest wound",
-        "yes": "33",
-        "no": "19"
-      },
-      {
-        "key": "103",
         "bodyText": "Is the patient breathing?",
         "yes": "74",
         "no": "13"
       },
       {
-        "key": "127",
-        "bodyText": "Are there rhonchi on lung examination?",
-        "yes": "128",
-        "no": "19"
+        "key": "126",
+        "bodyText": "Are there crackles on lung examination?",
+        "yes": "166",
+        "no": "169"
       },
       {
-        "key": "128",
-        "bodyText": "Continue oxygen and arrange rapid transfer.",
+        "key": "127",
+        "bodyText": "Continue giving oxygen therapy.\n\nMany of these patients will need a chest tube or drainage.\n\nArrange for handover/transfer to a capable facility immediately upon completion of ABCDE evaluation.",
+        "next": "14"
+      },
+      {
+        "key": "163",
+        "bodyText": "Is there hyperresonance to percussion on affected side?",
+        "yes": "16",
+        "no": "24"
+      },
+      {
+        "key": "164",
+        "bodyText": "Are there dull sounds with percussion on the affected side?",
+        "yes": "165",
+        "no": "127"
+      },
+      {
+        "key": "165",
+        "bodyText": "Consider haemothorax.",
+        "next": "127"
+      },
+      {
+        "key": "166",
+        "bodyText": "Is there a fever or signs of infection?",
+        "yes": "167",
+        "no": "169"
+      },
+      {
+        "key": "167",
+        "bodyText": "Consider pneumonia.\n\nContinue oxygen and give antibiotics.",
         "next": "33"
+      },
+      {
+        "key": "168",
+        "bodyText": "Consider large pleural effusion.",
+        "next": "127"
+      },
+      {
+        "key": "169",
+        "bodyText": "Are there decreased breath sounds or dullness to percussion?",
+        "yes": "168",
+        "no": "33"
       }
     ],
-    "initialRouteName": "103"
+    "initialRouteName": "102"
   },
   "Circulation": {
     "screens": [
@@ -388,13 +465,13 @@
           "./img/36_Flatfontanelle.jpg",
           "./img/40_Abnormalskinpinchinachild.jpg"
         ],
-        "yes": "129",
-        "no": "106"
+        "yes": "128",
+        "no": "105"
       },
       {
         "key": "35",
         "bodyText": "Begin relevant CPR protocol.",
-        "next": "148"
+        "next": "147"
       },
       {
         "key": "36",
@@ -418,7 +495,7 @@
         "image": [
           "./img/20_Applyingdirectpressuretoawound.jpg"
         ],
-        "next": "136"
+        "next": "135"
       },
       {
         "key": "39",
@@ -430,7 +507,7 @@
         "key": "40",
         "bodyText": "Are there muffled heart sounds?",
         "yes": "88",
-        "no": "131"
+        "no": "130"
       },
       {
         "key": "41",
@@ -446,7 +523,7 @@
       {
         "key": "43",
         "bodyText": "Continue to give fluids and move on to Disability",
-        "next": "106"
+        "next": "105"
       },
       {
         "key": "44",
@@ -456,7 +533,7 @@
       {
         "key": "75",
         "bodyText": "Reassess breath sounds.\n\nAre breath sounds decreased bilaterally?",
-        "yes": "130",
+        "yes": "129",
         "no": "85"
       },
       {
@@ -472,7 +549,7 @@
           "./img/32_Openpelvicfracture.jpg"
         ],
         "yes": "84",
-        "no": "141"
+        "no": "140"
       },
       {
         "key": "84",
@@ -498,7 +575,7 @@
       {
         "key": "87",
         "bodyText": "Have signs of circulation stabilized or improved with interventions?",
-        "yes": "106",
+        "yes": "105",
         "no": "19"
       },
       {
@@ -507,114 +584,114 @@
         "next": "44"
       },
       {
-        "key": "129",
-        "bodyText": "Are there signs of volume overload?\n(Pitting edema, elevated JVP or history of heart failure)",
-        "yes": "132",
+        "key": "128",
+        "bodyText": "Are there signs of volume overload?\n(Pitting oedema, elevated JVP or history of heart failure)",
+        "yes": "131",
         "no": "36"
       },
       {
-        "key": "130",
+        "key": "129",
         "bodyText": "Are there rhonchi present on lung exam?",
-        "yes": "133",
-        "no": "134"
+        "yes": "132",
+        "no": "133"
       },
       {
-        "key": "131",
+        "key": "130",
         "bodyText": "Is there tracheal deviation?",
         "yes": "85",
         "no": "75"
       },
       {
-        "key": "132",
+        "key": "131",
         "bodyText": "Consider volume overload.\nGive oxygen.",
-        "next": "135"
+        "next": "134"
+      },
+      {
+        "key": "132",
+        "bodyText": "Consider pulmonary oedema.\nGive oxygen.",
+        "next": "134"
       },
       {
         "key": "133",
-        "bodyText": "Consider pulmonary edema.\nGive oxygen.",
-        "next": "135"
+        "bodyText": "Consider pleural effusion.\nGive oxygen.",
+        "next": "134"
       },
       {
         "key": "134",
-        "bodyText": "Consider pleural effusion.\nGive oxygen.",
-        "next": "135"
+        "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
+        "next": "105"
       },
       {
         "key": "135",
-        "bodyText": "Prepare for rapid handover/transfer after completing evaluation.",
-        "next": "106"
+        "bodyText": "Is bleeding controlled?",
+        "yes": "82",
+        "no": "136"
       },
       {
         "key": "136",
-        "bodyText": "Is bleeding controlled?",
-        "yes": "82",
-        "no": "137"
+        "bodyText": "Attempt Deep wound packing.",
+        "next": "138"
       },
       {
         "key": "137",
-        "bodyText": "Attempt Deep wound packing.",
+        "bodyText": "Attempt tourniquette use.\n\nRemember: A tourniquet should be used only for life-threatening bleeding. When placed, it may lead to amputation.",
         "next": "139"
       },
       {
         "key": "138",
-        "bodyText": "Attempt tourniquette use.\n\nRemember: A tourniquet should be used only for life-threatening bleeding. When placed, it may lead to amputation.",
-        "next": "140"
+        "bodyText": "Has bleeding improved?",
+        "yes": "82",
+        "no": "137"
       },
       {
         "key": "139",
-        "bodyText": "Has bleeding improved?",
-        "yes": "82",
-        "no": "138"
-      },
-      {
-        "key": "140",
         "bodyText": "Is the bleeding improved or controlled?",
         "yes": "82",
         "no": "44"
       },
       {
-        "key": "141",
+        "key": "140",
         "bodyText": "Is the patient female?",
-        "yes": "144",
+        "yes": "143",
         "no": "44"
       },
       {
-        "key": "142",
+        "key": "141",
         "bodyText": "Did the patient recently deliver a child?",
-        "yes": "143",
-        "no": "146"
+        "yes": "142",
+        "no": "145"
       },
       {
-        "key": "143",
+        "key": "142",
         "bodyText": "Consider uterine massage.\nExplain to the woman what you will do and why.\nMassage the uterus until it is very firm.\nDo not stop massaging until the uterus is contracted (hard).\nMake sure the uterus does not become relaxed (soft) after you stop uterine massage. If it becomes relaxed, resume massage.",
         "image": [
           "./img/22_Uterinemassageforpostpartumhemorrhage.jpg"
         ],
-        "next": "147"
+        "next": "146"
+      },
+      {
+        "key": "143",
+        "bodyText": "Is the patient currently pregnant?",
+        "yes": "144",
+        "no": "141"
       },
       {
         "key": "144",
-        "bodyText": "Is the patient currently pregnant?",
-        "yes": "145",
-        "no": "142"
+        "bodyText": "Consider ectopic pregnancy.",
+        "next": "146"
       },
       {
         "key": "145",
-        "bodyText": "Consider ectopic pregnancy.",
-        "next": "147"
+        "bodyText": "Consider mass in the cervix or uterus.",
+        "next": "146"
       },
       {
         "key": "146",
-        "bodyText": "Consider mass in the cervix or uterus.",
-        "next": "147"
-      },
-      {
-        "key": "147",
         "bodyText": "Continue IV fluids.\n\nPlan for rapid transfer to facility with blood transfusion and obstetric care capabilities after completing evaluation.",
         "next": "87"
       },
       {
-        "key": "148",
+        "key": "147",
         "bodyText": "Continue relevant CPR protocol while completing ABCDE evaluation.",
         "next": "36"
       }
@@ -637,7 +714,7 @@
       {
         "key": "47",
         "bodyText": "Is the patient having a seizure?\nExamples: Abnormal repetitive movements or shaking on one or both sides of the body.",
-        "yes": "151",
+        "yes": "150",
         "no": "49"
       },
       {
@@ -651,7 +728,7 @@
       {
         "key": "49",
         "bodyText": "Does the patient have localizing symptoms or uneven pupils?\nExamples: facial droop, inability to move one side of the body.",
-        "yes": "152",
+        "yes": "151",
         "no": "51"
       },
       {
@@ -685,7 +762,7 @@
         "image": [
           "./img/29_Spinalimmobilizationformovingapatient.jpg"
         ],
-        "next": "149"
+        "next": "148"
       },
       {
         "key": "92",
@@ -715,7 +792,7 @@
       {
         "key": "96",
         "bodyText": "Concern for spinal injury? \nExamples: Patients with midline spinal tenderness, misaligned spinal bones, loss of control of urine or stool.",
-        "yes": "108",
+        "yes": "107",
         "no": "97"
       },
       {
@@ -727,7 +804,7 @@
         "key": "98",
         "bodyText": "Is glucose testing available?",
         "yes": "46",
-        "no": "107"
+        "no": "106"
       },
       {
         "key": "99",
@@ -738,19 +815,19 @@
         "next": "47"
       },
       {
-        "key": "106",
+        "key": "105",
         "bodyText": "Is the patient awake and alert?",
         "yes": "73",
         "no": "45"
       },
       {
-        "key": "107",
+        "key": "106",
         "bodyText": "Is there a high concern for hypoglycemia? \n\nExamples: Patients with a history of diabetes, those taking medications that can lower blood sugar, those with malaria or a severe infection.",
         "yes": "99",
         "no": "47"
       },
       {
-        "key": "108",
+        "key": "107",
         "bodyText": "Maintain spinal precautions.\nImmobilize cervical, thoracic or lumbar spine.",
         "image": [
           "./img/29_Spinalimmobilizationformovingapatient.jpg"
@@ -758,53 +835,53 @@
         "next": "50"
       },
       {
-        "key": "149",
+        "key": "148",
         "bodyText": "Are there signs concerning for a skull fracture?\n\nExamples: Skull deformity, bruising to head (especially around eyes or ears), blood or fluid from the ears or nose.",
-        "yes": "150",
+        "yes": "149",
         "no": "98"
       },
       {
-        "key": "150",
+        "key": "149",
         "bodyText": "Concerning for skull fracture. Give antibiotics as per local protocol.",
         "next": "98"
       },
       {
-        "key": "151",
+        "key": "150",
         "bodyText": "Suspect a seizure.\n\nDo not put anything in the mouth of a person with active seizure.\nMove all hard or sharp objects away from the patient.\nSuction the airway if needed.\nGive oxygen.\nMonitor closely for slowing or difficult breathing.",
         "next": "94"
       },
       {
-        "key": "152",
+        "key": "151",
         "bodyText": "Is there concern for increased pressure on the brain?\n\nExamples: Patient with headache, nausea, vomiting or history of a tumor.",
         "yes": "96",
-        "no": "153"
+        "no": "152"
+      },
+      {
+        "key": "152",
+        "bodyText": "Concern for spinal injury?\nExamples: Patients with midline spinal tenderness, misaligned spinal bones, loss of control of urine or stool.",
+        "yes": "153",
+        "no": "154"
       },
       {
         "key": "153",
-        "bodyText": "Concern for spinal injury?\nExamples: Patients with midline spinal tenderness, misaligned spinal bones, loss of control of urine or stool.",
-        "yes": "154",
-        "no": "155"
-      },
-      {
-        "key": "154",
         "bodyText": "Maintain spinal precautions.\nImmobilize cervical, thoracic or lumbar spine.",
         "image": [
           "./img/29_Spinalimmobilizationformovingapatient.jpg"
         ],
-        "next": "156"
+        "next": "155"
       },
       {
-        "key": "155",
+        "key": "154",
         "bodyText": "Suspect possible stroke. \nArrange rapid Transfer to stroke facility after completing evaluation.",
         "next": "93"
       },
       {
-        "key": "156",
+        "key": "155",
         "bodyText": "Suspect spinal injury. \nArrange rapid transfer to specialist facility after completing evaluation.",
         "next": "93"
       }
     ],
-    "initialRouteName": "106"
+    "initialRouteName": "105"
   },
   "Exposure": {
     "screens": [
@@ -836,7 +913,7 @@
       },
       {
         "key": "57",
-        "bodyText": "Immobilize extremity.\nKeep extremity below the level of the heart.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.\n\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
+        "bodyText": "Immobilize the extremity.\nTake a picture of snake if possible and keep it with the patient.\n\nGive tetanus vaccine if required and available.\n\n**IM Injection: 0.5 mL (Give for children not up to date; adults with none in 5 years; or status unknown)**",
         "next": "67"
       },
       {
@@ -895,7 +972,7 @@
       {
         "key": "68",
         "bodyText": "Warm the patient as able.\nRemember to cover head in children.",
-        "next": "109"
+        "next": "108"
       },
       {
         "key": "69",
@@ -906,7 +983,7 @@
       {
         "key": "70",
         "bodyText": "Cool the patient as possible.\nUnbundle wrapped babies.",
-        "next": "109"
+        "next": "108"
       },
       {
         "key": "72",
@@ -920,18 +997,18 @@
         "no": "54"
       },
       {
-        "key": "109",
+        "key": "108",
         "bodyText": "Is there evidence of infection or poisoning?",
-        "yes": "110",
+        "yes": "109",
         "no": "67"
       },
       {
-        "key": "110",
+        "key": "109",
         "bodyText": "Treat infection or poisoning as per local protocol.",
-        "next": "119"
+        "next": "118"
       },
       {
-        "key": "119",
+        "key": "118",
         "bodyText": "Has the patient's condition stabilized?",
         "yes": "67",
         "no": "72"
@@ -944,7 +1021,7 @@
       {
         "key": "67",
         "bodyText": "Does the patient need to be transferred to another facility based on likely diagnosis or prior answers?",
-        "yes": "114",
+        "yes": "113",
         "no": "71"
       },
       {
@@ -953,28 +1030,28 @@
         "next": "72"
       },
       {
+        "key": "113",
+        "bodyText": "Check that patient needs match the available services at the destination facility.\n\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\n\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\n\nSecure patient valuables for transport (whenever possible, leave with family).\n\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+        "next": "114"
+      },
+      {
         "key": "114",
-        "bodyText": "Check that patient needs match the available services at the destination facility.\nEnsure that patient and family are aware of reasons, plan, and destination for transport.\nRecord family contact name and number in sending facility chart and in paperwork sent with patient.\nSecure patient valuables for transport (whenever possible, leave with family).\nA brief written record (including name, date of birth, clinical presentation and all interventions) should ALWAYS accompany the patient.",
+        "bodyText": "Provide personal protective equipment (PPE) for the staff.\n\nAirway equipment: Ensure adequate oxygen (with replacement tank if needed), bag valve mask (BVM) and suction (check if working before departure).\n\nIV: Check that IV is secured prior to transport. Consider a second IV or backup supply.\n\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\n\nPrepare for new or recurrent symptoms.\nPosition patient carefully.\nSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\nWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
         "next": "115"
       },
       {
         "key": "115",
-        "bodyText": "PPE for the staff.\nAirway equipment and suction (check if working before departure).\nAdequate oxygen (with replacement tank if needed) and bag valve mask (BVM).\nIV access: Check that IV is secured prior to transport; consider second IV or backup supply.\nMedications: Bring additional doses of medications and fluids, and consider other medications that you may need.\nPrepare for new or recurrent symptoms.\n\tSeizure/convulsion patients: place pads/pillows around patient to limit injury from a seizure during transport.\n\tWatch for vomiting and ensure that airway remains clear, particularly for those with cervical spine immobilization. Take suction. Position patient carefully.\nCheck that there is enough fuel for transport.\nEnsure that telephone or radio is present in vehicle and working",
+        "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\n\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.\n\n(Pregnancy Concerns)\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side, or tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.",
         "next": "116"
       },
       {
         "key": "116",
-        "bodyText": "Position patient for best airway opening and breathing.\nUse recovery position if no trauma.\nIf > 20 weeks pregnant and NO spine injury: Place pillows along the length of her right back to keep her on her left side.\nCheck that cervical spine has been immobilized if indicated.\nPossible spine injury: use backboard and log-roll manoeuvre to move patients. Check for pressure spots every 2 hours; pad areas with soft material as needed.\nIf > 20~weeks pregnant: Tip backboard slightly to the left using a wedge or other materials. This avoids compression of the large blood vessels by the pregnant uterus.\nSplint or immobilize fractures to protect soft tissues and decrease pain and bleeding.",
+        "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic.\n\nControl bleeding prior to transport and re-assess for new bleeding.\n\nPerform regular re-assessment of any splinted extremity.\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\nPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\nBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\nRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\nWatch for hypothermia and hypoglycaemia, as these are more common in children.",
         "next": "117"
       },
       {
         "key": "117",
-        "bodyText": "Continually re-assess the patient using the ABCDE approach (at least every 15 minutes), including repeat glucose checks if patient has been hypoglycaemic\nControl bleeding prior to transport and re-assess for new bleeding\nPerform regular re-assessment of any splinted extremity\nContinue necessary treatments (e.g. oxygen, IV fluids, oxytocin, glucose)\nKeep the patient from getting too hot or too cold during transport.\n\n(Paediatric Considerations)\n\tPrepare appropriate size equipment and weight-adjusted dosages of critical medications.\n\tBring a family member or friend to provide reassurance and comfort and tell the receiving facility that there is a person accompanying the child.\n\tRemember that critically ill or injured children can look well initially and then worsen quickly. Monitor closely.\n\tWatch for hypothermia and hypoglycaemia, as these are more common in children.",
-        "next": "118"
-      },
-      {
-        "key": "118",
-        "bodyText": "Situation: Basic patient information (e.g. age, sex); Chief complaint (the patient's initial description of the problem, such as difficulty in breathing for 3 days, or arm pain after a fall, etc.)\nBackground: 2-4 most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition (e.g. need for close airway observation if inhalation burn is suspected); cautions regarding prior therapies or interventions (e.g. time of last adrenaline dose to anticipate return symptoms, need to monitor mental status if sedating medications have been given, need to monitor 3-way dressing for clotting, etc.).",
+        "bodyText": "Handover\nUse the Situation, Background, Assessment, Recommendations (SBAR) format to communicate key information.\n\nSituation: Basic patient information and chief complaint.\nBackground: 2-4 of the most important and relevant aspects of patient's case and/or condition; important ABCDE findings/interventions.\nAssessment: What you think is wrong with the patient; reason for the transfer/ handover.\nRecommendations: next steps in treatment plan; potential worsening of the patient's condition; cautions regarding prior therapies or interventions.",
         "next": "71"
       }
     ],
