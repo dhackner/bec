@@ -23,7 +23,6 @@ const requiredImages = {
 ,  './img/24_InsertingIVhand_Child.jpg': require('./img/24_InsertingIVhand_Child.jpg')
 ,  './img/25_SecuringanIV_Child.jpg': require('./img/25_SecuringanIV_Child.jpg')
 ,  './img/29_Spinalimmobilizationformovingapatient.jpg': require('./img/29_Spinalimmobilizationformovingapatient.jpg')
-,  './img/29_Spinalimmobilizationformovingapatient.jpg': require('./img/29_Spinalimmobilizationformovingapatient.jpg')
 ,  './img/30_Recoveryposition.jpg': require('./img/30_Recoveryposition.jpg')
 ,  './img/30_Recoveryposition.jpg': require('./img/30_Recoveryposition.jpg')
 ,  './img/32_Openpelvicfracture.jpg': require('./img/32_Openpelvicfracture.jpg')
