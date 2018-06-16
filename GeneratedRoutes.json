@@ -637,12 +637,12 @@
       {
         "key": "47",
         "bodyText": "Is the patient having a seizure?\nExamples: Abnormal repetitive movements or shaking on one or both sides of the body.",
-        "yes": "94",
+        "yes": "151",
         "no": "49"
       },
       {
         "key": "48",
-        "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\nExamples: IV injection, intramuscular injection, intranasal or rectal.\n\n**Diazepam\nOral Tablet: 2mg, 5mg\nIV Injection: 5mg /1ml ampoule\nRectal Solution: 10mg/2ml\nAdults:\nFirst dose:  10 mg slow IV push or 20 mg rectally\nSecond dose after 10 minutes:   5 mg slow IV push or 10 mg rectally\nMaximum IV Dose: 30 mg\nChildren:\nFirst dose: 0.2 mg/kg slow IV push or 0.5 mg/kg rectally. Can repeat half of first dose after 10 minutes if\nseizures/convulsions continue. Max IV Dose: 20 mg**",
+        "bodyText": "Give a benzodiazepine medication such as Diazepam however available.\nExamples: IV injection, intramuscular injection, intranasal or rectal.\nClosely monitor vital signs.\n\n**Diazepam\nOral Tablet: 2mg, 5mg\nIV Injection: 5mg /1ml ampoule\nRectal Solution: 10mg/2ml\nAdults:\nFirst dose:  10 mg slow IV push or 20 mg rectally\nSecond dose after 10 minutes:   5 mg slow IV push or 10 mg rectally\nMaximum IV Dose: 30 mg\nChildren:\nFirst dose: 0.2 mg/kg slow IV push or 0.5 mg/kg rectally. Can repeat half of first dose after 10 minutes if\nseizures/convulsions continue. Max IV Dose: 20 mg**",
         "image": [
           "./img/Diazepam.jpg"
         ],
@@ -651,17 +651,17 @@
       {
         "key": "49",
         "bodyText": "Does the patient have localizing symptoms or uneven pupils?\nExamples: facial droop, inability to move one side of the body.",
-        "yes": "96",
+        "yes": "152",
         "no": "51"
       },
       {
         "key": "50",
-        "bodyText": "Place in full spinal precautions, including immobilization of cervical spine, using log rolling technique if necessary.\n\nArrange rapid transfer to a stroke facility after completing evaluation.",
+        "bodyText": "Suspect intracranial process. Arrange rapid transfer to a surgical facility after completing evaluation.\n\nUse log-roll technique as necessary.",
         "next": "93"
       },
       {
         "key": "51",
-        "bodyText": "Small (pinpoint) pupils or slow breathing?",
+        "bodyText": "Does the patient have small (pinpoint) pupils or slow breathing?",
         "yes": "52",
         "no": "73"
       },
@@ -675,7 +675,7 @@
       },
       {
         "key": "90",
-        "bodyText": "Are there signs of trauma (such as bleeding, bruising or deformity)?",
+        "bodyText": "Are there signs of trauma such as bleeding, bruising or deformity?",
         "yes": "91",
         "no": "92"
       },
@@ -685,7 +685,7 @@
         "image": [
           "./img/29_Spinalimmobilizationformovingapatient.jpg"
         ],
-        "next": "98"
+        "next": "149"
       },
       {
         "key": "92",
@@ -714,7 +714,7 @@
       },
       {
         "key": "96",
-        "bodyText": "Concern for spinal injury?",
+        "bodyText": "Concern for spinal injury? \nExamples: Patients with midline spinal tenderness, misaligned spinal bones, loss of control of urine or stool.",
         "yes": "108",
         "no": "97"
       },
@@ -745,17 +745,63 @@
       },
       {
         "key": "107",
-        "bodyText": "Is there a high concern for hypoglycemia? \n(History of diabetes medications or similar presentation in the past?)",
+        "bodyText": "Is there a high concern for hypoglycemia? \n\nExamples: Patients with a history of diabetes, those taking medications that can lower blood sugar, those with malaria or a severe infection.",
         "yes": "99",
         "no": "47"
       },
       {
         "key": "108",
-        "bodyText": "Immobilize cervical, thoracic or lumbar spine.",
+        "bodyText": "Maintain spinal precautions.\nImmobilize cervical, thoracic or lumbar spine.",
         "image": [
           "./img/29_Spinalimmobilizationformovingapatient.jpg"
         ],
         "next": "50"
+      },
+      {
+        "key": "149",
+        "bodyText": "Are there signs concerning for a skull fracture?\n\nExamples: Skull deformity, bruising to head (especially around eyes or ears), blood or fluid from the ears or nose.",
+        "yes": "150",
+        "no": "98"
+      },
+      {
+        "key": "150",
+        "bodyText": "Concerning for skull fracture. Give antibiotics as per local protocol.",
+        "next": "98"
+      },
+      {
+        "key": "151",
+        "bodyText": "Suspect a seizure.\n\nDo not put anything in the mouth of a person with active seizure.\nMove all hard or sharp objects away from the patient.\nSuction the airway if needed.\nGive oxygen.\nMonitor closely for slowing or difficult breathing.",
+        "next": "94"
+      },
+      {
+        "key": "152",
+        "bodyText": "Is there concern for increased pressure on the brain?\n\nExamples: Patient with headache, nausea, vomiting or history of a tumor.",
+        "yes": "96",
+        "no": "153"
+      },
+      {
+        "key": "153",
+        "bodyText": "Concern for spinal injury?\nExamples: Patients with midline spinal tenderness, misaligned spinal bones, loss of control of urine or stool.",
+        "yes": "154",
+        "no": "155"
+      },
+      {
+        "key": "154",
+        "bodyText": "Maintain spinal precautions.\nImmobilize cervical, thoracic or lumbar spine.",
+        "image": [
+          "./img/29_Spinalimmobilizationformovingapatient.jpg"
+        ],
+        "next": "156"
+      },
+      {
+        "key": "155",
+        "bodyText": "Suspect possible stroke. \nArrange rapid Transfer to stroke facility after completing evaluation.",
+        "next": "93"
+      },
+      {
+        "key": "156",
+        "bodyText": "Suspect spinal injury. \nArrange rapid transfer to specialist facility after completing evaluation.",
+        "next": "93"
       }
     ],
     "initialRouteName": "106"
