@@ -114,8 +114,13 @@ class SearchScreen extends React.Component {
         </View>;
     }
 }
-
-var stacks = {};
+var stacks = {
+    'meta': StackNavigator({
+        search: {
+            screen: SearchScreen
+        },
+    })
+};
 for (var section in routes) {
     stacks[section] = StackNavigator(
         routes[section]['screens'].reduce((stack, routeInfo) => {
@@ -150,11 +155,6 @@ for (var section in routes) {
             }
         }
     );
-    stacks['meta'] = StackNavigator({
-        search: {
-            screen: SearchScreen
-        },
-    });
 }
 
 const BECNavigator = DrawerNavigator(
