@@ -137,8 +137,7 @@ for (var section in routes) {
     stacks[section] = StackNavigator(
         screens, {
             initialRouteName: routes[section]['initialRouteName'],
-            navigationOptions: ({ navigation }) => {
-                return {
+            navigationOptions: {
                     headerStyle: {
                         backgroundColor: '#473830',
                     },
@@ -150,9 +149,8 @@ for (var section in routes) {
                     headerRight: <Button
                         icon={{name: 'search'}}
                         backgroundColor='#473830'
-                        onPress={() => navigation.navigate('search')}
+                        //onPress={() => navigation.navigate('search')}
                     />
-                }
             }
         }
     );
