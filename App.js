@@ -122,19 +122,20 @@ var stacks = {
     })
 };
 for (var section in routes) {
+    var screens = routes[section]['screens'].reduce((stack, routeInfo) => {
+        stack[routeInfo.key] = ({ navigation }) => (
+            <View style={ styles.flexContainer }>
+            <ScrollView>
+            <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
+            { insertImages(routeInfo) }
+            </ScrollView>
+            { insertButtons(navigation, routeInfo) }
+            </View>
+        );
+        return stack;
+    }, {});
     stacks[section] = StackNavigator(
-        routes[section]['screens'].reduce((stack, routeInfo) => {
-            stack[routeInfo.key] = ({ navigation }) => (
-                <View style={ styles.flexContainer }>
-                    <ScrollView>
-                        <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
-                        { insertImages(routeInfo) }
-                    </ScrollView>
-                    { insertButtons(navigation, routeInfo) }
-                </View>
-            );
-            return stack;
-        }, {}), {
+        screens, {
             initialRouteName: routes[section]['initialRouteName'],
             navigationOptions: ({ navigation }) => {
                 return {
