@@ -145,6 +145,7 @@ for (var section in routes) {
                     headerTitleStyle: {
                         fontWeight: 'bold',
                     },
+                    headerLeft: null,
                     headerTitle: section,
                     headerRight: <Button
                         icon={{name: 'search'}}
