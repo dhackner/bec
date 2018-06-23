@@ -5,7 +5,7 @@ import { Button, Icon, SearchBar} from 'react-native-elements'
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
-import styles from './style.js';
+import {commonHeaderStyling, styles} from './style.js';
 
 // TODO | v2 logging and reporting back of route navigation
 // TODO | v3 parallel interventions (start preparing for transfer while
@@ -85,8 +85,7 @@ const insertButtons = (navigation, routeInfo) => {
 }
 
 class SearchScreen extends React.Component {
-    static navigationOptions = {
-    };
+    static navigationOptions = {...commonHeaderStyling};
     render() {
         return <View>
             <Text>Under Development</Text>
@@ -120,21 +119,12 @@ for (var section in routes) {
             initialRouteName: routes[section]['initialRouteName'],
             navigationOptions: ({ navigation }) => {
                 return {
-                    headerStyle: {
-                        backgroundColor: '#473830',
-                    },
-                    headerTintColor: '#fff',
-                    headerTitleStyle: {
-                        fontWeight: 'bold',
-                    },
-                    headerLeft: null,
-                    headerTitle: "Emergency Care",
                     headerRight: <Button
                         icon={{name: 'search'}}
                         backgroundColor='#473830'
                         onPress={() => navigation.navigate('search')}
-                    />
-                };
+                    />,
+                    ...commonHeaderStyling};
             }
         }
     );
