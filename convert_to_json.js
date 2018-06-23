@@ -74,9 +74,6 @@ twineToJSON({
 
 
     fs = require('fs');
-
-    fs.readFile('disclaimer.txt', 'utf8', (err, disclaimer) => {
-        if (err) console.log(err)
         requiredImages.sort();
 
         //console.log(routes);
@@ -89,7 +86,6 @@ twineToJSON({
             if (err) console.log(err)
             console.log('done');
         });
-    });
 }).catch(function(err) {
     console.log(err);
 });
