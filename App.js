@@ -80,25 +80,23 @@ const insertButtons = (navigation, routeInfo) => {
     return (
         <View style={ styles.buttonContainer }>
             {drawerOpenButton}
-            {backButton}
         </View>
     );
 }
 
 class SearchScreen extends React.Component {
     static navigationOptions = {
-        title: 'Welcome',
     };
     render() {
         return <View>
             <Text>Under Development</Text>
             <SearchBar placeholder='Type Here...' />
-            <Text>Under Development</Text>
+            { insertButtons(this.props.navigation, {}) }
         </View>;
     }
 }
 var stacks = {
-    'meta': StackNavigator({
+    'Search': StackNavigator({
         search: {
             screen: SearchScreen
         },
@@ -120,7 +118,8 @@ for (var section in routes) {
     stacks[section] = StackNavigator(
         screens, {
             initialRouteName: routes[section]['initialRouteName'],
-            navigationOptions: {
+            navigationOptions: ({ navigation }) => {
+                return {
                     headerStyle: {
                         backgroundColor: '#473830',
                     },
@@ -129,12 +128,13 @@ for (var section in routes) {
                         fontWeight: 'bold',
                     },
                     headerLeft: null,
-                    headerTitle: section,
+                    headerTitle: "Emergency Care",
                     headerRight: <Button
                         icon={{name: 'search'}}
                         backgroundColor='#473830'
-                        //onPress={() => navigation.navigate('search')}
+                        onPress={() => navigation.navigate('search')}
                     />
+                };
             }
         }
     );
