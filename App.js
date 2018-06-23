@@ -22,22 +22,28 @@ const insertImages = (routeInfo) => {
 }
 
 const insertButtons = (navigation, routeInfo) => {
+    let drawerOpenButton = (
+        <Icon
+            reverse
+            name='menu'
+            accessibilityLabel='Open tab selection drawer'
+            onPress={ () => navigation.navigate('DrawerOpen') }
+        />
+    );
+    let backButton = (
+        <Icon
+            reverse
+            color="gray"
+            name="arrow-back"
+            accessibilityLabel='Go to last screen'
+            onPress={ () => navigation.goBack() }
+        />
+    );
     if (routeInfo['no'] && routeInfo['yes']) {
         return (
             <View style={ styles.buttonContainer }>
-                <Icon
-                    reverse
-                    name='menu'
-                    accessibilityLabel='Open tab selection drawer'
-                    onPress={ () => navigation.navigate('DrawerOpen') }
-                />
-                <Icon
-                    reverse
-                    color="gray"
-                    name="arrow-back"
-                    accessibilityLabel='Go to last screen'
-                    onPress={ () => navigation.goBack() }
-                />
+                {drawerOpenButton}
+                {backButton}
                 <Icon
                     reverse
                     color="gray"
@@ -59,19 +65,8 @@ const insertButtons = (navigation, routeInfo) => {
     } else if (routeInfo['next']) {
         return (
             <View style={ styles.buttonContainer }>
-                <Icon
-                    reverse
-                    name='menu'
-                    accessibilityLabel='Open tab selection drawer'
-                    onPress={ () => navigation.navigate('DrawerOpen') }
-                />
-                <Icon
-                    reverse
-                    color="gray"
-                    name="arrow-back"
-                    accessibilityLabel='Go to last screen'
-                    onPress={ () => navigation.goBack() }
-                />
+                {drawerOpenButton}
+                {backButton}
                 <Icon
                     reverse
                     color="gray"
@@ -81,25 +76,13 @@ const insertButtons = (navigation, routeInfo) => {
                 />
             </View>
         );
-    } else {
-        return (
-            <View style={ styles.buttonContainer }>
-                <Icon
-                    reverse
-                    name='menu'
-                    accessibilityLabel='Open tab selection drawer'
-                    onPress={ () => navigation.navigate('DrawerOpen') }
-                />
-                <Icon
-                    reverse
-                    color="gray"
-                    name="arrow-back"
-                    accessibilityLabel='Go to last screen'
-                    onPress={ () => navigation.goBack() }
-                />
-            </View>
-        );
     }
+    return (
+        <View style={ styles.buttonContainer }>
+            {drawerOpenButton}
+            {backButton}
+        </View>
+    );
 }
 
 class SearchScreen extends React.Component {
