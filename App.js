@@ -94,6 +94,23 @@ class SearchScreen extends React.Component {
         </View>;
     }
 }
+
+class BECScreen extends React.Component {
+    render() {
+        let {navigation, routeInfo } = this.props;
+        return (
+            <View style={ styles.flexContainer }>
+                <ScrollView>
+                    <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
+                    { insertImages(routeInfo) }
+                </ScrollView>
+                { insertButtons(navigation, routeInfo) }
+            </View>
+        );
+    }
+};
+
+
 var stacks = {
     'Search': StackNavigator({
         search: {
@@ -104,13 +121,7 @@ var stacks = {
 for (var section in routes) {
     var screens = routes[section]['screens'].reduce((stack, routeInfo) => {
         stack[routeInfo.key] = ({ navigation }) => (
-            <View style={ styles.flexContainer }>
-            <ScrollView>
-            <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
-            { insertImages(routeInfo) }
-            </ScrollView>
-            { insertButtons(navigation, routeInfo) }
-            </View>
+            <BECScreen navigation={navigation} routeInfo={routeInfo}/>
         );
         return stack;
     }, {});
