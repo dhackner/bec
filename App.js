@@ -1,10 +1,11 @@
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
-import { Button, Icon, SearchBar} from 'react-native-elements'
+import { Button, SearchBar} from 'react-native-elements'
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
+import NavigationPane from './NavigationPane.js';
 import {commonHeaderStyling, styles} from './style.js';
 
 // TODO | v2 logging and reporting back of route navigation
@@ -21,76 +22,14 @@ const insertImages = (routeInfo) => {
     }
 }
 
-const insertButtons = (navigation, routeInfo) => {
-    let drawerOpenButton = (
-        <Icon
-            reverse
-            name='menu'
-            accessibilityLabel='Open tab selection drawer'
-            onPress={ () => navigation.navigate('DrawerOpen') }
-        />
-    );
-    let backButton = (
-        <Icon
-            reverse
-            color="gray"
-            name="arrow-back"
-            accessibilityLabel='Go to last screen'
-            onPress={ () => navigation.goBack() }
-        />
-    );
-    if (routeInfo['no'] && routeInfo['yes']) {
-        return (
-            <View style={ styles.buttonContainer }>
-                {drawerOpenButton}
-                {backButton}
-                <Icon
-                    reverse
-                    color="gray"
-                    type="MaterialCommunityIcons"
-                    name="close"
-                    accessibilityLabel='The answer to the question on the screen is no'
-                    onPress={ () => navigation.navigate(routeInfo.no) }
-                />
-                <Icon
-                    reverse
-                    color="gray"
-                    type="MaterialCommunityIcons"
-                    name="check"
-                    accessibilityLabel='The answer to the question on the screen is yes'
-                    onPress={ () => navigation.navigate(routeInfo.yes) }
-                />
-            </View>
-        );
-    } else if (routeInfo['next']) {
-        return (
-            <View style={ styles.buttonContainer }>
-                {drawerOpenButton}
-                {backButton}
-                <Icon
-                    reverse
-                    color="gray"
-                    name="arrow-forward"
-                    accessibilityLabel='Go to next screen'
-                    onPress={ () => navigation.navigate(routeInfo.next) }
-                />
-            </View>
-        );
-    }
-    return (
-        <View style={ styles.buttonContainer }>
-            {drawerOpenButton}
-        </View>
-    );
-}
-
 class SearchScreen extends React.Component {
     static navigationOptions = {...commonHeaderStyling};
     render() {
+        let {navigation} = this.props;
         return <View>
             <Text>Under Development</Text>
             <SearchBar placeholder='Type Here...' />
-            { insertButtons(this.props.navigation, {}) }
+            <NavigationPane navigation={navigation} routeInfo={{}}/>
         </View>;
     }
 }
@@ -104,7 +43,7 @@ class BECScreen extends React.Component {
                     <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
                     { insertImages(routeInfo) }
                 </ScrollView>
-                { insertButtons(navigation, routeInfo) }
+                <NavigationPane navigation={navigation} routeInfo={routeInfo}/>
             </View>
         );
     }
