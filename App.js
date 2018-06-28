@@ -23,13 +23,13 @@ const insertImages = (routeInfo) => {
 }
 
 class SearchScreen extends React.Component {
-    static navigationOptions = {...commonHeaderStyling};
+    static navigationOptions = {headerTitle: "Search", ...commonHeaderStyling};
     render() {
         let {navigation} = this.props;
         return <View>
             <Text>Under Development</Text>
             <SearchBar placeholder='Type Here...' />
-            <NavigationPane navigation={navigation} routeInfo={{}}/>
+            <NavigationPane navigation={navigation} routeInfo={{}} />
         </View>;
     }
 }
@@ -43,22 +43,22 @@ class BECScreen extends React.Component {
                     <Text style={ styles.bodyText }>{ routeInfo.bodyText }</Text>
                     { insertImages(routeInfo) }
                 </ScrollView>
-                <NavigationPane navigation={navigation} routeInfo={routeInfo}/>
+                <NavigationPane navigation={navigation} routeInfo={routeInfo} />
             </View>
         );
     }
 };
 
 
-var stacks = {
+let stacks = {
     'Search': StackNavigator({
         search: {
             screen: SearchScreen
         },
     })
 };
-for (var section in routes) {
-    var screens = routes[section]['screens'].reduce((stack, routeInfo) => {
+for (let section in routes) {
+    let screens = routes[section]['screens'].reduce((stack, routeInfo) => {
         stack[routeInfo.key] = ({ navigation }) => (
             <BECScreen navigation={navigation} routeInfo={routeInfo}/>
         );
@@ -74,6 +74,7 @@ for (var section in routes) {
                         backgroundColor='#473830'
                         onPress={() => navigation.navigate('search')}
                     />,
+                    headerTitle: section,
                     ...commonHeaderStyling};
             }
         }

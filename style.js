@@ -28,5 +28,4 @@ export const commonHeaderStyling = {
         fontWeight: 'bold',
     },
     headerLeft: null,
-    headerTitle: "Emergency Care",
 };
