@@ -4,7 +4,8 @@ const blue = '#0F7FCA';
 const deviceWidth = Dimensions.get('window').width;
 export const styles = StyleSheet.create({
     bodyText: {
-        fontSize: 30
+        fontSize: 24,
+        padding: 16
     },
     flexContainer: {
         flex: 1,
