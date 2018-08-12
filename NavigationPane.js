@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Icon } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 
 import {styles} from './style.js';
 
@@ -8,18 +8,22 @@ export default class NavigationPane extends React.Component {
     render() {
         let {navigation, routeInfo} = this.props;
         let drawerOpenButton = (
-            <Icon
-                reverse
-                name='menu'
+            <Button
+                rounded
+                raised
+                backgroundColor='#0077C0'
+                title='&#9776;'
                 accessibilityLabel='Open tab selection drawer'
                 onPress={ () => navigation.navigate('DrawerOpen') }
             />
         );
         let backButton = (
-            <Icon
-                reverse
-                color="gray"
-                name="arrow-back"
+            <Button
+                rounded
+                raised
+                color='#00619A'
+                backgroundColor='#F1F1F1'
+                title='<'
                 accessibilityLabel='Go to last screen'
                 onPress={ () => navigation.goBack() }
             />
@@ -29,19 +33,21 @@ export default class NavigationPane extends React.Component {
                 <View style={ styles.buttonContainer }>
                     {drawerOpenButton}
                     {backButton}
-                    <Icon
-                        reverse
-                        color="gray"
-                        type="MaterialCommunityIcons"
-                        name="close"
+                    <Button
+                        rounded
+                        raised
+                        color='#00619A'
+                        backgroundColor='#F1F1F1'
+                        title='No'
                         accessibilityLabel='The answer to the question on the screen is no'
                         onPress={ () => navigation.navigate(routeInfo.no) }
                     />
-                    <Icon
-                        reverse
-                        color="gray"
-                        type="MaterialCommunityIcons"
-                        name="check"
+                    <Button
+                        rounded
+                        raised
+                        color='#00619A'
+                        backgroundColor='#F1F1F1'
+                        title='Yes'
                         accessibilityLabel='The answer to the question on the screen is yes'
                         onPress={ () => navigation.navigate(routeInfo.yes) }
                     />
@@ -52,10 +58,12 @@ export default class NavigationPane extends React.Component {
                 <View style={ styles.buttonContainer }>
                     {drawerOpenButton}
                     {backButton}
-                    <Icon
-                        reverse
-                        color="gray"
-                        name="arrow-forward"
+                    <Button
+                        rounded
+                        raised
+                        color='#00619A'
+                        backgroundColor='#F1F1F1'
+                        title='Next'
                         accessibilityLabel='Go to next screen'
                         onPress={ () => navigation.navigate(routeInfo.next) }
                     />

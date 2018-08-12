@@ -17,7 +17,9 @@ export const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        paddingTop: 16,
+        paddingBottom: 16
     },
 });
 export const commonHeaderStyling = {
