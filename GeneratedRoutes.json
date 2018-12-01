@@ -142,7 +142,7 @@
       },
       {
         "key": "81",
-        "bodyText": "Encourage speaking or coughing.",
+        "bodyText": "If the object is visible, remove it - be careful not to push the object any deeper.\n\nIf the patient is able to cough or make noises, keep the patient calm and encourage coughing.",
         "next": "110"
       },
       {
