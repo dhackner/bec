@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, ScrollView, Text, View } from 'react-native';
+import { Image, Picker, ScrollView, Text, WebView, View } from 'react-native';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
-import { Button, SearchBar} from 'react-native-elements'
+import { Button } from 'react-native-elements'
 
 import routes from './GeneratedRoutes.json';
 import requiredImages from './GeneratedImages.js';
@@ -16,21 +16,53 @@ import {commonHeaderStyling, styles} from './style.js';
 // TODO | Add disclaimer
 // TODO | Tie back button across stacks; hide at beginning
 
-const insertImages = (routeInfo) => {
-    if (routeInfo['image']) {
-        return routeInfo.image.map( (image, index) => {return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />});
+
+class SummaryScreen extends React.Component {
+    constructor(){
+        super();
+        this.state = {}
+    }
+
+    static navigationOptions = {headerTitle: "Summary", ...commonHeaderStyling};
+    render() {
+        let {navigation} = this.props;
+        return (
+            <View style={ styles.flexContainer }>
+                <Button raised rounded title='+ Select' onPress={() => this.setState({showPicker: true}) }/>
+                {this.state.showPicker &&
+                <Picker
+                    selectedValue={this.state.selected}
+                    onValueChange={(itemValue, itemIndex) => this.setState({selected: itemValue, showPicker: false})}>
+                    <Picker.Item label="ABCDE" value="ABCDE" />
+                    <Picker.Item label="Airway Obstruction" value="AirwayObstruction" />
+                    <Picker.Item label="Flail Chest" value="FlailChest" />
+                    <Picker.Item label="Haemothorax" value="Haemothorax" />
+                    <Picker.Item label="Hypovolaemic Shock" value="HypovolaemicShock" />
+                    <Picker.Item label="Pericardial Tamponade" value="PericardialTamponade" />
+                    <Picker.Item label="Severe Head Injury" value="SevereHeadInjury" />
+                    <Picker.Item label="Sucking Chest Wound" value="SuckingChestWound" />
+                    <Picker.Item label="Tension Pneumothorax" value="TensionPneumothorax" />
+                </Picker>
+                }
+                { this.state.selected == 'ABCDE' && <WebView originWhitelist={['*']} source={require('./img/summaries/ABCDE.html')} />}
+                { this.state.selected == 'AirwayObstruction' && <WebView originWhitelist={['*']} source={require('./img/summaries/AirwayObstruction.html')} />}
+                { this.state.selected == 'FlailChest' && <WebView originWhitelist={['*']} source={require('./img/summaries/FlailChest.html')} />}
+                { this.state.selected == 'Haemothorax' && <WebView originWhitelist={['*']} source={require('./img/summaries/Haemothorax.html')} />}
+                { this.state.selected == 'HypovolaemicShock' && <WebView originWhitelist={['*']} source={require('./img/summaries/HypovolaemicShock.html')} />}
+                { this.state.selected == 'PericardialTamponade' && <WebView originWhitelist={['*']} source={require('./img/summaries/PericardialTamponade.html')} />}
+                { this.state.selected == 'SevereHeadInjury' && <WebView originWhitelist={['*']} source={require('./img/summaries/SevereHeadInjury.html')} />}
+                { this.state.selected == 'SuckingChestWound' && <WebView originWhitelist={['*']} source={require('./img/summaries/SuckingChestWound.html')} />}
+                { this.state.selected == 'TensionPneumothorax' && <WebView originWhitelist={['*']} source={require('./img/summaries/TensionPneumothorax.html')} />}
+
+                <NavigationPane navigation={navigation} routeInfo={{}} />
+            </View>
+        )
     }
 }
 
-class SearchScreen extends React.Component {
-    static navigationOptions = {headerTitle: "Search", ...commonHeaderStyling};
-    render() {
-        let {navigation} = this.props;
-        return <View>
-            <Text>Under Development</Text>
-            <SearchBar placeholder='Type Here...' />
-            <NavigationPane navigation={navigation} routeInfo={{}} />
-        </View>;
+const insertImages = (routeInfo) => {
+    if (routeInfo['image']) {
+        return routeInfo.image.map( (image, index) => {return <Image key={ index } style={ styles.image } source={ requiredImages[image] } />});
     }
 }
 
@@ -51,9 +83,9 @@ class BECScreen extends React.Component {
 
 
 let stacks = {
-    'Search': StackNavigator({
+    'Summary': StackNavigator({
         search: {
-            screen: SearchScreen
+            screen: SummaryScreen
         },
     })
 };
